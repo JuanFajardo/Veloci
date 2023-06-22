@@ -106,22 +106,22 @@
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 1</b> </label>
             <input type="file" name="foto1" autocomplete="off"> 
-            <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto1)[2] )}}">
+            <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}">
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b> Foto 2</b> </label>
             <input type="file" name="foto2" autocomplete="off">
-            <img  class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto2)[2] )}}">
+            <img  class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto2)[2] )}}">
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 3</b> </label>
             <input type="file" name="foto3" autocomplete="off">
-            <img  class="card-img img-fluid"  src="{{asset('storage/images/'.explode("/", $dato->foto3)[2] )}}">
+            <img  class="card-img img-fluid"  src="{{asset('public/images/'.explode("/", $dato->foto3)[2] )}}">
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 4</b> </label>
             <input type="file" name="foto4"   autocomplete="off">
-            <img  class="card-img img-fluid"  src="{{asset('storage/images/'.explode("/", $dato->foto4)[2] )}}" width="50px">
+            <img  class="card-img img-fluid"  src="{{asset('public/images/'.explode("/", $dato->foto4)[2] )}}" width="50px">
         </div>
     </div>
 
@@ -129,16 +129,16 @@
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 5</b> </label>
             <input type="file" name="foto5"   autocomplete="off">
-            <img  class="card-img img-fluid"  src="{{asset('storage/images/'.explode("/", $dato->foto5)[2] )}}" width="50px">
+            <img  class="card-img img-fluid"  src="{{asset('public/images/'.explode("/", $dato->foto5)[2] )}}" width="50px">
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 6</b> </label>
             <input type="file" name="foto6"   autocomplete="off">
-            <img  class="card-img img-fluid"  src="{{asset('storage/images/'.explode("/", $dato->foto6)[2] )}}" width="50px">
+            <img  class="card-img img-fluid"  src="{{asset('public/images/'.explode("/", $dato->foto6)[2] )}}" width="50px">
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Ficha Tecnica</b> </label>
-            <input type="file" name="ficha"   autocomplete="off"> <a href="{{asset('storage/images/'.explode("/", $dato->ficha)[2] )}}" class="btn btn-primary"> <i class="fa fa-download"></i> Ficha</a> 
+            <input type="file" name="ficha"   autocomplete="off"> <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="btn btn-primary"> <i class="fa fa-download"></i> Ficha</a> 
         </div>
         <div class="form-group col-md-3 mb-3">
             <input type="submit" value="Actualizar" class="btn btn-warning">

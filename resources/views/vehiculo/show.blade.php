@@ -7,7 +7,7 @@
         <div class="row">
                 <div class="col-lg-8 col-12">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto1)[2] )}}" alt="Card image cap" id="product-detail">
+                        <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" alt="Card image cap" id="product-detail">
                     </div>
                     <div class="row">
                         <!--Start Controls-->
@@ -28,17 +28,17 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto1)[2] )}}" alt="Product Image 1">
+                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" alt="Product Image 1">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto2)[2] )}}" alt="Product Image 2">
+                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto2)[2] )}}" alt="Product Image 2">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto3)[2] )}}" alt="Product Image 3">
+                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto3)[2] )}}" alt="Product Image 3">
                                             </a>
                                         </div>
                                     </div>
@@ -50,17 +50,17 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto4)[2] )}}" alt="Product Image 4">
+                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto4)[2] )}}" alt="Product Image 4">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto5)[2] )}}" alt="Product Image 5">
+                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto5)[2] )}}" alt="Product Image 5">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('storage/images/'.explode("/", $dato->foto6)[2] )}}" alt="Product Image 6">
+                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto6)[2] )}}" alt="Product Image 6">
                                             </a>
                                         </div>
                                     </div>
@@ -119,10 +119,11 @@
                             </table>
                     </div>
                     <div class="tags-block">
-                        <a href="{{asset('storage/images/'.explode("/", $dato->ficha)[2] )}}" class=" tags-block-link ">
+                        
+                        <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class=" tags-block-link " style="color: white;">
                             <i class=" bi-download"></i>  <span>Ficha Tecnica</span> 
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion%20de%20{{$dato->titulo}}" class="tags-block-link">
+                        <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion%20de%20{{$dato->titulo}}" class="tags-block-link" style="color: white;">
                             <i class=" bi-whatsapp"></i>  <span>Whatsapp</span>
                         </a>
                     </div>
@@ -146,14 +147,11 @@
     <div class="container">
         <div class="row">
             <h4 class="mb-lg-3">Autos Relacionados</h2>
-            
-            
                 @foreach ($datos as $dato)
-
                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                     <div class="custom-block-wrap">
                         <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
-                        <img src="{{asset('storage/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
+                        <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
     
                         <div class="custom-block">
                             <div class="custom-block-body">
@@ -165,22 +163,20 @@
                                     <tr><td>Traccion : </td><th>{{$dato->traccion}}</th></tr>
                                     <tr><td>Comustible:  </td><th>{{$dato->combustible}}</th></tr>
                                 </table>
-                                
+
                                 <hr style="width: 230px;">
                                  <div class="d-flex align-items-center mb-0 ">
-                                <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn btn "><i class="bi-plus-lg"></i></a>
-                                <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion%20{{$dato->titulo}}" class="custom-btn btn "><i class="bi-whatsapp"></i></a>
-                                <a href="{{asset('storage/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn btn "><i class="bi-download"></i></a>
-                                </div>
+                                <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion%20{{$dato->titulo}}" class="custom-btn-w btn me-1 "><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                                <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn mb-0"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
+                                </div> 
                             </div>
                             
                         </div>
                     </a>
                     </div>
                 </div>
-
                 @endforeach
-
         </div>
     </div>
 </section>

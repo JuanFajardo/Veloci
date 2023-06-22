@@ -54,7 +54,8 @@ https://templatemo.com/tm-581-kind-heart-charity
   --section-bg-color:             #f0f8ff;
   --site-footer-bg-color:         #44525d;
   --custom-btn-bg-color:          #597081;
-  --custom-btn-bg-hover-color:    #5bc1ac;
+ 
+  --custom-btn-bg-hover-color:    #8e9291;
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #e9eaeb;
@@ -65,8 +66,8 @@ https://templatemo.com/tm-581-kind-heart-charity
   --h2-font-size:                 36px;
   --h3-font-size:                 32px;
   --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
+  --h5-font-size:                 21px;
+  --h6-font-size:                 20px;
   --p-font-size:                  16px;
   --btn-font-size:                18px;
   --copyright-font-size:          14px;
@@ -128,16 +129,17 @@ h3 {
 h4 {
   font-size: var(--h4-font-size);
 }
-
+/*-----------------------------------------------cambio de color las h5 y h6----*/
 h5 {
-  color: var(--primary-color);
+  color: #52596d;
   font-size: var(--h5-font-size);
 }
 
 h6 {
+  color: #d0d1d0;
   font-size: var(--h6-font-size);
 }
-
+/*-------------------------------------------------------------------------*/
 p {
   color: var(--p-color);
   font-size: var(--p-font-size);
@@ -170,6 +172,11 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.texto-justificado{
+  text-align: justify;
+  }
+ 
+ 
 
 /*---------------------------------------
   SECTION               
@@ -225,7 +232,7 @@ strong {
 }
 
 .custom-block .custom-btn {
-  border-radius: 0;
+  border-radius: 0; /* cambo de borde de */
   display: block;
 }
 
@@ -312,9 +319,9 @@ strong {
   CUSTOM BUTTON               
 -----------------------------------------*/
 .custom-btn {
-  background: var(--secondary-color);
+  background: #2b5a7c;
   border: 2px solid transparent;
-  border-radius: var(--border-radius-large);
+  border-radius: var(--border-radius-small);
   color: var(--white-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-normal);
@@ -322,6 +329,50 @@ strong {
   padding: 15px 25px;
 }
 
+/* --------------------------------------------------------botones box botoned de las muestras */
+.custom-btn-bo {
+  background:  #44525d;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-small);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: normal;
+  padding: 10px 20px;
+}
+.custom-btn-bo:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.custom-btn-w {
+  background: #d7e6d2;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-small);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: normal;
+  padding: 10px 20px;
+}
+.custom-btn-w:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.custom-btn-d {
+  background: #c9cfda;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-small);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: normal;
+  padding: 10px 20px;
+}
+.custom-btn-d:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+/*-------------------------------------------------------------------------------------------------------------*/
 .navbar-expand-lg .navbar-nav .nav-link.custom-btn {
   color: var(--custom-btn-bg-color);
   margin-top: 8px;
@@ -386,12 +437,12 @@ strong {
   margin-left: 0;
   padding: 20px;
 }
-
+/*-----------------------------------------------------------------Cambio tamaño de letra en menu-----------*/
 .navbar-nav .nav-link {
   display: inline-block;
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-medium);
+  color: #1a346d;
+  font-size: 17px;
+  font-weight: var(--font-weight-semibold);
   position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -399,10 +450,10 @@ strong {
 
 .navbar-nav .nav-link.active, 
 .navbar-nav .nav-link:hover {
-  background: transparent;
-  color: var(--primary-color);
+  background: #f0f0f3;
+  color: #1a346d;
 }
-
+/*-----------------------------------------------------------------------------------------------------*/
 .dropdown-menu {
   background: var(--white-color);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
@@ -425,15 +476,15 @@ strong {
 .dropdown-menu li:last-child .dropdown-item {
   padding-top: 0;
 }
-
+/*---------------------------------------------cambio de efecto menu-------*/
 .dropdown-item.active, 
 .dropdown-item:active,
 .dropdown-item:focus, 
 .dropdown-item:hover {
-  background: transparent;
-  color: var(--primary-color);
+  background: #a9a9a8;
+  color: #020006;
 }
-
+/*---------------------------------------------------------------------*/
 .dropdown-toggle::after {
   content: "\f282";
   display: inline-block;
@@ -693,7 +744,7 @@ strong {
   COUNTER NUMBERS              
 -----------------------------------------*/
 .counter-thumb {
-  margin: 20px;
+  margin: 15px;
   margin-bottom: 0;
 }
 
@@ -889,16 +940,34 @@ blockquote::before {
 
 .tags-block-link {
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-small);
   display: inline-block;
   font-size: var(--copyright-font-size);
   line-height: normal;
   margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-  padding: 8px 15px;
-  background-color: #898c8e;
+  padding: 14px 18px;
+  background-color: #2b5a7c;
 }
+/* WHATSAPP*/
+.tags-block-linkw {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-small);
+  display: inline-block;
+  font-size: var(--copyright-font-size);
+  line-height: normal;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 14px 18px;
+  background-color: #389127;
+}
+.tags-block-linkw:hover {
+  border-color: var(--dark-color);
+  color: var(--dark-color);
+}
+/*FIN*/
 .tags-block-linkredes {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-medium);
@@ -1309,7 +1378,7 @@ blockquote::before {
 -----------------------------------------*/
 .site-footer {
   background-color: var(--site-footer-bg-color);
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 .site-footer-bottom {
@@ -1323,14 +1392,17 @@ blockquote::before {
 
 .site-footer-bottom a {
 	color: var(--white-color);
+
 }
 
 .site-footer-bottom a:hover {
-	color: #FF6;
+	color: rgb(44, 110, 177);
 }
 
 .site-footer-link {
   color: var(--white-color);
+  font-size: 15px;
+  
 }
 
 .copyright-text {

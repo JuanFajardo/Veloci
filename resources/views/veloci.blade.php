@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="Pagina de Veloci.com.bo">
+        <meta name="author" content="Elena Taboada, Juan Fajardo">
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/rueda.png')}}">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -79,9 +80,6 @@
                             </li>
                         </ul>
                     </div>
-
-                    
-
                 </div>
             </div>
         </header>
@@ -91,6 +89,7 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="{{asset('assets/images/logveloci 1.png')}}" class="logo img-fluid" alt="Kind Heart Charity">
                 </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -98,10 +97,12 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link smoothscroll" href="{{asset('index.php   ')}}">Inicio</a>
+                            <a class="nav-link smoothscroll" href="{{asset('index.php')}}">Inicio</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link click-scroll dropdown-toggle" href="" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inventario</a>
+
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{asset('index.php/Tienda')}}">Inventario</a></li>
                                 <li><a class="dropdown-item" href="inventario.html">Camionetas</a></li>
@@ -118,7 +119,8 @@
                                 <li><a class="dropdown-item" href="clasificado.html">Clasificados</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item ms-3"></li>
+                        <li class="nav-item ms-3">
+                        </li>
                     </ul>
                 </div>
             </div>

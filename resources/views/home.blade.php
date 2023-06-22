@@ -51,7 +51,7 @@
         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
             <div class="custom-block-wrap">
                 <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
-                <img src="{{asset('storage/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
+                <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
 
                 <div class="custom-block">
                     <div class="custom-block-body">
@@ -62,10 +62,10 @@
                         <p class="mb-0"> Combustible <strong>{{$dato->combustible}}</strong></p>
                         <hr style="width: 230px;">
                          <div class="d-flex align-items-center mb-0 ">
-                        <a href="producto-detalle.html" class="custom-btn btn me-2"><i class="bi-plus-lg"></i></a>
+                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn btn me-2"><i class="bi-plus-lg"></i></a>
 
                         <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn btn  me-2"><i class="bi-whatsapp"></i></a>
-                        <a href="{{asset('storage/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn btn me-2"><i class="bi-download"></i></a>
+                        <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn btn me-2"><i class="bi-download"></i></a>
                         </div>
                     </div>
                     
@@ -106,10 +106,6 @@
                         <div class="carousel-inner">
                           <div class="carousel-item active">
                             <div class="row">
- 
-                
-                
-
                                 <div class="col-3 p-md-5">
                                     <a href="{{asset('index.php/Tienda/Land Rover/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/landrover web.png')}}" alt="Land Rover"></a>
                                 </div>
@@ -199,28 +195,24 @@
             <h2 >Visita Nuestro Showroom</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
-        <div class="row">
-            <div class="">
+        <div class="row"><!--------------------------------------------------------------------------------ACTUALIZACION DE UBICACION--------------------------------------------------------------------------------------------------->
                 <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
                     <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-                    var setting = {"query":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","width":1266,"height":600,"satellite":false,"zoom":12,"placeId":"ChIJxQ4n--7n8ZMRHF8cGqXnVTg","cid":"0x3855e7a51a1c5f1c","coords":[-17.7293141,-63.16689729999999],"lang":"es","queryString":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","centerCoord":[-17.7293141,-63.16689729999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"943793"};
+                    var setting = {"query":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","width":1095,"height":600,"satellite":false,"zoom":17,"placeId":"ChIJxQ4n--7n8ZMRHF8cGqXnVTg","cid":"0x3855e7a51a1c5f1c","coords":[-17.7293141,-63.16689729999999],"lang":"es","queryString":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","centerCoord":[-17.7293141,-63.16689729999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"944979"};
                     var d = document;
                     var s = d.createElement('script');
-                    s.src = 'https://1map.com/js/script-for-user.js?embed_id=943793';
+                    s.src = 'https://1map.com/js/script-for-user.js?embed_id=944979';
                     s.async = true;
                     s.onload = function (e) {
                       window.OneMap.initMap(setting)
                     };
                     var to = d.getElementsByTagName('script')[0];
                     to.parentNode.insertBefore(s, to);
-                  })();</script><a href="https://1map.com/es/map-embed">1 Map</a></div>
-            </div>
-            
-            
-
+                  })();</script><a href="https://1map.com/es/map-embed">1 Map</a></div>            
         </div>
     </div>
 </section>
+
 <section class="news-detail-header-section text-center">
     <div class="container">
         <div class="row">

@@ -1,12 +1,9 @@
 @extends('veloci')
 
 @section('producto')
-@if( strlen($sucess) > 2 )
-        <h1>{{$sucess}} </h1>
-    @else
-        <h1>Vehiculos </h1>
-    @endif
-
+  @if( strlen($sucess) > 2 )
+    <h1>{{$sucess}} </h1>
+  @endif
 
 <section class="section-padding section-bg" id="section_3">
     <div class="container">
@@ -171,7 +168,7 @@
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
                             <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
-                            <img src="{{asset('storage/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
+                            <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
                                 <div class="custom-block-body">
@@ -185,7 +182,7 @@
                                     
                                     <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn btn me-2"><i class="bi-plus-lg"></i></a>
                                     <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn btn  me-2"><i class="bi-whatsapp"></i></a>
-                                    <a href="{{asset('storage/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn btn me-2"><i class="bi-download"></i></a>
+                                    <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn btn me-2"><i class="bi-download"></i></a>
 
                                     </div>
                                 </div>
