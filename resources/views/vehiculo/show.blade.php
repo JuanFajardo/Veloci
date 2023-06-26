@@ -148,7 +148,7 @@
         <div class="row">
             <h4 class="mb-lg-3">Autos Relacionados</h2>
                 @foreach ($datos as $dato)
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-5">
                     <div class="custom-block-wrap">
                         <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
                         <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
@@ -160,7 +160,7 @@
     
                                 <table class="default" >
                                     <tr><td>Motor :  </td><th colspan="3"> {{$dato->tipo}}</th></tr>
-                                    <tr><td>Traccion : </td><th>{{$dato->traccion}}</th></tr>
+                                    <tr><td>Tracción : </td><th>{{$dato->traccion}}</th></tr>
                                     <tr><td>Comustible:  </td><th>{{$dato->combustible}}</th></tr>
                                 </table>
 

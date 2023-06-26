@@ -13,8 +13,8 @@ class CreateVehiculosTable extends Migration
             $table->integer('id_usuario');
             $table->string('titulo')->comment('2022 Jeep Gladiator Willys');
             
-            $table->string('marca')->default('')->nullable->comment('Toyota');
-            $table->string('motor')->default('')->nullable->comment('Nose');
+            $table->string('marca')->default('')->nullable()->comment('Toyota');
+            $table->string('motor')->default('')->nullable()->comment('Nose');
             $table->string('tipo')->comment('Camioneta');
             $table->string('combustible')->comment('Gasolina');
             $table->string('anio')->comment('2022');

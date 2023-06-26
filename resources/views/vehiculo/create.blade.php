@@ -45,7 +45,9 @@
             <input type="text" class="form-control mt-1" name="tipo" placeholder="Camioneta" required  list="tipo-list" autocomplete="off" >
             <datalist id="tipo-list"> 
                 <option value="Caminioneta">Caminioneta</option> 
-                <option value="Vagoneta">Vagoneta</option> 
+                <option value="Vagoneta">Vagoneta</option>
+                <option value="Semi-Nuevo">Semi-Nuevo</option>
+                
             </datalist>        
         </div>
     </div>
@@ -63,7 +65,7 @@
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Año</b> </label>
-            <input type="text" class="form-control mt-1" name="anio" placeholder="2022" required  list="anio-list" autocomplete="off">
+            <input type="text" class="form-control mt-1" name="anio" placeholder="2022" required  list="anio-list" autocomplete="off" >
             <datalist id="anio-list"> 
                 @for($i=date('Y'); $i>=2018; $i--)
                     <option value="{{$i}}">{{$i}}</option> 
@@ -91,11 +93,11 @@
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Whatsapp</b> </label>
-            <input type="text" class="form-control mt-1" name="comunicate" placeholder="59177889944" required  autocomplete="off" >
+            <input type="text" class="form-control mt-1" name="comunicate" placeholder="59177889944" required value="69612086"  autocomplete="off" >
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Correo</b> </label>
-            <input type="text" class="form-control mt-1" name="correo" placeholder="correo@correo.com" required  autocomplete="off" >
+            <input type="text" class="form-control mt-1" name="correo" placeholder="correo@correo.com" required value="ventas@veloci.com.bo" autocomplete="off" >
         </div>
     </div>
 
@@ -103,26 +105,26 @@
     <div class="row">
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 1</b> </label>
-            <input type="file" name="foto1" autocomplete="off"> 
+            <input type="file" name="foto1" autocomplete="off" required> 
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b> Foto 2</b> </label>
-            <input type="file" name="foto2" autocomplete="off">
+            <input type="file" name="foto2" autocomplete="off" required>
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 3</b> </label>
-            <input type="file" name="foto3" autocomplete="off">
+            <input type="file" name="foto3" autocomplete="off" required>
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 4</b> </label>
-            <input type="file" name="foto4"   autocomplete="off">
+            <input type="file" name="foto4"   autocomplete="off" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 5</b> </label>
-            <input type="file" name="foto5"   autocomplete="off">
+            <input type="file" name="foto5"   autocomplete="off" required>
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Foto 6</b> </label>

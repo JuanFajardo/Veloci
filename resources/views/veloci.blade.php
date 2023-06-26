@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="row">
                     
-                    <div class="col-lg-8 col-12 d-flex">
+                    <div class="col-lg-12 d-flex">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-whatsapp me-2"></i>
                             <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion">
@@ -54,8 +54,8 @@
                         </p>
                     </div>
 
-                    <div class="col-lg-3 col-12 ms-auto d-flex">
-                        <ul class="social-icon">
+                    <div class="col-lg-0 col-12 ms-auto d-flex">
+                        <!--<ul class="social-icon">
                             
                             <li class="social-icon-item">
                                 <a href="https://www.facebook.com/VelociAutoventa/" class="social-icon-link bi-facebook"></a>
@@ -78,7 +78,7 @@
                             <li class="social-icon-item">
                                 <a href="https://www.linkedin.com/company/velociautoventa/" class="social-icon-link bi-linkedin"></a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>
@@ -105,23 +105,52 @@
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{asset('index.php/Tienda')}}">Inventario</a></li>
-                                <li><a class="dropdown-item" href="inventario.html">Camionetas</a></li>
-                                <li><a class="dropdown-item" href="inventario.html">Vagonetas</a></li>
-                                <li><a class="dropdown-item" href="inventario.html">Electrica</a></li>
-                                <li><a class="dropdown-item" href="inventario.html">Híbtidos</a></li>
-                                <li><a class="dropdown-item" href="inventario.html">Semi-Nuevos</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Camioneta')}}">Camionetas</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Vagoneta')}}">Vagonetas</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Electrica')}}">Electrica</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Hibridos')}}">Híbridos</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Seminuevo')}}">Semi-Nuevos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre Nosotros</a>
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="quienesomos.html">¿Quienes Somo?</a></li>
-                                <li><a class="dropdown-item" href="clasificado.html">Clasificados</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Pagina/quienes')}}">¿Quienes Somo?</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Pagina/clasificados')}}">Clasificados</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ms-3">
                         </li>
                     </ul>
+                </div>
+                <div class="row "><!------ se agrego iconos redes sociales en menu ------>
+                    <div class="me-4  ms-auto d-flex ">
+                        <ul class="social-icon ">
+                            
+                            <li class="social-icon-item me-2">
+                                <a href="https://www.facebook.com/VelociAutoventa/" >
+                                    <i class=" bi-facebook" style="color: blue;"></i>
+                                </a>
+                            </li>
+                            <li class="social-icon-item me-2">
+                                <a href="https://twitter.com/AutoventaVeloci/" class=" bi-twitter" style="color: rgb(54, 168, 234);"></a>
+                            </li>
+    
+                            <li class="social-icon-item me-2">
+                                <a href="https://www.instagram.com/veloci.autoventas/" class="bi-instagram" style="color: rgb(233, 38, 171);"></a>
+                            </li>
+    
+                            <li class="social-icon-item me-2">
+                                <a href="https://youtube.com/@velociautoventabo/" class=" bi-youtube" style="color: red;"></a>
+     
+                            <li class="social-icon-item me-2">
+                                <a href="https://www.tiktok.com/@veloci.autoventas/" class=" bi-tiktok" style="color: black;"></a>
+                            </li>
+                            <li class="social-icon-item me-2">
+                                <a href="https://www.linkedin.com/company/velociautoventa/" class=" bi-linkedin" style="color: blue;"></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -135,25 +164,22 @@
 
         
 
-        <footer class="site-footer">
+        <footer class="site-footer"> 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-12 mb-4">
-                        <h5 class="site-footer-title mb-3">Contactos</h5>
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+
+                       <h6 class="mb-3">Acerca de</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
-                        <p class="text-white d-flex mb-2">
-                            <i class="bi-whatsapp me-2"></i>
-                            <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion" class="site-footer-link">+591 - 69612086 </a>
+                        <p  class="text-white  texto-justificado mt-3" >
+                            El sitio donde podrá encontrar 
+                            <br>los mejore catálogo de coches.
                         </p>
-                        <p class="text-white d-flex">
-                            <i class="bi-envelope me-2"></i><a href="mailto:ventas@veloci.com.bo" class="site-footer-link">ventas@veloci.com.bo</a>
-                        </p>
-                        <p class="text-white d-flex mt-3">
-                            <i class="bi-geo-alt me-2"></i> Santa Cruz Avenida Cristo Redentor entre sexto y septimo anillo (a lado de Supermercado Hipermaxi)
-                        </p>
+                        
+                        <img src="images/logveloci blanco.png" class="logo img-fluid" alt="">
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                        <h5 class="site-footer-title mb-3">Horarios de  Atención</h5>
+                        <h6 class=" mb-3">Horarios de  Atención</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
                         <p class="text-white d-flex mt-3">
                             <i class="bi-clock-fill me-2"></i>
@@ -164,21 +190,43 @@
                                 Mañanas: 8:00 - 12:00<br>
                                 Tarde: 14:00 - 18:00
                         </p>
+
                     </div>
+                    
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        <h5 class="site-footer-title mb-3">Acerca de</h5>
+                        
+                        <h6 class=" mb-3" >Contactos</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
-                        <p class="text-white d-flex mt-3">
-                            El sitio donde podrá encontrar los mejores vehículos, catálogos de coches o contactar con nuestro equipo de profesionales.
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-whatsapp me-2"></i>
+
+                            <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion" class="site-footer-link">
+                                +591 - 69612086 
+                            </a>
                         </p>
-                        <img src="{{asset('assets/images/logveloci blanco.png')}}" class="logo img-fluid" alt="">
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:ventas@veloci.com.bo" class="site-footer-link">
+                                <span > ventas@veloci.com.bo</span> 
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex mt-3 ">
+                            <i class="bi-geo-alt me-2"></i>
+                            <span class="texto-justificado" style="font-size: 14px">Santa Cruz Avenida Cristo Redentor entre <br>y septimo anillo (a lado de Supermercado <br> Hipermaxi)</span>
+                        </p>
                     </div>
+                    
                 </div>
             </div>
 
             <div class="site-footer-bottom">
                 <div class="container">
                     <div class="row">
+                        
                         <div class="col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                             <ul class="social-icon">
                                 <li class="social-icon-item">
@@ -210,7 +258,6 @@
                 </div>
             </div>
         </footer>
-
         <script src="{{asset('assets/js/jquery.min.js')}}"></script>
         <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('assets/js/jquery.sticky.js')}}"></script>

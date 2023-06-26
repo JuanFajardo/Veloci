@@ -27,7 +27,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/Tienda/{busqueda}/Marca', [App\Http\Controllers\HomeController::class, 'show'])->name('home');
 
 Route::get('/Tienda/{id}' , 'App\Http\Controllers\VehiculoController@show');
 Route::get('/Tienda' , 'App\Http\Controllers\VehiculoController@tienda');
+
+Route::get('/Inventario/{tipo}' , 'App\Http\Controllers\VehiculoController@inventarioTipo');
+Route::get('/Pagina/{pagina}' , 'App\Http\Controllers\VehiculoController@pagina');
+
+Route::post('/Tienda' , 'App\Http\Controllers\VehiculoController@filtro')->name('Vehiculo.filtro');

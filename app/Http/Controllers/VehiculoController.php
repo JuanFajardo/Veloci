@@ -23,7 +23,9 @@ class VehiculoController extends Controller
         $foto3 = $request->file('foto3')->store('public/images');
         $foto4 = $request->file('foto4')->store('public/images');
         $foto5 = $request->file('foto5')->store('public/images');
-        $foto6 = $request->file('foto6')->store('public/images');
+        if( isset( $request->foto6 ) )
+            $foto6 = $request->file('foto6')->store('public/images');
+
         $pdf = $request->file('ficha')->store('public/images');
         
 
@@ -47,7 +49,8 @@ class VehiculoController extends Controller
         $dato->foto3 = $foto3;
         $dato->foto4 = $foto4;
         $dato->foto5 = $foto5;
-        $dato->foto6 = $foto6;
+        if( isset( $request->foto6 ) )
+            $dato->foto6 = $foto6;
         $dato->ficha = $pdf;
         $dato->popular = False;
         $dato->save();
@@ -60,7 +63,7 @@ class VehiculoController extends Controller
 
     public function show($id){
         $dato = Vehiculo::find($id);
-        $datos = Vehiculo::Where( 'tipo', $dato->tipo )->get();
+        $datos = Vehiculo::Where( 'tipo', $dato->tipo )->paginate(3);
         return view('vehiculo.show', compact('dato', 'datos'));
     }
 
@@ -130,6 +133,7 @@ class VehiculoController extends Controller
         return redirect()->route('Vehiculo.index')
             ->with('success', 'Activo');
     }
+
     public function popular($id){
         $dato = Vehiculo::find($id);
         $dato->popular= !($dato->popular);
@@ -140,7 +144,6 @@ class VehiculoController extends Controller
 
     public function destroy(Product $product){
         $product->delete();
-
         return redirect()->route('products.index')
             ->with('success', 'Product deleted successfully');
     }
@@ -152,4 +155,65 @@ class VehiculoController extends Controller
     }
 
 
+    public function filtro(Request $request){
+        $anio  = $marca = $tipo = $combustible = "%";
+        $msj = ''; 
+       // {"_token":"NXT6iqAflE2t9qvK6QqmCoiC0gDPtC0uIKmFHvm0","anio":"2023","marca":"--","tiptipoo":"Camioneta","combustible":"--","boton":"Filtrar"}
+       if($request->anio != '--'){
+            $anio = $request->anio;
+            $msj = $msj.' <b>Año:</b> '.$anio;
+        }
+        if($request->marca != '--'){
+            $marca = $request->marca;
+            $msj = $msj.' <b>Marca:</b> '.$marca;
+        }
+        if($request->tipo != '--'){
+            $tipo = $request->tipo;
+            $msj = $msj.' <b>Tipo de vehiculo:</b> '.$tipo;
+        }
+        if($request->combustible != '--'){
+            $combustible = $request->combustible;
+            $msj = $msj.' <b>Combustible:</b> '.$combustible;
+        }
+       $datos = Vehiculo::Where( 'anio', 'like', $anio)->where('marca', 'like', $marca)->where('tipo', 'like', $tipo)->where('combustible', 'like', $combustible)->paginate(12);
+       $sucess = $msj;
+       return view('vehiculo.tienda', compact('datos','sucess'));
+    }
+
+    public function inventarioTipo($tipo){
+        $datos = $sucess = $combustible = $tipo = "-";
+
+        if ($tipo == 'Camioneta'){
+            $marca = "Camioneta";
+            $success ="Camioneta";
+        }
+        if ($tipo == 'Vagoneta'){
+            $marca = "Vagoneta";
+            $success = "Vagoneta";
+        }
+        if ($tipo == 'Seminuevo'){
+            $marca = "Seminuevo";
+            $success = "Semi Nuevos";
+        }
+
+        if ($tipo == 'Electrica'){
+            $combustible = "Electrico";
+            $success = "Electrica";
+        }
+        if ($tipo == 'Hibridos'){
+            $combustible = "Hibrido" ;
+            $success = "Hibrido";
+        }
+        
+        $datos = Vehiculo::Where('tipo', 'like', $tipo)->where('combustible', 'like', $combustible)->paginate(12);
+        return view('vehiculo.tienda', compact('datos','sucess'));
+    }
+
+    public function pagina( $pagina ){
+        //return $pagina;
+        return view($pagina);
+    }
+
 }
+
+

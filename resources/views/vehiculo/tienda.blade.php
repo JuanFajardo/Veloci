@@ -1,9 +1,6 @@
 @extends('veloci')
 
 @section('producto')
-  @if( strlen($sucess) > 2 )
-    <h1>{{$sucess}} </h1>
-  @endif
 
 <section class="section-padding section-bg" id="section_3">
     <div class="container">
@@ -12,156 +9,101 @@
             @if( isset($busqueda) )
               <h2>{{$busqueda}}</h2>
             @else
-              <h2>Inventario</h2>
+              @if( strlen($sucess) > 2 )
+                <h3>{!! $sucess !!}</h3>
+              @else
+                <h2>Inventario</h2>
+              @endif
             @endif
             
-
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
         <div class="row">
             <div class="col-lg-3 col-12 mb-4">
+            <form action="{{ route('Vehiculo.filtro') }}" method="POST" enctype="multipart/form-data" class="col-md-12 m-auto card-body" >
+            @csrf
                 <div class="container mt-3">
                     <h4>Filtro</h4>
                     <div id="accordion">
                       <div class="card">
                         <div class="card-header">
-                          <a class=" dropdown-item btn" data-bs-toggle="collapse" href="#collapseOne">
-                            Año
-                          </a>
-                        </div>
-                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-                          <div class="card-body">
-                            <ul class="list-group" >
-                                <li class="list-group-item">
-                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                  2019
-                                </li>
-                                <li class="list-group-item">
-                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                  2020
-                                </li>
-                                <li class="list-group-item">
-                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                  2021
-                                </li>
-                                <li class="list-group-item">
-                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                 2022
-                                </li>
-                                <li class="list-group-item">
-                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                  2023
-                                </li>
-                              </ul>
-                          </div>
+                          <p class=" dropdown-item btn" data-bs-toggle="collapse" href="#collapseOne"> Año</p>
+                          <select name="anio" id="anio" class="form-select form-select-lg mb-3">
+                              <option value="--"> </option>
+                            @for($i=date('Y'); $i>=2019; $i--)
+                                <option value="{{$i}}">{{$i}}</option>
+                            @endfor
+                          </select>
                         </div>
                       </div>
                       
                       <div class="card">
                         <div class="card-header">
-                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-                          Marca
-                        </a>
-                        </div>
-                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-                            <div class="card-body">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Jaguar
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Toyota
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Ram
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Volvo
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Hyundai
-                                    </li>
-                                  </ul>
-                              </div>
+                          <p class="collapsed btn" data-bs-toggle="collapse">Marca</p>
                           
+                          <select name="marca" id="marca" class="form-select form-select-lg mb-3">
+                                <option value="--" > </option>
+                                <option value="Land Rover">Land Rover</option> 
+                                <option value="Jaguar">Jaguar</option> 
+                                <option value="Mercedes Benz">Mercedes Benz</option> 
+                                <option value="Cadillac">Cadillac</option> 
+                                <option value="Audi">Audi</option> 
+                                <option value="Dodge">Dodge</option> 
+                                <option value="RAM">RAM</option> 
+                                <option value="Jeep">Jeep</option> 
+                                <option value="Bronco">Bronco</option> 
+                                <option value="Toyota">Toyota</option> 
+                                <option value="Volkswagen">Volkswagen</option> 
+                                <option value="Volvo">Volvo</option> 
+                                <option value="Nissan">Nissan</option> 
+                                <option value="Hyundai">Hyundai</option> 
+                                <option value="Mitsubishi">Mitsubishi</option>
+                          </select>
+                        </div>
+                        
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <p class=" dropdown-item btn" data-bs-toggle="collapse" href="#collapseOne"> Tipo de Vehículo</p>
+                          <select name="tipo" id="tipo" class="form-select form-select-lg mb-3">
+                              <option value="--"> </option>
+                              <option value="Camioneta">Camioneta</option>
+                              <option value="Vagoneta">Vagoneta</option>
+                              <option value="Semi-Nuevo">Semi-Nuevo</option>
+                          </select>
                         </div>
                       </div>
                       <div class="card">
                         <div class="card-header">
-                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-                            Tipo de Vehículo
-                          </a>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-                          <div class="card-body">
-                            <div class="card-body">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Camioneta
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Vagoneta
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Eléctrico
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Híbrido
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Semi-Nuevo
-                                    </li>
-                                  </ul>
-                              </div>
-                          </div>
+                          <p class=" dropdown-item btn" data-bs-toggle="collapse" href="#collapseOne">Combustible</p>
+                          <select name="combustible" id="combustible" class="form-select form-select-lg mb-3">
+                              <option value="--"> </option>
+                              <option value="Gasolina">Gasolina</option>
+                              <option value="Diesel">Diesel</option>
+                              <option value="Hibrido">Hibrido</option>
+                              <option value="Electrico">Eléctrico</option>
+                          </select>
                         </div>
                       </div>
+
                       <div class="card">
                         <div class="card-header">
-                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
-                            Combustible
-                          </a>
-                        </div>
-                        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
-                          <div class="card-body">
-                            <div class="card-body">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Gasolina
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Diesel
-                                    </li>
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                      Eléctrico
-                                    </li>
-                                    
-                                  </ul>
-                              </div>
-                          </div>
+                          <input type="submit" class="form-control mt-1 btn btn-primary" name="boton" value="Filtrar" id="">
                         </div>
                       </div>
+
+                        
+                      
                     </div>
                   </div>
+              </form>
             </div>
             
             <div class="col-lg-9 col-12 mb-4">
-                <?php $id=3; ?>
+                <?php $contador=0; ?>
                 @foreach ($datos as $dato)
-                @if($id%3 ==0 )    
+                
+                @if($contador == 0 )    
                 <div class="row">
                 @endif    
 
@@ -193,12 +135,13 @@
                     </div>
                     
                 
-                @if($id%6 ==0 )    
-                </div>
+                @if( $contador == 2 )    
+                </div><br/>
+                <?php  $contador = 0; ?>
+                @else
+                <?php $contador++; ?>
                 @endif    
                 
-
-                <?php $id++; ?>
                 @endforeach
 
                 <div class="mt-5">

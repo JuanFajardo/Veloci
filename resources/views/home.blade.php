@@ -42,13 +42,14 @@
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
 
-        <?php $id=3; ?>
-        @foreach($datos as $dato)
-        @if($id%3 ==0 )    
+        <?php $contador=0; ?>
+        @foreach ($datos as $dato)
+                
+        @if($contador == 0 )    
         <div class="row">
         @endif
 
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-4">
             <div class="custom-block-wrap">
                 <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
                 <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
@@ -58,14 +59,13 @@
                         <h5 class="mb-3">{{$dato->titulo}}</h5>
                         <hr style="width: 230px;">
                         <p class="mb-0"> Motor <strong> {{$dato->motor}}</strong></p>
-                        <p class="mb-0"> Traccion <strong>{{$dato->traccion}}</strong></p>
+                        <p class="mb-0"> Tracción <strong>{{$dato->traccion}}</strong></p>
                         <p class="mb-0"> Combustible <strong>{{$dato->combustible}}</strong></p>
                         <hr style="width: 230px;">
                          <div class="d-flex align-items-center mb-0 ">
-                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn btn me-2"><i class="bi-plus-lg"></i></a>
-
-                        <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn btn  me-2"><i class="bi-whatsapp"></i></a>
-                        <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn btn me-2"><i class="bi-download"></i></a>
+                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
+                        <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                        <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(53, 62, 102);"></i></a>
                         </div>
                     </div>
                     
@@ -75,18 +75,20 @@
         </div>
         
     
-        @if($id%6 ==0 )    
-        </div>
+        
+        @if( $contador == 2 )    
+            </div><br/>
+            <?php  $contador = 0; ?>
+        @else
+            <?php $contador++; ?>
         @endif    
         
-        <?php $id++; ?>
         @endforeach
         
     </div>
     <div class="row">
         <div class="col text-end mt-5">
-            <p class="text-center"><a class="btn btn-secondary" href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Catálogo</span></a></p>
-           
+            <p class="text-center"><a class="custom-btn btn " href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Catálogo</span></a></p>
     </div>
     </div>
     
@@ -198,7 +200,7 @@
         <div class="row"><!--------------------------------------------------------------------------------ACTUALIZACION DE UBICACION--------------------------------------------------------------------------------------------------->
                 <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
                     <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-                    var setting = {"query":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","width":1095,"height":600,"satellite":false,"zoom":17,"placeId":"ChIJxQ4n--7n8ZMRHF8cGqXnVTg","cid":"0x3855e7a51a1c5f1c","coords":[-17.7293141,-63.16689729999999],"lang":"es","queryString":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","centerCoord":[-17.7293141,-63.16689729999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"944979"};
+                    var setting = {"query":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","width":1266,"height":600,"satellite":false,"zoom":17,"placeId":"ChIJxQ4n--7n8ZMRHF8cGqXnVTg","cid":"0x3855e7a51a1c5f1c","coords":[-17.7293141,-63.16689729999999],"lang":"es","queryString":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","centerCoord":[-17.7293141,-63.16689729999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"944979"};
                     var d = document;
                     var s = d.createElement('script');
                     s.src = 'https://1map.com/js/script-for-user.js?embed_id=944979';
