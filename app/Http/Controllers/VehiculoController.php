@@ -181,31 +181,38 @@ class VehiculoController extends Controller
     }
 
     public function inventarioTipo($tipo){
-        $datos = $sucess = $combustible = $tipo = "-";
+        $datos = $sucess = $combustible = $marca = "-";
 
-        if ($tipo == 'Camioneta'){
+        if ($tipo == "Camioneta"){
             $marca = "Camioneta";
+            $combustible = '%';
             $success ="Camioneta";
         }
-        if ($tipo == 'Vagoneta'){
+        if ($tipo == "Vagoneta"){
             $marca = "Vagoneta";
+            $combustible = '%';
             $success = "Vagoneta";
         }
-        if ($tipo == 'Seminuevo'){
-            $marca = "Seminuevo";
-            $success = "Semi Nuevos";
+        if ($tipo == "Semi-Nuevo"){
+            $marca = "Semi-Nuevo";
+            $combustible = '%';
+            $success = "Semi-Nuevo";
         }
 
-        if ($tipo == 'Electrica'){
+
+        if ($tipo == "Electrica"){
             $combustible = "Electrico";
-            $success = "Electrica";
+            $marca = "%";
+            $success = "Electrico";
         }
-        if ($tipo == 'Hibridos'){
+        if ($tipo == "Hibrido"){
             $combustible = "Hibrido" ;
+            $marca = "%";
             $success = "Hibrido";
         }
         
-        $datos = Vehiculo::Where('tipo', 'like', $tipo)->where('combustible', 'like', $combustible)->paginate(12);
+        $datos = Vehiculo::Where('tipo', 'like', $marca)->where('combustible', 'like', $combustible)->paginate(12);
+        //return $datos;
         return view('vehiculo.tienda', compact('datos','sucess'));
     }
 

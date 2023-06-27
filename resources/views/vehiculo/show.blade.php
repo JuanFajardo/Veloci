@@ -118,17 +118,17 @@
                                 </tbody>
                             </table>
                     </div>
-                    <div class="tags-block">
+                    <div class="tags-block mt-5">
                         
                         <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class=" tags-block-link " style="color: white;">
                             <i class=" bi-download"></i>  <span>Ficha Tecnica</span> 
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion%20de%20{{$dato->titulo}}" class="tags-block-link" style="color: white;">
+                        <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20estoy%20estoy%20interesado%20en%20{{$dato->titulo}}" class="tags-block-linkw" style="color: white;">
                             <i class=" bi-whatsapp"></i>  <span>Whatsapp</span>
                         </a>
                     </div>
 
-                    <form class="custom-form contact-form" action="#" method="post" role="form">
+                    <form class="custom-form contact-form mt-5" action="#" method="post" role="form">
                         <p class="mb-4"> <strong>Envia un mensaje para mas informacion:</strong>
                             
                         </p>
@@ -167,7 +167,7 @@
                                 <hr style="width: 230px;">
                                  <div class="d-flex align-items-center mb-0 ">
                                 <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
-                                <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion%20{{$dato->titulo}}" class="custom-btn-w btn me-1 "><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                                <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20mas%20informacion%20de%20{{$dato->titulo}}" class="custom-btn-w btn me-1 "><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
                                 <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn mb-0"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
                                 </div> 
                             </div>
@@ -182,4 +182,3 @@
 </section>
 
 @stop
-

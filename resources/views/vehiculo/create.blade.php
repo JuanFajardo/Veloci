@@ -44,7 +44,7 @@
             <label> <b>Tipo</b> </label>
             <input type="text" class="form-control mt-1" name="tipo" placeholder="Camioneta" required  list="tipo-list" autocomplete="off" >
             <datalist id="tipo-list"> 
-                <option value="Caminioneta">Caminioneta</option> 
+                <option value="Camioneta">Caminioneta</option> 
                 <option value="Vagoneta">Vagoneta</option>
                 <option value="Semi-Nuevo">Semi-Nuevo</option>
                 

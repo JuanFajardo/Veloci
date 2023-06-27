@@ -160,8 +160,27 @@
             <p class="social-icon-item">
                 <a href="https://wa.me/59169612086" class="whatsapp-float bi-whatsapp" target="_blank"></a>
             </p>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Su correo ah sido enviado, nos contactaremos con su persona lo mas antes posible.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
+
+        
         
 
         <footer class="site-footer"> 
@@ -176,7 +195,7 @@
                             <br>los mejore catálogo de coches.
                         </p>
                         
-                        <img src="images/logveloci blanco.png" class="logo img-fluid" alt="">
+                        <img  src="{{asset('assets/images/logveloci blanco.png')}}" class="logo img-fluid" alt="">
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mx-auto">
                         <h6 class=" mb-3">Horarios de  Atención</h6>

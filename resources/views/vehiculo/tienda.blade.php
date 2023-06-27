@@ -88,7 +88,7 @@
 
                       <div class="card">
                         <div class="card-header">
-                          <input type="submit" class="form-control mt-1 btn btn-primary" name="boton" value="Filtrar" id="">
+                          <input type="submit" class="form-control mt-1 custom-btn btn" name="boton" value="Filtrar" id="">
                         </div>
                       </div>
 
@@ -116,15 +116,15 @@
                                 <div class="custom-block-body">
                                     <h5 class="mb-3">{{$dato->titulo}}</h5>
                                     <hr style="width: 230px;">
-                                    <p class="mb-0"> Motor <strong> {{$dato->motor}}</strong></p>
-                                    <p class="mb-0"> Traccion <strong>{{$dato->traccion}}</strong></p>
-                                    <p class="mb-0"> Combustible <strong>{{$dato->combustible}}</strong></p>
+                                    <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
+                                    <p class="mb-0"> Tracción: <strong>{{$dato->traccion}}</strong></p>
+                                    <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
                                     <hr style="width: 230px;">
                                      <div class="d-flex align-items-center mb-0 ">
                                     
-                                    <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn btn me-2"><i class="bi-plus-lg"></i></a>
-                                    <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn btn  me-2"><i class="bi-whatsapp"></i></a>
-                                    <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn btn me-2"><i class="bi-download"></i></a>
+                                    <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><i class="bi-plus-lg"></i></a>
+                                    <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20vi%20este%20vehiculo%20{{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                                    <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
 
                                     </div>
                                 </div>
@@ -145,24 +145,7 @@
                 @endforeach
 
                 <div class="mt-5">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                          <li class="page-item">
-                            <a class="page-link active" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                            </a>
-                          </li>
-                          {{ $datos->links() }}
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
+                  {{ $datos->links() }}
                 </div>
             </div>
         </div>
@@ -172,9 +155,4 @@
 </section>
 
 
-
-    
-    
-
-    
 @endsection

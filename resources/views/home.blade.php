@@ -38,7 +38,7 @@
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
             <hr style="width:60px; height:2px; background:rgb(15, 38, 114)">
-            <h2>Los Polulares</h2>
+            <h4 style="color: rgb(48, 54, 82);">Los Polulares</h4>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
 
@@ -58,9 +58,9 @@
                     <div class="custom-block-body">
                         <h5 class="mb-3">{{$dato->titulo}}</h5>
                         <hr style="width: 230px;">
-                        <p class="mb-0"> Motor <strong> {{$dato->motor}}</strong></p>
-                        <p class="mb-0"> Tracción <strong>{{$dato->traccion}}</strong></p>
-                        <p class="mb-0"> Combustible <strong>{{$dato->combustible}}</strong></p>
+                        <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
+                        <p class="mb-0"> Tracci贸n: <strong>{{$dato->traccion}}</strong></p>
+                        <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
                         <hr style="width: 230px;">
                          <div class="d-flex align-items-center mb-0 ">
                         <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
@@ -88,7 +88,7 @@
     </div>
     <div class="row">
         <div class="col text-end mt-5">
-            <p class="text-center"><a class="custom-btn btn " href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Catálogo</span></a></p>
+            <p class="text-center"><a class="custom-btn btn " href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Cat谩logo</span></a></p>
     </div>
     </div>
     
@@ -97,7 +97,7 @@
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
             <hr style="width:50px; height:2px; background:rgb(15, 38, 114)">
-            <h2>Las Mejores Marcas</h2>
+            <h4 style="color: rgb(48, 54, 82);">Las Mejores Marcas</h4>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
         <div class="row">
@@ -194,13 +194,13 @@
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
             <hr style="width:50px; height:2px; background:rgb(15, 38, 114)">
-            <h2 >Visita Nuestro Showroom</h2>
+            <h4 style="color: rgb(48, 54, 82);">Visita Nuestro Showroom</h4>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
-        <div class="row"><!--------------------------------------------------------------------------------ACTUALIZACION DE UBICACION--------------------------------------------------------------------------------------------------->
+        <div class="row "><!--------------------------------------------------------------------------------ACTUALIZACION DE UBICACION--------------------------------------------------------------------------------------------------->
                 <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
                     <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-                    var setting = {"query":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","width":1266,"height":600,"satellite":false,"zoom":17,"placeId":"ChIJxQ4n--7n8ZMRHF8cGqXnVTg","cid":"0x3855e7a51a1c5f1c","coords":[-17.7293141,-63.16689729999999],"lang":"es","queryString":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","centerCoord":[-17.7293141,-63.16689729999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"944979"};
+                    var setting = {"query":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","width":1300,"height":600,"satellite":false,"zoom":17,"placeId":"ChIJxQ4n--7n8ZMRHF8cGqXnVTg","cid":"0x3855e7a51a1c5f1c","coords":[-17.7293141,-63.16689729999999],"lang":"es","queryString":"Veloci, Avenida Cristo Redentor, Santa Cruz de la Sierra, Bolivia","centerCoord":[-17.7293141,-63.16689729999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"944979"};
                     var d = document;
                     var s = d.createElement('script');
                     s.src = 'https://1map.com/js/script-for-user.js?embed_id=944979';
@@ -215,42 +215,4 @@
     </div>
 </section>
 
-<section class="news-detail-header-section text-center">
-    <div class="container">
-        <div class="row">
-
-        </div>
-        <div class="row ">
-            <div class="col-lg-3 col-md-3 col-12">
-                <div class="custom-text-box  flex-wrap d-lg-block mb-lg-0">
-                    <div class="counter-thumb"> 
-                            <span class="counter-number" data-from="1" data-to="200" data-speed="1000"><i class="bi-plus-lg"></i></span>
-                            <span class="counter-number-text"></span>
-                        <span class="counter-text">Clientes</span>
-                    </div> 
-                </div> 
-            </div>
-            <div class="col-lg-3 col-md-3 col-12">
-                <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
-                    <div class="counter-thumb"> 
-                            <span class="counter-number" data-from="1" data-to="80" data-speed="1000"></span>
-                            <span class="counter-number-text"></span>
-                        <span class="counter-text">Vehiculos</span>
-                    </div> 
-                </div> 
-            </div>
-            <div class="col-lg-3 col-md-3 col-12">
-                <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
-                    <div class="counter-thumb">
-                            <span class="counter-number" data-from="1" data-to="200" data-speed="1000"></span>
-                            <span class="counter-number-text"></span>
-                        <span class="counter-text">Clientes Satisfechos</span>
-                    </div> 
-
-                </div> 
-            </div>
-
-        </div>
-    </div>
-</section>
 @endsection

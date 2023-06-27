@@ -45,8 +45,9 @@
             <label> <b>Tipo</b> </label>
             <input type="text" class="form-control mt-1" name="tipo" placeholder="Camioneta" required  list="tipo-list" autocomplete="off" value="{{$dato->tipo}}">
             <datalist id="tipo-list"> 
-                <option value="Caminioneta">Caminioneta</option> 
-                <option value="Vagoneta">Vagoneta</option> 
+                <option value="Camioneta">Caminioneta</option> 
+                <option value="Vagoneta">Vagoneta</option>
+                <option value="Semi-Nuevo">Semi-Nuevo</option>
             </datalist>        
         </div>
     </div>
@@ -60,7 +61,7 @@
                 <option value="Gasolina">Gasolina</option> 
                 <option value="Diesel">Diesel</option> 
                 <option value="Hibrido">Hibrido</option> 
-                <option value="Electrico">Electrico</option> 
+                <option value="Electrico">Electrico</option>
             </datalist>
         </div>
         <div class="form-group col-md-3 mb-3">
