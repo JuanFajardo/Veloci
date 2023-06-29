@@ -213,19 +213,15 @@ class VehiculoController extends Controller
         }
         
         $datos = Vehiculo::Where('tipo', 'like', $marca)->where('combustible', 'like', $combustible)->paginate(12);
-        //return $datos;
         return view('vehiculo.tienda', compact('datos','sucess'));
     }
 
     public function pagina( $pagina ){
-        //return $pagina;
         return view($pagina);
     }
 
     public function correo(Request $request){
         $nombre     = $request->nombre."|".$request->email."|".$request->message."|".$request->titulo;
-        //return $nombre; 
-        //'eduardofloresscz@gmail.com',  
         foreach(['pagina@veloci.com.bo'] as $correo ){
             try {
                 Mail::to($correo)->send(new VelociMail($nombre));//, $email, $message, $titulo ));
@@ -234,6 +230,13 @@ class VehiculoController extends Controller
             }   
         }
         return ["mensaje"=>"enviado"];
+    }
+
+    public function buscar(Request $request){
+        $datos = Vehiculo::Where('titulo', 'like', '%'.$request->busqueda.'%')->paginate(12);
+        $sucess = "Busqueda de : ".$request->busqueda;
+        return view('vehiculo.tienda', compact('datos','sucess'));
+
     }
 
 }
