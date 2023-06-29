@@ -1,11 +1,13 @@
 @extends('veloci')
 
 @section('producto')
+<br/><br/>
 <style>
     label {
         font-weight: bold;
     }
-</style>    
+</style>  
+  
 <form action="{{ route('Vehiculo.store') }}" method="POST" enctype="multipart/form-data" class="col-md-12 m-auto card-body" >
     @csrf
 

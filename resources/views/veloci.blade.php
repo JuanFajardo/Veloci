@@ -11,6 +11,7 @@
         <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/bootstrap-icons.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/templatemo-kind-heart-charity.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
         <style>
             .whatsapp-float {
             position: fixed;
@@ -18,9 +19,10 @@
             right: 20px;
             width: 60px;
             height: 60px;
-            color: green;
+            color: white;
+            background-color: #01be3e;
             font-size: 40px;
-            border-radius: 50%;
+            border-radius: 70%;
             text-align: center;
             line-height: 60px;
             z-index: 999;
@@ -40,7 +42,7 @@
                     <div class="col-lg-12 d-flex">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-whatsapp me-2"></i>
-                            <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion">
+                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
                                 +591 - 69612086 
                             </a>
                         </p>
@@ -117,6 +119,11 @@
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{asset('index.php/Pagina/quienes')}}">¿Quienes Somo?</a></li>
                                 <li><a class="dropdown-item" href="{{asset('index.php/Pagina/clasificados')}}">Clasificados</a></li>
+                                
+                                @if( auth()->check() )
+                                    <li><a class="dropdown-item" href="{{asset('index.php/Vehiculo')}}">Administrar</a></li>
+                                @endif
+
                             </ul>
                         </li>
                         <li class="nav-item ms-3">
@@ -161,7 +168,7 @@
                 <a href="https://wa.me/59169612086" class="whatsapp-float bi-whatsapp" target="_blank"></a>
             </p>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="correoModal" tabindex="-1" aria-labelledby="correoModal" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -219,8 +226,7 @@
 
                         <p class="text-white d-flex mb-2">
                             <i class="bi-whatsapp me-2"></i>
-
-                            <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion" class="site-footer-link">
+                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
                                 +591 - 69612086 
                             </a>
                         </p>
@@ -283,6 +289,7 @@
         <script src="{{asset('assets/js/click-scroll.js')}}"></script>
         <script src="{{asset('assets/js/counter.js')}}"></script>
         <script src="{{asset('assets/js/custom.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
         @yield('js')
     </body>
 </html>

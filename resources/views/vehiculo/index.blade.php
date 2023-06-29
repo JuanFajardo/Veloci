@@ -1,9 +1,10 @@
 @extends('veloci')
 
 @section('producto')
-<a href="{{asset('index.php/Vehiculo/create')}}" class="btn btn-success"> Nuevo Vehiculo</a>
+<br/>
+<a href="{{asset('index.php/Vehiculo/create')}}" class="btn btn-success"> <b>Nuevo Vehiculo</b> </a><br/>
 <br>
-<table class="table" border="1">
+<table id="tablaAgenda" class="table table-striped table-bordered" >
     <thead>
         <tr>
             <th> Titulo </th>
@@ -43,4 +44,32 @@
     @endforeach
     </tbody>
 </table>
+@stop
+
+@section('js')
+<script>
+    $(document).ready(function(){
+        $('#tablaAgenda').DataTable({
+            "order": [[ 0, 'asc']],
+            "language": {
+                "bDeferRender": true,
+                "sEmtpyTable": "No ay registros",
+                "decimal": ",",
+                "thousands": ".",
+                "lengthMenu": "Mostrar _MENU_ ",
+                "zeroRecords": "No se encontro nada,  lo siento",
+                "info": "Mostrar paginas [_PAGE_] de [_PAGES_]",
+                "infoEmpty": "No ay entradas permitidas",
+                "search": "Buscar ",
+                "infoFiltered": "(Busqueda de _MAX_ registros en total)",
+                "oPaginate":{
+                    "sLast":"Final",
+                    "sFirst":"Principio",
+                    "sNext":"Siguiente",
+                    "sPrevious":"Anterior"
+                }
+            }
+        });
+    });
+</script>
 @stop
