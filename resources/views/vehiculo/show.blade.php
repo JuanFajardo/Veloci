@@ -7,7 +7,7 @@
         <div class="row">
                 <div class="col-lg-8 col-12">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" alt="Card image cap" id="product-detail">
+                        <img class="card-img img-fluid" src="{{asset('/'. $dato->foto1)}}" alt="Card image cap" id="product-detail">
                     </div>
                     <div class="row">
                         <!--Start Controls-->
@@ -28,17 +28,17 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" alt="Product Image 1">
+                                                <img class="card-img img-fluid" src="{{asset('/'.$dato->foto1 )}}" onclick='cargarImagen("{{$dato->foto1}}")'>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto2)[2] )}}" alt="Product Image 2">
+                                                <img class="card-img img-fluid" src="{{asset('/'.$dato->foto2 )}}" onclick='cargarImagen("{{$dato->foto2}}")'>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto3)[2] )}}" alt="Product Image 3">
+                                                <img class="card-img img-fluid" src="{{asset('/'.$dato->foto3 )}}" onclick='cargarImagen("{{$dato->foto3}}")'>
                                             </a>
                                         </div>
                                     </div>
@@ -50,22 +50,25 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto4)[2] )}}" alt="Product Image 4">
+                                                <img class="card-img img-fluid" src="{{asset('/'.$dato->foto4 )}}" onclick='cargarImagen("{{$dato->foto4}}")'>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto5)[2] )}}" alt="Product Image 5">
+                                                <img class="card-img img-fluid" src="{{asset('/'.$dato->foto5 )}}" onclick='cargarImagen("{{$dato->foto5}}")'>
                                             </a>
                                         </div>
+                                        
+                                        @if( strlen($dato->foto6) > 10 )
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="{{asset('public/images/'.explode("/", $dato->foto6)[2] )}}" alt="Product Image 6">
+                                                <img class="card-img img-fluid" src="{{asset('/'.$dato->foto6 )}}" onclick='cargarImagen("{{$dato->foto6}}")'>
                                             </a>
                                         </div>
+                                        @endif
+
                                     </div>
                                 </div>
-                                <!--/.Second slide-->
 
                             </div>
                             <!--End Slides-->
@@ -128,14 +131,15 @@
                         </a>
                     </div>
 
-                    <form class="custom-form contact-form mt-5" action="#" method="post" role="form">
+                    <form class="custom-form contact-form mt-5"  role="form">
+                        @csrf
                         <p class="mb-4"> <strong>Envia un mensaje para mas informacion:</strong>
-                            
                         </p>
+                        <input type="hidden" name="titulo" id="titulo"  value="{{asset('/index.php/Tienda/'.$dato->id)}}" required>
                         <input type="text" name="nombre" id="nombre"  class="form-control" placeholder="ejemplo:Luis" required>
                         <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="ejemplo@gmail.com" required>
-                        <textarea name="message" rows="5" class="form-control" id="message" placeholder="Mensaje" required></textarea>
-                        <button type="submit" class="form-control">Enviar</button>
+                        <textarea name="message" id="message" rows="5" class="form-control"  placeholder="Mensaje" required></textarea>
+                        <a href="#" id ="boton" class="btn form-control" >Enviar</a>
                     </form>
                 </div>
         </div>
@@ -180,5 +184,60 @@
         </div>
     </div>
 </section>
+
+@stop
+
+@section('js')
+<script>
+    function cargarImagen(url) {
+    var imagen = document.getElementById("product-detail");
+    imagen.src = '{{asset("")}}/'+ url;
+  }
+
+  $('#boton').on( "click", function(event){
+
+    event.preventDefault();
+
+    if($('#nombre').val() != "" && $('#email').val()!="" && $('#message').val()!=""){
+        var correoModal = document.getElementById('correoModal');
+        correoModal.classList.add('show');
+        $("#correoModal").modal('show');
+
+        $("#boton").hide();
+        const csrfToken = $('meta[name="csrf-token"]').attr('content');
+        
+        const formData = {
+        _token: csrfToken,
+        titulo: $('#titulo').val(),
+        nombre: $('#nombre').val(),
+        email: $('#email').val(),
+        message: $('#message').val()
+        };    
+        const url = '{{asset("index.php/Correo")}}';
+        
+        $('#titulo').val("");
+        $('#nombre').val("");
+        $('#email').val("");
+        $('#message').val("");
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'document',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            success: function(response) {
+                $('#titulo').val("");
+                $('#nombre').val("");
+                $('#email').val("");
+                $('#message').val("");
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    }
+  });
+</script>
 
 @stop

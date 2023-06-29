@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\Vehiculo;
+use \App\Mail\VelociMail;
+use Illuminate\Support\Facades\Mail;
 
 class VehiculoController extends Controller
 {
@@ -121,7 +123,6 @@ class VehiculoController extends Controller
 
         $dato->save();
        
-
         return redirect()->route('Vehiculo.index')
             ->with('success', 'Product updated successfully');
     }
@@ -219,6 +220,20 @@ class VehiculoController extends Controller
     public function pagina( $pagina ){
         //return $pagina;
         return view($pagina);
+    }
+
+    public function correo(Request $request){
+        $nombre     = $request->nombre."|".$request->email."|".$request->message."|".$request->titulo;
+        //return $nombre; 
+        //'eduardofloresscz@gmail.com',  
+        foreach(['pagina@veloci.com.bo'] as $correo ){
+            try {
+                Mail::to($correo)->send(new VelociMail($nombre));//, $email, $message, $titulo ));
+            } catch (\Throwable $th) {
+                printf( "".$th);
+            }   
+        }
+        return ["mensaje"=>"enviado"];
     }
 
 }

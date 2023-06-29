@@ -2,8 +2,10 @@
 
 @section('producto')
 <section class="hero-section hero-section-full-height">
+    
     <div class="container-fluid">
-        <div class="row">
+        
+        <div class="row ">
 
             <div class="col-lg-12 col-12 p-0">
                 <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
@@ -36,7 +38,26 @@
 </section>
 <section class="section-padding section-bg" id="section_3">
     <div class="container">
-        <div class="col-lg-12 col-12 text-left mb-4">
+        <div class=" row  ">
+            <div class="col-lg-12 col-12 text-center mb-4">
+                            
+                <h2>Buscador Rapido </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-5 mx-auto ">
+                    <div class="small fw-light">Buscar por marca,tipo de auto y  mas</div>
+                        <div class="input-group">
+                            <input class="form-control border-end-0 border rounded-pill" type="search" value="Buscar" id="example-search-input">
+                            <span class="input-group-append">
+                            <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
+                                <i class="bis bi-search"></i>
+                            </button>
+                            </span>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+        <div class="col-lg-12 col-12 text-left mb-4 mt-5">
             <hr style="width:60px; height:2px; background:rgb(15, 38, 114)">
             <h4 style="color: rgb(48, 54, 82);">Los Polulares</h4>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
@@ -88,7 +109,7 @@
     </div>
     <div class="row">
         <div class="col text-end mt-5">
-            <p class="text-center"><a class="custom-btn btn " href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Cat谩logo</span></a></p>
+            <p class="text-center"><a class="custom-btn btn " href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Catálogo</span></a></p>
     </div>
     </div>
     

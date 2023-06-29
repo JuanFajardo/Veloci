@@ -7,27 +7,32 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
+
+
 class VelociMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
+    public $nombre;
+    public $email;
+    public $msj;
+    public $titulo;
+
+
+    public function __construct($nombre)
+    {   
+        $dato = explode("|", $nombre);
+
+        $this->nombre = $dato[0];
+        $this->email = $dato[1];
+        $this->msj = $dato[2];
+        $this->titulo = $dato[3];
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
+    
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('vehiculo.correo');
     }
+
 }

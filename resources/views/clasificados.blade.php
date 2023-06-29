@@ -89,8 +89,7 @@
 
                                 <p class="d-flex mb-2">
                                     <i class="bi-whatsapp me-2"></i>
-
-                                    <a href="https://api.whatsapp.com/send?phone=59178718632&text=Hola%20mas%20informacion">
+                                    <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
                                         +591 - 69612086 
                                     </a>
                                 </p>

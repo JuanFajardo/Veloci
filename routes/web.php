@@ -36,4 +36,6 @@ Route::get('/Tienda' , 'App\Http\Controllers\VehiculoController@tienda');
 Route::get('/Inventario/{tipo}' , 'App\Http\Controllers\VehiculoController@inventarioTipo');
 Route::get('/Pagina/{pagina}' , 'App\Http\Controllers\VehiculoController@pagina');
 
+Route::post('/Correo' , 'App\Http\Controllers\VehiculoController@correo')->name('Enviar.Correo');
+
 Route::post('/Tienda' , 'App\Http\Controllers\VehiculoController@filtro')->name('Vehiculo.filtro');
