@@ -47,8 +47,8 @@
 
                 <div class="col-md-5 mx-auto ">
                     <div class="small fw-light">Buscar por marca,tipo de auto y  mas</div>
-                        <div class="input-group">
-                            <form action="{{route('vehiculo.buscar')}}" method="POST">
+                        <form action="{{route('vehiculo.buscar')}}" method="POST">
+                            <div class="input-group">
                                 @csrf
                                 <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Buscar" name="busqueda" id="example-search-input">
                                 <span class="input-group-append">
@@ -56,8 +56,8 @@
                                     <i class="bis bi-search"></i>
                                 </button>
                                 </span>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -69,49 +69,34 @@
         </div>
         
 
-        <?php $contador=0; ?>
-        @foreach ($datos as $dato)
-                
-        @if($contador == 0 )    
         <div class="row">
-        @endif
+        @foreach ($datos as $dato)
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-4">
+                <div class="custom-block-wrap">
+                    <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
+                    <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
 
-        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-4">
-            <div class="custom-block-wrap">
-                <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
-                <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
-
-                <div class="custom-block">
-                    <div class="custom-block-body">
-                        <h5 class="mb-3">{{$dato->titulo}}</h5>
-                        <hr style="width: 230px;">
-                        <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
-                        <p class="mb-0"> Tracción: <strong>{{$dato->traccion}}</strong></p>
-                        <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
-                        <hr style="width: 230px;">
-                         <div class="d-flex align-items-center mb-0 ">
-                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
-                        <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
-                        <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(53, 62, 102);"></i></a>
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">{{$dato->titulo}}</h5>
+                            <hr style="width: 230px;">
+                            <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
+                            <p class="mb-0"> Tracción: <strong>{{$dato->traccion}}</strong></p>
+                            <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
+                            <hr style="width: 230px;">
+                            <div class="d-flex align-items-center mb-0 ">
+                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
+                            <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                            <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(53, 62, 102);"></i></a>
+                            </div>
                         </div>
+                        
                     </div>
-                    
+                    </a>
                 </div>
-                </a>
             </div>
-        </div>
-        
-    
-        
-        @if( $contador == 2 )    
-            </div><br/>
-            <?php  $contador = 0; ?>
-        @else
-            <?php $contador++; ?>
-        @endif    
-        
         @endforeach
-        
+        </div><br/>
     </div>
     <div class="row">
         <div class="col text-end mt-5">

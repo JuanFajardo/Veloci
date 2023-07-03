@@ -19,8 +19,6 @@
             right: 20px;
             width: 60px;
             height: 60px;
-            color: white;
-            background-color: #01be3e;
             font-size: 40px;
             border-radius: 70%;
             text-align: center;
@@ -30,7 +28,8 @@
             transition: opacity 0.3s ease;
             }
             .whatsapp-float:hover {
-              opacity: 0.8;
+                width: 80px;
+                height: 80px;
             }
         </style>
     </head>
@@ -180,7 +179,9 @@
         <main>
             @yield('producto')
             <p class="social-icon-item">
-                <a href="https://wa.me/59169612086" class="whatsapp-float bi-whatsapp" target="_blank"></a>
+                <a href="https://wa.me/59169612086"  target="_blank">
+                    <img class="whatsapp-float" src="{{asset('assets/images/logo.png')}}" alt="">
+                </a>
             </p>
 
             <div class="modal fade" id="correoModal" tabindex="-1" aria-labelledby="correoModal" aria-hidden="true">

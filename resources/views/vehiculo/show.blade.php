@@ -131,15 +131,19 @@
                         </a>
                     </div>
 
-                    <form class="custom-form contact-form mt-5"  role="form">
+                    <form class="custom-form contact-form mt-2"  role="form">
                         @csrf
-                        <p class="mb-4"> <strong>Envia un mensaje para mas informacion:</strong>
+                        <p class="mb-1"> <strong>Envia un mensaje para mas informacion:</strong>
                         </p>
                         <input type="hidden" name="titulo" id="titulo"  value="{{asset('/index.php/Tienda/'.$dato->id)}}" required>
-                        <input type="text" name="nombre" id="nombre"  class="form-control" placeholder="ejemplo:Luis" required>
-                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="ejemplo@gmail.com" required>
-                        <textarea name="message" id="message" rows="5" class="form-control"  placeholder="Mensaje" required></textarea>
-                        <a href="#" id ="boton" class="btn form-control" >Enviar</a>
+                        <input type="text" name="nombre" id="nombre"  class="form-control" placeholder="ejemplo:Luis" required style="background-color:rgb(197, 197, 197);">
+                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="ejemplo@gmail.com" required  style="background-color:rgb(197, 197, 197);">
+                        <textarea name="message" id="message" rows="5" class="form-control"  placeholder="Mensaje" required  style="background-color:rgb(197, 197, 197);"></textarea>
+                        
+                        <a href="#" id ="boton" class=" tags-block-link " style="color: white;">
+                            <i class=" bi bi-send-fill"></i>  <span>Enviar Correo</span> 
+                        </a>
+
                     </form>
                 </div>
         </div>

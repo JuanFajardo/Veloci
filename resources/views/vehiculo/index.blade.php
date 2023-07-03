@@ -1,9 +1,21 @@
 @extends('veloci')
 
 @section('producto')
-<br/>
-<a href="{{asset('index.php/Vehiculo/create')}}" class="btn btn-success"> <b>Nuevo Vehiculo</b> </a><br/>
 <br>
+<div class="row">
+
+    <div class="col-lg-4 col-4 p-0">
+        &nbsp;&nbsp;&nbsp;<a href="{{asset('index.php/Vehiculo/create')}}" class="btn btn-success"> <b>Nuevo Vehiculo</b> </a>
+    </div>
+    <div class="col-lg-4 col-4 p-0">
+        <h4><p class="badge badge-info">  Cantidad de autos: <b>{{count($datos)}}</b></p> </h4>
+    </div>
+    <div class="col-lg-4 col-4 p-0">
+        <h4><p class="badge badge-info">  Cantidad de Populares: <b>{{$populares}}</b> </p> </h4>
+    </div>
+</div>
+<br/>
+
 <table id="tablaAgenda" class="table table-striped table-bordered" >
     <thead>
         <tr>
