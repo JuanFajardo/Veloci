@@ -64,9 +64,10 @@
 
         <div class="col-lg-12 col-12 text-left mb-4 mt-5">
             <hr style="width:60px; height:2px; background:rgb(15, 38, 114)">
-            <h4 style="color: rgb(48, 54, 82);">Los Polulares</h4>
+            <h2 >Los Polulares</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
+        
 
         <?php $contador=0; ?>
         @foreach ($datos as $dato)
@@ -123,7 +124,7 @@
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
             <hr style="width:50px; height:2px; background:rgb(15, 38, 114)">
-            <h4 style="color: rgb(48, 54, 82);">Las Mejores Marcas</h4>
+            <h2 >Las Mejores Marcas</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
         <div class="row">
@@ -220,7 +221,7 @@
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
             <hr style="width:50px; height:2px; background:rgb(15, 38, 114)">
-            <h4 style="color: rgb(48, 54, 82);">Visita Nuestro Showroom</h4>
+            <h2 >Visita Nuestro Showroom</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
         <div class="row "><!--------------------------------------------------------------------------------ACTUALIZACION DE UBICACION--------------------------------------------------------------------------------------------------->
@@ -240,5 +241,82 @@
         </div>
     </div>
 </section>
+<section class="section-padding ">
+                <div class="container">
+                    <div class="col-lg-12 col-12 text-left mb-4">
+                        <hr style="width:60px; height:2px; background:rgb(15, 38, 114)">
+                        <h2>La Mejor Facilidad </h2>
+                        <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
+                    </div>
+                    <div class="row">
+                        <div class=" col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-6 ">
+                                    <div class="card" style="width: 16rem;">
+                                        <div class="card-body">
+                                        <img src="{{asset('assets/images/auto2.png')}}" alt=""  width="40" height="40">
+                                        <h5 class="card-title ">Selcción el vehículo </h5>
+                                            <p >Tenemos muchos modelos y marcas disponibles</p>
+                                          
+                                        </div>
+                                     </div>
+                                </div>
+                                <div class="col-lg-6  ">
+                                    
+                                    <div class="card" style="width: 16rem;">
+                                        <div class="card-body">
+                                        <img src="{{asset('assets/images/auto3.png ')}}" alt=""  width="40" height="40">
+                                        <h5 class="card-title">Solicita una cotización </h5>
+                                        <p >Te ofrecemos diferentes tipos de precios .</p>
+                                          
+                                        </div>
+                                     </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 ">
+                                    
+                                    <div class="card" style="width: 16rem;">
+                                        <div class="card-body aling-center">
+                                        <img src=" {{asset('assets/images/moneysRecurso 7.png')}}" alt=""  width="40" height="40">
+                                        <h5 class="card-title">Proceso de compra sencilla</h5>
+                                        <p >No necesitas grandes requisitos.</p>
+                                          
+                                        </div>
+                                     </div>
+
+                                </div>
+                                <div class="col-lg-6 mt-5  ">
+                                    <div class="card" style="width: 16rem;">
+                                        <div class="card-body">
+                                        <img src=" {{asset('assets/images/auto.png')}}" alt=""  width="50" height="50">
+                                        <h5 class="card-title">Paga y llévatelo</h5>
+                                        <p >Paga el monto y llévate el auto hasta tu casa.</p>
+                                          
+                                        </div>
+                                      </div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6 ">
+                            <div class="news-block">
+                                <div class="news-block">
+                                    <img src="{{asset('assets/images/llave.png')}}" class="news-image img-fluid" alt="" >
+    
+                                   
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+            </section>
 
 @endsection
