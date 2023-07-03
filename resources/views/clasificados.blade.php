@@ -2,7 +2,7 @@
 
 @section('producto')
 <main>
-    <section class="section-padding" id="section_3">
+    <section class="section-padding section-bg" >
             <div class="container">
                 <div class="row">
 
