@@ -38,24 +38,39 @@
             <div class="container">
                 <div class="row">
                     
-                    <div class="col-lg-12 d-flex">
+                    <div class="col-lg-6 d-flex">
                         <p class="d-flex me-4 mb-0">
-                            <i class="bi-whatsapp me-2"></i>
+                            <!--<i class="bi-whatsapp me-2"></i>
                             <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
                                 +591 - 69612086 
-                            </a>
+                            </a>-->
                         </p>
 
-                        <p class="d-flex mb-0">
+                        <!--<p class="d-flex mb-0">
                             <i class="bi-envelope me-2"></i>
 
                             <a href="mailto: ventas@veloci.com.bo">
                                 ventas@veloci.com.bo
                             </a>
-                        </p>
+                        </p>-->
                     </div>
 
-                    <div class="col-lg-0 col-12 ms-auto d-flex">
+                    <div class="col-lg-6 col-12 ms-auto d-flex">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-whatsapp me-2" style="color: rgb(34, 215, 58);"></i>
+                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
+                                +591 - 69612086 
+                            </a>
+                        </p>
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-whatsapp me-2" style="color: rgb(34, 215, 58);"></i>
+                            <a href="https://wa.me/59177047837text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
+                                +591 - 77047837
+                            </a>
+                        </p>
+                       
+                       
+
                         <!--<ul class="social-icon">
                             
                             <li class="social-icon-item">

@@ -63,10 +63,10 @@ https://templatemo.com/tm-581-kind-heart-charity
   --body-font-family:             'Metropolis', sans-serif;
 
   --h1-font-size:                 52px;
-  --h2-font-size:                 30px;
+  --h2-font-size:                 28px;
   --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 21px;
+  --h4-font-size:                 25px;
+  --h5-font-size:                 18px;
   --h6-font-size:                 20px;
   --p-font-size:                  16px;
   --btn-font-size:                18px;
@@ -441,7 +441,7 @@ strong {
 .navbar-nav .nav-link {
   display: inline-block;
   color: #1a346d;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: var(--font-weight-semibold);
   position: relative;
   padding-top: 15px;
@@ -1763,5 +1763,6 @@ blockquote::before {
   .donate-form {
     padding: 25px;
   }
+  
 }
 

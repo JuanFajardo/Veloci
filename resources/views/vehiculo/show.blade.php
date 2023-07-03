@@ -151,7 +151,7 @@
 </section>
 
 
-<section class="contact-section section-padding" id="section_6">
+<section class="section-padding section-bg" >
     <div class="container">
         <div class="row">
             <h4 class="mb-lg-3">Autos Relacionados</h2>
