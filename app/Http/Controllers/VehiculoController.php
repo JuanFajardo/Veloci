@@ -11,7 +11,8 @@ class VehiculoController extends Controller
 {
     public function index(){
         $datos = Vehiculo::all();
-        return view('vehiculo.index', compact('datos'));
+        $populares = Vehiculo::Where('popular', '1')->count();
+        return view('vehiculo.index', compact('datos', 'populares'));
     }
 
     public function create(){
@@ -222,9 +223,9 @@ class VehiculoController extends Controller
 
     public function correo(Request $request){
         $nombre     = $request->nombre."|".$request->email."|".$request->message."|".$request->titulo;
-        foreach(['pagina@veloci.com.bo'] as $correo ){
+        foreach(['ventas@veloci.com.bo'] as $correo ){
             try {
-                Mail::to($correo)->send(new VelociMail($nombre));//, $email, $message, $titulo ));
+                Mail::to($correo)->send(new VelociMail($nombre));
             } catch (\Throwable $th) {
                 printf( "".$th);
             }   

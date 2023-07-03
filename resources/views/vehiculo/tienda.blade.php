@@ -100,13 +100,8 @@
             </div>
             
             <div class="col-lg-9 col-12 mb-4">
-                <?php $contador=0; ?>
+              <div class="row">
                 @foreach ($datos as $dato)
-                
-                @if($contador == 0 )    
-                <div class="row">
-                @endif    
-
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
                             <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
@@ -133,17 +128,8 @@
                             </a>
                         </div>
                     </div>
-                    
-                
-                @if( $contador == 2 )    
-                </div><br/>
-                <?php  $contador = 0; ?>
-                @else
-                <?php $contador++; ?>
-                @endif    
-                
                 @endforeach
-
+                </div><br/>
                 <div class="mt-5">
                   {{ $datos->links() }}
                 </div>
