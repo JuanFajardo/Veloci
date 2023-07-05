@@ -9,21 +9,25 @@
                     <div class="card mb-3">
                         <img class="card-img img-fluid" src="{{asset('/'. $dato->foto1)}}" alt="Card image cap" id="product-detail">
                     </div>
+                    
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    
                     <div class="row">
-                        <!--Start Controls-->
                         <div class="col-1 align-self-center">
                             <a href="#multi-item-example" role="button" data-bs-slide="prev">
                                 <i class="text-dark bi-chevron-left"></i>
                                 <span class="visually-hidden">Previous</span>
                             </a>
                         </div>
-                        <!--End Controls-->
-                        <!--Start Carousel Wrapper-->
-                        <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
-                            <!--Start Slides-->
-                            <div class="carousel-inner product-links-wap" role="listbox">
+                        
+                        <br/>
+                        <br/>
 
-                                <!--First slide-->
+                        <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
+                            <div class="carousel-inner product-links-wap" role="listbox">
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col-4">
@@ -138,7 +142,7 @@
                         <input type="hidden" name="titulo" id="titulo"  value="{{asset('/index.php/Tienda/'.$dato->id)}}" required>
                         <input type="text" name="nombre" id="nombre"  class="form-control" placeholder="ejemplo:Luis" required style="background-color:rgb(197, 197, 197);">
                         <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="ejemplo@gmail.com" required  style="background-color:rgb(197, 197, 197);">
-                        <textarea name="message" id="message" rows="5" class="form-control"  placeholder="Mensaje" required  style="background-color:rgb(197, 197, 197);"></textarea>
+                        <textarea name="message" id="message" rows="3" class="form-control"  placeholder="Mensaje" required  style="background-color:rgb(197, 197, 197);"></textarea>
                         
                         <a href="#" id ="boton" class=" tags-block-link " style="color: white;">
                             <i class=" bi bi-send-fill"></i>  <span>Enviar Correo</span> 
@@ -148,47 +152,42 @@
                 </div>
         </div>
     </div>
-</section>
 
+    <div class="row">
+        <h4 class="mb-lg-3">Autos Relacionados</h2>
+            @foreach ($datos as $dato)
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-5">
+                <div class="custom-block-wrap">
+                    <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
+                    <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
 
-<section class="section-padding section-bg" >
-    <div class="container">
-        <div class="row">
-            <h4 class="mb-lg-3">Autos Relacionados</h2>
-                @foreach ($datos as $dato)
-                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-5">
-                    <div class="custom-block-wrap">
-                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
-                        <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
-    
-                        <div class="custom-block">
-                            <div class="custom-block-body">
-                                <h5 class="mb-3">{{$dato->titulo}}</h5>
-                                <hr style="width: 230px;">
-    
-                                <table class="default" >
-                                    <tr><td>Motor :  </td><th colspan="3"> {{$dato->tipo}}</th></tr>
-                                    <tr><td>Tracción : </td><th>{{$dato->traccion}}</th></tr>
-                                    <tr><td>Comustible:  </td><th>{{$dato->combustible}}</th></tr>
-                                </table>
+                    <div class="custom-block">
+                        <div class="custom-block-body">
+                            <h5 class="mb-3">{{$dato->titulo}}</h5>
+                            <hr style="width: 230px;">
 
-                                <hr style="width: 230px;">
-                                 <div class="d-flex align-items-center mb-0 ">
-                                <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
-                                <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20mas%20informacion%20de%20{{$dato->titulo}}" class="custom-btn-w btn me-1 "><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
-                                <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn mb-0"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
-                                </div> 
-                            </div>
-                            
+                            <table class="default" >
+                                <tr><td>Motor :  </td><th colspan="3"> {{$dato->tipo}}</th></tr>
+                                <tr><td>Tracción : </td><th>{{$dato->traccion}}</th></tr>
+                                <tr><td>Comustible:  </td><th>{{$dato->combustible}}</th></tr>
+                            </table>
+
+                            <hr style="width: 230px;">
+                             <div class="d-flex align-items-center mb-0 ">
+                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
+                            <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20mas%20informacion%20de%20{{$dato->titulo}}" class="custom-btn-w btn me-1 "><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                            <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn mb-0"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
+                            </div> 
                         </div>
-                    </a>
+                        
                     </div>
+                </a>
                 </div>
-                @endforeach
-        </div>
+            </div>
+            @endforeach
     </div>
-</section>
 
+</section>
 @stop
 
 @section('js')
