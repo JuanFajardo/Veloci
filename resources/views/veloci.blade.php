@@ -224,11 +224,11 @@
                         <h6 class=" mb-3">Horarios de  Atención</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
                         <p class="text-white d-flex mt-3">
-                            <i class="bi-clock-fill me-2"></i>
+                            <i class="bi-clock-fill me-2" style="color: rgb(186, 223, 244);"></i>
                                 Lunes - Viernes
                         </p>
                         <p class="text-white d-flex mt-3">
-                            <i class="bi-minus me-2"></i>
+                            <i class="bi-minus me-2" ></i>
                                 Mañanas: 8:00 - 12:00<br>
                                 Tarde: 14:00 - 18:00
                         </p>
@@ -241,14 +241,14 @@
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
 
                         <p class="text-white d-flex mb-2">
-                            <i class="bi-whatsapp me-2"></i>
+                            <i class="bi-whatsapp me-2" style="color: rgb(206, 255, 203);"></i>
                             <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
                                 +591 - 69612086 
                             </a>
                         </p>
 
                         <p class="text-white d-flex">
-                            <i class="bi-envelope me-2"></i>
+                            <i class="bi-envelope me-2"style="color: rgb(199, 199, 255);"></i>
 
                             <a href="mailto:ventas@veloci.com.bo" class="site-footer-link">
                                 <span > ventas@veloci.com.bo</span> 
@@ -256,7 +256,7 @@
                         </p>
 
                         <p class="text-white d-flex mt-3 ">
-                            <i class="bi-geo-alt me-2"></i>
+                            <i class="bi-geo-alt me-2" style="color: rgb(255, 222, 217);"></i>
                             <span class="texto-justificado" style="font-size: 14px">Santa Cruz Avenida Cristo Redentor entre <br>y septimo anillo (a lado de Supermercado <br> Hipermaxi)</span>
                         </p>
                     </div>

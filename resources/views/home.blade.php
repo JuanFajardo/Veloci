@@ -241,18 +241,18 @@
                                         <div class="card-body">
                                         <img src="{{asset('assets/images/auto2.png')}}" alt=""  width="40" height="40">
                                         <h5 class="card-title ">Selcción el vehículo </h5>
-                                            <p >Tenemos muchos modelos y marcas disponibles</p>
+                                            <p >Tenemos muchos modelos y marcas disponibles.</p>
                                           
                                         </div>
                                      </div>
                                 </div>
-                                <div class="col-lg-6  ">
+                                <div class="col-lg-6 mt-5 ">
                                     
                                     <div class="card" style="width: 16rem;">
                                         <div class="card-body">
                                         <img src="{{asset('assets/images/auto3.png ')}}" alt=""  width="40" height="40">
                                         <h5 class="card-title">Solicita una cotización </h5>
-                                        <p >Te ofrecemos diferentes tipos de precios .</p>
+                                        <p >Te ofrecemos diferentes tipos de precios.</p>
                                           
                                         </div>
                                      </div>

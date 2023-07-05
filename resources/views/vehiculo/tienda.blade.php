@@ -23,7 +23,7 @@
             <form action="{{ route('Vehiculo.filtro') }}" method="POST" enctype="multipart/form-data" class="col-md-12 m-auto card-body" >
             @csrf
                 <div class="container mt-3">
-                    <h4>Filtro</h4>
+                    <h5>Filtro</h5>
                     <div id="accordion">
                       <div class="card">
                         <div class="card-header">
