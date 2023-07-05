@@ -46,7 +46,7 @@
             <div class="row">
 
                 <div class="col-md-5 mx-auto ">
-                    <div class="small fw-light">Buscar por marca,tipo de auto y  mas</div>
+                    <div class="small fw-light animated animate__rotateOut">Buscar por marca,tipo de auto y  mas</div>
                         <form action="{{route('vehiculo.buscar')}}" method="POST">
                             <div class="input-group">
                                 @csrf
@@ -108,7 +108,7 @@
 <section class="about-section section-padding">
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
-            <hr style="width:50px; height:2px; background:rgb(15, 38, 114)">
+            
             <h2 >Las Mejores Marcas</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
@@ -205,7 +205,6 @@
 <section class="section-padding section-bg">
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
-            <hr style="width:50px; height:2px; background:rgb(15, 38, 114)">
             <h2 >Visita Nuestro Showroom</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
@@ -229,8 +228,7 @@
 <section class="section-padding ">
                 <div class="container">
                     <div class="col-lg-12 col-12 text-left mb-4">
-                        <hr style="width:60px; height:2px; background:rgb(15, 38, 114)">
-                        <h2>La Mejor Facilidad </h2>
+                        <h2 class="animated bounce">La Mejor Facilidad </h2>
                         <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
                     </div>
                     <div class="row">
@@ -246,7 +244,7 @@
                                         </div>
                                      </div>
                                 </div>
-                                <div class="col-lg-6 mt-5 ">
+                                <div class="col-lg-6 ">
                                     
                                     <div class="card" style="width: 16rem;">
                                         <div class="card-body">
