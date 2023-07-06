@@ -5,12 +5,11 @@
 <section class="section-padding section-bg" id="section_3">
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
-            <hr style="width:50px; height:2px; background:rgb(15, 38, 114)">
             @if( isset($busqueda) )
               <h2>{{$busqueda}}</h2>
             @else
               @if( strlen($sucess) > 2 )
-                <h3>{!! $sucess !!}</h3>
+                <h4>{!! $sucess !!}</h4>
               @else
                 <h2>Inventario</h2>
               @endif

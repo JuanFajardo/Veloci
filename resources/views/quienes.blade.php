@@ -5,7 +5,6 @@
     <section class="section-padding section-bg" id="section_2">
         <div class="container">
             <div class="col-lg-12 col-12 text-left mb-4">
-                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
                 <h2>¿Quienes Somos?</h2>
                 <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
             </div>

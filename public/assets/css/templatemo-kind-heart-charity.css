@@ -43,7 +43,15 @@ https://templatemo.com/tm-581-kind-heart-charity
     font-style: normal;
     font-display: swap;
 }
-
+@keyframes mover-izquierda-derecha {
+  
+from{
+  transform: translateX(-100px);
+}
+to{
+  transform: translateX(5px);
+}
+}
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
@@ -120,6 +128,7 @@ h2 {
   color: var(--secondary-color);
   font-size: var(--h2-font-size);
   letter-spacing: -2px;
+  animation: mover-izquierda-derecha 2s 1;
 }
 
 h3 {
@@ -214,6 +223,8 @@ strong {
   position: relative;
   overflow: hidden;
   transition: all 0.5s;
+  
+  
 }
 
 .custom-block-wrap:hover {
@@ -1378,7 +1389,7 @@ blockquote::before {
 -----------------------------------------*/
 .site-footer {
   background-color: var(--site-footer-bg-color);
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .site-footer-bottom {
@@ -1763,6 +1774,6 @@ blockquote::before {
   .donate-form {
     padding: 25px;
   }
-  
+  /******animacion */
 }
 

@@ -12,6 +12,7 @@
         <link href="{{asset('assets/css/bootstrap-icons.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/templatemo-kind-heart-charity.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/dataTables.animate.css')}}" rel="stylesheet">
         <style>
             .whatsapp-float {
             position: fixed;
@@ -64,7 +65,7 @@
                         </p>
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-whatsapp me-2" style="color: rgb(34, 215, 58);"></i>
-                            <a href="https://wa.me/59177047837text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
+                            <a href="https://wa.me/59177047837?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
                                 +591 - 77047837
                             </a>
                         </p>
@@ -191,7 +192,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Su correo ah sido enviado, nos contactaremos con su persona lo mas antes posible.</p>
+                            <p>Su correo ha sido enviado exitosamente, nos contactaremos con su usted lo más antes posible.</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -224,67 +225,30 @@
                         <h6 class=" mb-3">Horarios de  Atención</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
                         <p class="text-white d-flex mt-3">
-                            <i class="bi-clock-fill me-2" style="color: rgb(186, 223, 244);"></i>
+                            <i class="bi-clock-fill me-2" ></i>
                                 Lunes - Viernes
                         </p>
                         <p class="text-white d-flex mt-3">
                             <i class="bi-minus me-2" ></i>
                                 Mañanas: 8:00 - 12:00<br>
-                                Tarde: 14:00 - 18:00
+                                Tardes: 14:00 - 18:00
                         </p>
+                        <ul class="social-icon">
+                             <li class="social-icon-item">
+                                <a href="https://twitter.com/AutoventaVeloci/" class="social-icon-link bi-twitter"></a>
+                            </li>
 
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        
-                        <h6 class=" mb-3" >Contactos</h6>
-                        <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
+                            <li class="social-icon-item">
+                                <a href="https://www.facebook.com/VelociAutoventa/" class="social-icon-link bi-facebook"></a>
+                            </li>
 
-                        <p class="text-white d-flex mb-2">
-                            <i class="bi-whatsapp me-2" style="color: rgb(206, 255, 203);"></i>
-                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
-                                +591 - 69612086 
-                            </a>
-                        </p>
+                            <li class="social-icon-item">
+                                <a href="https://www.instagram.com/veloci.autoventas/" class="social-icon-link bi-instagram"></a>
+                            </li>
 
-                        <p class="text-white d-flex">
-                            <i class="bi-envelope me-2"style="color: rgb(199, 199, 255);"></i>
-
-                            <a href="mailto:ventas@veloci.com.bo" class="site-footer-link">
-                                <span > ventas@veloci.com.bo</span> 
-                            </a>
-                        </p>
-
-                        <p class="text-white d-flex mt-3 ">
-                            <i class="bi-geo-alt me-2" style="color: rgb(255, 222, 217);"></i>
-                            <span class="texto-justificado" style="font-size: 14px">Santa Cruz Avenida Cristo Redentor entre <br>y septimo anillo (a lado de Supermercado <br> Hipermaxi)</span>
-                        </p>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="site-footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="https://twitter.com/AutoventaVeloci/" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="https://www.facebook.com/VelociAutoventa/" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="https://www.instagram.com/veloci.autoventas/" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="https://www.linkedin.com/company/velociautoventa/" class="social-icon-link bi-linkedin"></a>
-                                </li>
+                            <li class="social-icon-item">
+                                <a href="https://www.linkedin.com/company/velociautoventa/" class="social-icon-link bi-linkedin"></a>
+                            </li>
 
                                 <li class="social-icon-item">
                                     <a href="https://youtube.com/@velociautoventabo/" class="social-icon-link bi-youtube"></a>
@@ -292,12 +256,41 @@
                                 <li class="social-icon-item">
                                     <a href="https://www.tiktok.com/@veloci.autoventas/" class="social-icon-link bi-tiktok"></a>
                                 </li>
-                            </ul>
-                        </div>
-                        
+                        </ul>
+
                     </div>
+                    
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        
+                        <h6 class=" mb-3" >Contactos</h6>
+                        <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-whatsapp me-2" ></i>
+                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
+                                +591 - 69612086 
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:ventas@veloci.com.bo" class="site-footer-link">
+                                <span > ventas@veloci.com.bo</span> 
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex mt-3 ">
+                            <i class="bi-geo-alt me-2" ></i>
+                            <span class="texto-justificado" style="font-size: 14px">Santa Cruz Avenida Cristo Redentor entre <br>y septimo anillo (a lado de Supermercado <br> Hipermaxi)</span>
+                        </p>
+                    </div>
+                    
                 </div>
+                
             </div>
+
         </footer>
         <script src="{{asset('assets/js/jquery.min.js')}}"></script>
         <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
