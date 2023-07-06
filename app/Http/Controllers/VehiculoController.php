@@ -177,10 +177,12 @@ class VehiculoController extends Controller
             $combustible = $request->combustible;
             $msj = $msj.' <b>Combustible:</b> '.$combustible;
         }
-       $datos = Vehiculo::Where( 'anio', 'like', $anio)->where('marca', 'like', $marca)->where('tipo', 'like', $tipo)->where('combustible', 'like', $combustible)->paginate(12);
+       $datos = Vehiculo::Where( 'anio', 'like', $anio)->where('marca', 'like', $marca)->where('tipo', 'like', $tipo)->where('combustible', 'like', $combustible)->get();
        $sucess = $msj;
-       return view('vehiculo.tienda', compact('datos','sucess'));
+       return $datos; 
+       //return view('vehiculo.tienda', compact('datos','sucess'));
     }
+
 
     public function inventarioTipo($tipo){
         $datos = $sucess = $combustible = $marca = "-";
