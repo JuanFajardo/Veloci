@@ -41,15 +41,15 @@
         <div class=" row  ">
             <div class="col-lg-12 col-12 text-center mb-4">
                             
-                <h2>Buscador Rapido </h2>
+                <h2>Encentra tu Vehículo </h2>
             </div>
             <div class="row">
                 <div class="col-md-5 mx-auto ">
-                    <div class="small fw-light animated animate__rotateOut">Buscar por marca,tipo de auto y  mas</div>
-                        <form action="{{route('vehiculo.buscar')}}" method="POST">
+                    <div class="small fw-light animated animate__rotateOut ">Buscar por marca,tipo de auto, etc.</div>
+                        <form action="{{route('vehiculo.buscar')}}" method="POST" class="mt-2">
                             <div class="input-group">
                                 @csrf
-                                <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Buscar" name="busqueda" id="example-search-input">
+                                <input class="form-control border-end-0 border rounded-pill me-1" type="search" placeholder="Aqui.." name="busqueda" id="example-search-input" >
                                 <span class="input-group-append">
                                 <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
                                     <i class="bis bi-search"></i>
@@ -62,8 +62,7 @@
             </div>
 
         <div class="col-lg-12 col-12 text-left mb-4 mt-5">
-            <hr style="width:60px; height:2px; background:rgb(15, 38, 114)">
-            <h2 >Los Polulares</h2>
+            <h2 >Los Destacados</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
         
@@ -84,7 +83,7 @@
                             <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
                             <hr style="width: 230px;">
                             <div class="d-flex align-items-center mb-0 ">
-                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
+                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><font size=2> Ver</font></a>
                             <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
                             <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(53, 62, 102);"></i></a>
                             </div>
@@ -227,13 +226,16 @@
 <section class="section-padding ">
                 <div class="container">
                     <div class="col-lg-12 col-12 text-left mb-4">
-                        <h2 class="animated bounce">La Mejor Facilidad </h2>
+                        <h2 class="animated bounce">Te Ofrecemos </h2>
                         <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
                     </div>
+                    <p>La mejor atención y la compra con solo algunos pasos.</p>
                     <div class="row">
                         <div class=" col-lg-6">
                             <div class="row">
+
                                 <div class="col-lg-6 ">
+                                    
                                     <div class="card" style="width: 16rem;">
                                         <div class="card-body">
                                         <img src="{{asset('assets/images/auto2.png')}}" alt=""  width="40" height="40">
@@ -243,7 +245,7 @@
                                         </div>
                                      </div>
                                 </div>
-                                <div class="col-lg-6 ">
+                                <div class="col-lg-6 mt-5 ">
                                     
                                     <div class="card" style="width: 16rem;">
                                         <div class="card-body">

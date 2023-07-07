@@ -9,7 +9,7 @@
               <h2>{{$busqueda}}</h2>
             @else
               @if( strlen($sucess) > 2 )
-                <h4>{!! $sucess !!}</h4>
+                <h2>{!! $sucess !!}</h2>
               @else
                 <h2>Inventario</h2>
               @endif
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-lg-3 col-12 mb-4">
                 <div class="container mt-3">
-                    <h5>Filtro</h5>
+                    <h5>Buscador</h5>
                     <div id="accordion">
 
                       
@@ -172,21 +172,25 @@
                         <div class="custom-block-wrap">
                             <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
                             <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
-                              <div class="custom-block">
-                                  <div class="custom-block-body">
-                                      <h5 class="mb-3">{{$dato->titulo}}</h5>
-                                      <hr style="width: 230px;">
-                                      <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
-                                      <p class="mb-0"> Tracción: <strong>{{$dato->traccion}}</strong></p>
-                                      <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
-                                      <hr style="width: 230px;">
-                                      <div class="d-flex align-items-center mb-0 ">
-                                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><i class="bi-plus-lg"></i></a>
-                                        <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20vi%20este%20vehiculo%20{{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
-                                        <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
-                                      </div>
-                                  </div>       
-                              </div>
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    <h5 class="mb-3">{{$dato->titulo}}</h5>
+                                    <hr style="width: 230px;">
+                                    <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
+                                    <p class="mb-0"> Tracción: <strong>{{$dato->traccion}}</strong></p>
+                                    <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
+                                    <hr style="width: 230px;">
+                                     <div class="d-flex align-items-center mb-0 ">
+                                    
+                                    <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><i class="bi-plus-lg"></i></a>
+                                    <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20vi%20este%20vehiculo%20{{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                                    <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
                             </a>
                         </div>
                     </div>
