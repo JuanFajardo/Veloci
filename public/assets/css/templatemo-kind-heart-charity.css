@@ -297,7 +297,7 @@ strong {
 .custom-text-box-image {
   border-radius: var(--border-radius-medium);
   width: 100%;
-  height: 100%;
+  height: 96%;
   object-fit: cover;
 }
 
@@ -1183,7 +1183,7 @@ blockquote::before {
 .contact-form {
   background: var(--section-bg-color);
   border-radius: var(--border-radius-small);
-  padding: 40px;
+  padding: 20px;
 }
 
 .contact-info-wrap {

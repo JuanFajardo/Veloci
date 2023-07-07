@@ -192,7 +192,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Su correo ha sido enviado exitosamente, nos contactaremos con su usted lo más antes posible.</p>
+                            <p>Su correo ha sido enviado exitosamente, nos contactaremos con usted lo más antes posible.</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -226,7 +226,7 @@
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
                         <p class="text-white d-flex mt-3">
                             <i class="bi-clock-fill me-2" ></i>
-                                Lunes - Viernes
+                                Lunes - Sábado
                         </p>
                         <p class="text-white d-flex mt-3">
                             <i class="bi-minus me-2" ></i>
@@ -271,19 +271,24 @@
                             <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
                                 +591 - 69612086 
                             </a>
+                        <a class="me-5"></a>  
+                           <i class="bi-whatsapp me-2" ></i>
+                            <a href="https://wa.me/59177047837?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
+                                +591 - 77047837
+                            </a>
                         </p>
 
                         <p class="text-white d-flex">
                             <i class="bi-envelope me-2"></i>
 
                             <a href="mailto:ventas@veloci.com.bo" class="site-footer-link">
-                                <span > ventas@veloci.com.bo</span> 
+                                <font size=2> ventas@veloci.com.bo</font> 
                             </a>
                         </p>
 
-                        <p class="text-white d-flex mt-3 ">
+                        <p class="text-white d-flex mt-3 texto-justificado ">
                             <i class="bi-geo-alt me-2" ></i>
-                            <span class="texto-justificado" style="font-size: 14px">Santa Cruz Avenida Cristo Redentor entre <br>y septimo anillo (a lado de Supermercado <br> Hipermaxi)</span>
+                            <font size=2>Santa Cruz Avenida Cristo Redentor entre sexto y septimo anillo (a lado de Supermercado Hipermaxi)</font>
                         </p>
                     </div>
                     

@@ -98,7 +98,7 @@
                                     @if($dato->activo)
                                     <strong style="color:rgb(52, 190, 39);">Disponible</strong>
                                     @else
-                                    ><strong style="color:rgb(199, 45, 45);">No Disponible</strong>
+                                    <strong style="color:rgb(199, 45, 45);">No Disponible</strong>
                                     @endif
                                 </p>
                             </div>
@@ -151,10 +151,13 @@
                     </form>
                 </div>
         </div>
-    </div>
-
-    <div class="row">
-        <h4 class="mb-lg-3">Autos Relacionados</h2>
+        <div class="row mt-4">
+            <div class="container">
+                <h2>Autos Relacionados</h2>
+                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
+            </div>
+        
+        
             @foreach ($datos as $dato)
             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-5">
                 <div class="custom-block-wrap">
@@ -174,7 +177,7 @@
 
                             <hr style="width: 230px;">
                              <div class="d-flex align-items-center mb-0 ">
-                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><i class="bi-plus-lg"></i></a>
+                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-1"><font size=2> Ver</font></a>
                             <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20mas%20informacion%20de%20{{$dato->titulo}}" class="custom-btn-w btn me-1 "><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
                             <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn mb-0"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
                             </div> 
@@ -185,9 +188,13 @@
                 </div>
             </div>
             @endforeach
+        </div>
     </div>
+    
+   
 
 </section>
+
 @stop
 
 @section('js')
