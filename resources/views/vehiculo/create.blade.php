@@ -17,7 +17,7 @@
             <input type="text" class="form-control mt-1" name="titulo" placeholder="2022 Jeep Gladiator Willys" required  autocomplete="off" >
         </div>
         <div class="form-group col-md-3 mb-3">
-            <label> <b>Marca</b> </label>
+            <label> <b>Marca</b> <small><a href="{{asset('index.php/Marca')}}">Agregar Marca</a> </small> </label>
             <input type="text" class="form-control mt-1" name="marca" placeholder="Toyota" required  autocomplete="off" list="marca-list">
             <datalist id="marca-list">             
                 <option value="Land Rover">Land Rover</option> 
@@ -39,11 +39,11 @@
 
         </div>
         <div class="form-group col-md-3 mb-3">
-            <label> <b>Motor</b> </label>
+            <label> <b>Motor</b> <small><a href="{{asset('index.php/Motor')}}">Agregar Motor</a> </small> </label>
             <input type="text" name="motor" class="form-control mt-1" placeholder="--" required  autocomplete="off">
         </div>
         <div class="form-group col-md-3 mb-3">
-            <label> <b>Tipo</b> </label>
+            <label> <b>Tipo</b> <small><a href="{{asset('index.php/Tipo')}}">Agregar Tipo</a> </small> </label>
             <input type="text" class="form-control mt-1" name="tipo" placeholder="Camioneta" required  list="tipo-list" autocomplete="off" >
             <datalist id="tipo-list"> 
                 <option value="Camioneta">Caminioneta</option> 
@@ -56,7 +56,7 @@
         
     <div class="row">
         <div class="form-group col-md-3 mb-3">
-            <label> <b>Combustible</b> </label>
+            <label> <b>Combustible</b> <small><a href="{{asset('index.php/Combustible')}}">Agregar Combustible</a> </small> </label>
             <input type="text" class="form-control mt-1" name="combustible" placeholder="Gasolina" required  list="combustible-list" autocomplete="off">
             <datalist id="combustible-list"> 
                 <option value="Gasolina">Gasolina</option> 

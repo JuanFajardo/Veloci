@@ -23,6 +23,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/Vehiculo/{id}/popular' , 'App\Http\Controllers\VehiculoController@popular');
 
     Route::resource('/Trabajo' , 'App\Http\Controllers\TrabajoController');
+    Route::resource('/Tipo' , 'App\Http\Controllers\TipoController');
+    Route::resource('/Motor' , 'App\Http\Controllers\MotorController');
+    Route::resource('/Marca' , 'App\Http\Controllers\MarcaController');
+    Route::resource('/Combustible' , 'App\Http\Controllers\CombustibleController');
 });
 
 Auth::routes();
@@ -31,7 +35,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/Tienda/{busqueda}/Marca', [App\Http\Controllers\HomeController::class, 'show'])->name('home');
-
 Route::get('/Tienda/{id}' , 'App\Http\Controllers\VehiculoController@show');
 Route::get('/Tienda' , 'App\Http\Controllers\VehiculoController@tienda');
 Route::get('/Inventario/{tipo}' , 'App\Http\Controllers\VehiculoController@inventarioTipo');
@@ -39,7 +42,5 @@ Route::post('/Correo' , 'App\Http\Controllers\VehiculoController@correo')->name(
 Route::post('/Tienda' , 'App\Http\Controllers\VehiculoController@filtro')->name('Vehiculo.filtro');
 Route::post('/Tienda/Buscar' , 'App\Http\Controllers\VehiculoController@buscar')->name('vehiculo.buscar');
 
-
 Route::get('/Pagina/{pagina}' , 'App\Http\Controllers\VehiculoController@pagina');
 Route::get('/Clasificados' , 'App\Http\Controllers\TrabajoController@clasificados');
-

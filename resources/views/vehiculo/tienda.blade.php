@@ -157,7 +157,7 @@
 
                       <div class="card">
                         <div class="card-header">
-                          <a class="btn btn-info" href="#collapseFour" id="limpiar"> Limpiar Filtro </a>
+                          <center><a class="custom-btn-bo" href="#collapseFour" id="limpiar"> <i class="bi bi-filter"> </i> Limpiar Filtros </a></center>
                         </div>
                       </div>
   
