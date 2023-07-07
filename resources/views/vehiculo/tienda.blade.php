@@ -24,81 +24,129 @@
                 <div class="container mt-3">
                     <h5>Buscador</h5>
                     <div id="accordion">
-                      <div class="card">
-                        <div class="card-header">
-                          <p class=" dropdown-item btn" data-bs-toggle="collapse" href="#collapseOne"> Año</p>
-                          <select name="anio" id="anio" class="form-select form-select-lg mb-3">
-                              <option value="--"> </option>
-                            @for($i=date('Y'); $i>=2019; $i--)
-                                <option value="{{$i}}">{{$i}}</option>
-                            @endfor
-                          </select>
-                        </div>
-                      </div>
+
                       
                       <div class="card">
                         <div class="card-header">
-                          <p class="collapsed btn" data-bs-toggle="collapse">Marca</p>
-                          
-                          <select name="marca" id="marca" class="form-select form-select-lg mb-3">
-                                <option value="--" > </option>
-                                <option value="Land Rover">Land Rover</option> 
-                                <option value="Jaguar">Jaguar</option> 
-                                <option value="Mercedes Benz">Mercedes Benz</option> 
-                                <option value="Cadillac">Cadillac</option> 
-                                <option value="Audi">Audi</option> 
-                                <option value="Dodge">Dodge</option> 
-                                <option value="RAM">RAM</option> 
-                                <option value="Jeep">Jeep</option> 
-                                <option value="Bronco">Bronco</option> 
-                                <option value="Toyota">Toyota</option> 
-                                <option value="Volkswagen">Volkswagen</option> 
-                                <option value="Volvo">Volvo</option> 
-                                <option value="Nissan">Nissan</option> 
-                                <option value="Hyundai">Hyundai</option> 
-                                <option value="Mitsubishi">Mitsubishi</option>
-                          </select>
+                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseOne">Año
+                          </a>
                         </div>
-                        
-                      </div>
-                      <div class="card">
-                        <div class="card-header">
-                          <p class=" dropdown-item btn" data-bs-toggle="collapse" href="#collapseOne"> Tipo de Vehículo</p>
-                          <select name="tipo" id="tipo" class="form-select form-select-lg mb-3">
-                              <option value="--"> </option>
-                              <option value="Camioneta">Camioneta</option>
-                              <option value="Vagoneta">Vagoneta</option>
-                              <option value="Semi-Nuevo">Semi-Nuevo</option>
-                          </select>
+                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                          <div class="card-body">
+                            <ul class="list-group" >
+                                @for($i=date('Y'); $i>=2019; $i--)
+                                  <li class="list-group-item">
+                                    <input class="anio form-check-input me-1" type="radio" name="anio" value="{{$i}}" >{{$i}}
+                                  </li>
+                                @endfor
+                              </ul>
+                          </div>
                         </div>
                       </div>
+
+                      
+
                       <div class="card">
                         <div class="card-header">
-                          <p class=" dropdown-item btn" data-bs-toggle="collapse" href="#collapseOne">Combustible</p>
-                          <select name="combustible" id="combustible" class="form-select form-select-lg mb-3">
-                              <option value="--"> </option>
-                              <option value="Gasolina">Gasolina</option>
-                              <option value="Diesel">Diesel</option>
-                              <option value="Hibrido">Hibrido</option>
-                              <option value="Electrico">Eléctrico</option>
-                          </select>
+                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">Marca
+                        </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Land Rover">Land Rover</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Jaguar">Jaguar</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Mercedes Benz">Mercedes Benz</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Cadillac">Cadillac</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Audi">Audi</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Dodge">Dodge</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="RAM">RAM</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Jeep">Jeep</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Bronco">Bronco</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Toyota">Toyota</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Volkswagen">Volkswagen</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Volvo">Volvo</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Nissan">Nissan</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Hyundai">Hyundai</li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="marca" value="Mitsubishi">Mitsubishi</li>
+                                  </ul>
+                              </div>
                         </div>
                       </div>
 
                       <div class="card">
                         <div class="card-header">
-                          <input type="submit" class="form-control mt-1 custom-btn btn" name="boton" value="Filtrar" id="">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree"> Tipo de Vehículo</a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="radio" name="tipo" value="Camioneta" >Camioneta
+                                    </li>
+                                    <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="radio" name="tipo" value="Vagoneta" >Vagoneta
+                                    </li>
+                                    <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="radio" name="tipo" value="Semi-Nuevo" >Semi-Nuevo
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         </div>
                       </div>
 
-                        
+                      <div class="card">
+                        <div class="card-header">
+                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
+                            Combustible
+                          </a>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                          <div class="card-body">
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="combustible" value="Gasolina" >Gasolina
+                                    </li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="combustible" value="Diesel" >Diesel
+                                    </li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="combustible" value="Hibrido" >Hibrido
+                                    </li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="radio" name="combustible"  value="Electrico" >Electrico
+                                    </li>
+                                  </ul>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+  
                       
                     </div>
                   </div>
               </form>
             </div>
             
-            <div class="col-lg-9 col-12 mb-4">
+            <div class="col-lg-9 col-12 mb-4" id="principal">
               <div class="row">
                 @foreach ($datos as $dato)
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
@@ -116,7 +164,7 @@
                                     <hr style="width: 230px;">
                                      <div class="d-flex align-items-center mb-0 ">
                                     
-                                    <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><font size=2>Ver</font></a>
+                                    <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><i class="bi-plus-lg"></i></a>
                                     <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20vi%20este%20vehiculo%20{{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
                                     <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
 
@@ -128,16 +176,91 @@
                         </div>
                     </div>
                 @endforeach
-                </div><br/>
-                <div class="mt-5">
-                  {{ $datos->links() }}
-                </div>
+              </div>
+              <div class="mt-5">
+                {{ $datos->links() }}
+              </div>
             </div>
+
         </div>
-    </div>
-    
-    
+    </div>    
 </section>
 
+@endsection
 
+@section('js')
+<script>
+
+function cargarInformacion(){
+  var anio = $('input[name="anio"]:checked').val();
+  var marca = $('input[name="marca"]:checked').val();
+  var tipo = $('input[name="tipo"]:checked').val();
+  var combustible = $('input[name="combustible"]:checked').val();
+  const csrfToken = $('meta[name="csrf-token"]').attr('content');
+  const datos = {
+    _token: csrfToken,
+    anio: "--",
+    marca: "--",
+    tipo: "--",
+    combustible: "--",
+  };    
+  
+  if(typeof anio !== 'undefined' && anio.length > 0 )
+    datos.anio = anio;
+  if( typeof marca !== 'undefined' && marca.length > 0 )
+    datos.marca = marca;  
+  if( typeof tipo !== 'undefined' && tipo.length > 0 )
+    datos.tipo = tipo;  
+  if( typeof combustible !== 'undefined' && combustible.length > 0 )
+    datos.combustible = combustible;
+
+  $.post('{{asset("index.php")}}/Tienda', datos, function(response) {
+    var principal = '<div class="row">';
+
+    for(var i=0; i<response.length; i++){
+      
+      principal = principal + '<div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">';
+      principal = principal + '<div class="custom-block-wrap">';
+      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"d-block\">";
+      principal = principal + "<img src=\"{{asset('/')}}/"+response[i].foto1+"\" class=\"custom-block-image img-fluid\" >";
+      principal = principal + "<div class=\"custom-block\"><div class=\"custom-block-body\">";
+      principal = principal + "<h5 class=\"mb-3\">"+response[i].titulo+"</h5>";
+      principal = principal + "<hr style=\"width: 230px;\">";
+      principal = principal + "<p class=\"mb-0\"> Motor: <strong> "+response[i].motor+"</strong></p>";
+      principal = principal + "<p class=\"mb-0\"> Tracción: <strong>"+response[i].traccion+"</strong></p>";
+      principal = principal + "<p class=\"mb-0\"> Combustible: <strong>"+response[i].combustible+"</strong></p>";
+      principal = principal + "<hr style=\"width: 230px;\">";
+      principal = principal + "<div class=\"d-flex align-items-center mb-0 \">";
+      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"custom-btn-bo btn me-2\"><i class=\"bi-plus-lg\"></i></a>";
+      principal = principal + "<a href=\"https://wa.me/591"+response[i].comunicate+"?text=Hola%20vi%20este%20vehiculo%20"+response[i].titulo+"\" class=\"custom-btn-w btn  me-2\"><i class=\"bi-whatsapp\" style=\"color: rgb(51, 189, 69);\"></i></a>";
+      principal = principal + "<a href=\"{{asset('/')}}/"+response[i].ficha+"\" class=\"custom-btn-d btn me-2\"><i class=\"bi-download\" style=\"color: rgb(75, 92, 170);\"></i></a>";
+      principal = principal + '</div></div></div></a></div></div>';
+    }
+    principal = principal + "</div>";
+    $('#principal').html(principal);
+
+  }, 'json').fail(function(xhr, status, error) {
+    // Manejar errores
+    console.error('Error:', error);
+  });
+
+}
+
+$('input[name="anio"]').change(function() {
+    cargarInformacion();
+});
+
+$('input[name="marca"]').change(function() {
+    cargarInformacion();
+});
+
+$('input[name="tipo"]').change(function() {
+    cargarInformacion();
+});
+
+$('input[name="combustible"]').change(function() {
+    cargarInformacion();
+});
+
+</script>
 @endsection
