@@ -44,7 +44,6 @@
                 <h2>Buscador Rapido </h2>
             </div>
             <div class="row">
-
                 <div class="col-md-5 mx-auto ">
                     <div class="small fw-light animated animate__rotateOut">Buscar por marca,tipo de auto y  mas</div>
                         <form action="{{route('vehiculo.buscar')}}" method="POST">

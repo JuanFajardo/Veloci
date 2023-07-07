@@ -133,10 +133,11 @@
                             <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre Nosotros</a>
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{asset('index.php/Pagina/quienes')}}">¿Quienes Somo?</a></li>
-                                <li><a class="dropdown-item" href="{{asset('index.php/Pagina/clasificados')}}">Clasificados</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Clasificados')}}">Clasificados</a></li>
                                 
                                 @if( auth()->check() )
-                                    <li><a class="dropdown-item" href="{{asset('index.php/Vehiculo')}}">Administrar</a></li>
+                                    <li><a class="dropdown-item" href="{{asset('index.php/Vehiculo')}}">Adm. Vehiculos</a></li>
+                                    <li><a class="dropdown-item" href="{{asset('index.php/Trabajo')}}">Adm. Clasificados</a></li>
                                 @endif
 
                             </ul>

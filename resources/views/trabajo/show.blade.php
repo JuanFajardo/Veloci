@@ -167,7 +167,7 @@
                             <hr style="width: 230px;">
 
                             <table class="default" >
-                                <tr><td>Motor :  </td><th colspan="3"> {{$dato->motor}}</th></tr>
+                                <tr><td>Motor :  </td><th colspan="3"> {{$dato->tipo}}</th></tr>
                                 <tr><td>Tracción : </td><th>{{$dato->traccion}}</th></tr>
                                 <tr><td>Comustible:  </td><th>{{$dato->combustible}}</th></tr>
                             </table>

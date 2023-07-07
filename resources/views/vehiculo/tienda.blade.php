@@ -19,8 +19,6 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-12 mb-4">
-            <form action="{{ route('Vehiculo.filtro') }}" method="POST" enctype="multipart/form-data" class="col-md-12 m-auto card-body" >
-            @csrf
                 <div class="container mt-3">
                     <h5>Filtro</h5>
                     <div id="accordion">
@@ -28,10 +26,28 @@
                       
                       <div class="card">
                         <div class="card-header">
+                          <a class="collapsed btn" data-bs-toggle="collapse" href="#">Busqueda</a>      
+                          <form action="{{route('vehiculo.buscar')}}" method="POST">
+                            @csrf
+                            <div class="input-group">                      
+                              <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Buscar" name="busqueda" id="example-search-input">
+                              <span class="input-group-append">
+                                <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
+                                  <i class="bis bi-search"></i>
+                                </button>
+                              </span>        
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      
+                      <div class="card">
+                        <div class="card-header">
                           <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseOne">Año
                           </a>
                         </div>
-                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                        <!--<div id="collapseOne" class="collapse show" data-bs-parent="#accordion">-->
+                        <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
                           <div class="card-body">
                             <ul class="list-group" >
                                 @for($i=date('Y'); $i>=2019; $i--)
@@ -43,7 +59,6 @@
                           </div>
                         </div>
                       </div>
-
                       
 
                       <div class="card">
@@ -139,11 +154,15 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="card">
+                        <div class="card-header">
+                          <a class="btn btn-info" href="#collapseFour" id="limpiar"> Limpiar Filtro </a>
+                        </div>
+                      </div>
   
-                      
                     </div>
                   </div>
-              </form>
             </div>
             
             <div class="col-lg-9 col-12 mb-4" id="principal">
@@ -186,6 +205,15 @@
 
 @section('js')
 <script>
+
+$('#limpiar').click(function (e) { 
+  e.preventDefault();
+  $('input[name="anio"]').prop('checked', false);
+  $('input[name="marca"]').prop('checked', false);
+  $('input[name="tipo"]').prop('checked', false);
+  $('input[name="combustible"]').prop('checked', false);
+
+});
 
 function cargarInformacion(){
   var anio = $('input[name="anio"]:checked').val();
