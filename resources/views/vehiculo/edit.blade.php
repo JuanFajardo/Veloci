@@ -1,6 +1,7 @@
 @extends('veloci')
 
 @section('producto')
+<br/><br/><br/><br/>
 <style>
     label {
         font-weight: bold;
@@ -18,37 +19,29 @@
         <div class="form-group col-md-3 mb-3">
             <label> <b>Marca</b> </label>
             <input type="text" class="form-control mt-1" name="marca" placeholder="Toyota" required  autocomplete="off" value="{{$dato->marca}}" list="marca-list">
-            <datalist id="marca-list">             
-                <option value="Land Rover">Land Rover</option> 
-                <option value="Jaguar">Jaguar</option> 
-                <option value="Mercedes Benz">Mercedes Benz</option> 
-                <option value="Cadillac">Cadillac</option> 
-                <option value="Audi">Audi</option> 
-                <option value="Dodge">Dodge</option> 
-                <option value="RAM">RAM</option> 
-                <option value="Jeep">Jeep</option> 
-                <option value="Bronco">Bronco</option> 
-                <option value="Toyota">Toyota</option> 
-                <option value="Volkswagen">Volkswagen</option> 
-                <option value="Volvo">Volvo</option> 
-                <option value="Nissan">Nissan</option> 
-                <option value="Hyundai">Hyundai</option> 
-                <option value="Mitsubishi">Mitsubishi</option> 
+            <datalist id="marca-list"> 
+                @foreach($marcas as $marca)
+                    <option value="{{$marca->marca}}">{{$marca->marca}}</option> 
+                @endforeach
             </datalist>
-
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Motor</b> </label>
-            <input type="text" name="motor" class="form-control mt-1" placeholder="--" required  autocomplete="off" value="{{$dato->motor}}">
+            <input type="text" name="motor" class="form-control mt-1" placeholder="--" required  autocomplete="off" list="motor-list" value="{{$dato->motor}}">
+            <datalist id="motor-list"> 
+                @foreach($motors as $motor)
+                    <option value="{{$motor->motor}}">{{$motor->motor}}</option> 
+                @endforeach
+            </datalist> 
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Tipo</b> </label>
             <input type="text" class="form-control mt-1" name="tipo" placeholder="Camioneta" required  list="tipo-list" autocomplete="off" value="{{$dato->tipo}}">
             <datalist id="tipo-list"> 
-                <option value="Camioneta">Caminioneta</option> 
-                <option value="Vagoneta">Vagoneta</option>
-                <option value="Semi-Nuevo">Semi-Nuevo</option>
-            </datalist>        
+                @foreach($tipos as $tipo)
+                    <option value="{{$tipo->tipo}}">{{$tipo->tipo}}</option> 
+                @endforeach
+            </datalist> 
         </div>
     </div>
     
@@ -57,11 +50,10 @@
         <div class="form-group col-md-3 mb-3">
             <label> <b>Combustible</b> </label>
             <input type="text" class="form-control mt-1" name="combustible" placeholder="Gasolina" required  list="combustible-list" autocomplete="off" value="{{$dato->combustible}}">
-            <datalist id="combustible-list"> 
-                <option value="Gasolina">Gasolina</option> 
-                <option value="Diesel">Diesel</option> 
-                <option value="Hibrido">Hibrido</option> 
-                <option value="Electrico">Electrico</option>
+            <datalist id="combustible-list">
+                @foreach($combustibles as $combustible)
+                    <option value="{{$combustible->combustible}}">{{$combustible->combustible}}</option> 
+                @endforeach
             </datalist>
         </div>
         <div class="form-group col-md-3 mb-3">

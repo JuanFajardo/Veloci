@@ -16,7 +16,7 @@ class CombustibleController extends Controller
     }
 
     public function store(Request $request){
-        $dato = new Trabajo;
+        $dato = new Combustible;
         $dato->combustible    = $request['combustible'];
         $dato->save();
         return redirect('/Combustible');
@@ -33,7 +33,7 @@ class CombustibleController extends Controller
     }
 
     public function update(Request $request, $id){
-        $dato = Trabajo::find($id);
+        $dato = Combustible::find($id);
         $dato->combustible    = $request['combustible'];
         $dato->save();
         return redirect('/Combustible');

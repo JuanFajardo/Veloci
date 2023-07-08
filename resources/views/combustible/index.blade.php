@@ -6,7 +6,7 @@
 
     <div class="col-lg-4 col-4 p-0"></div>
     <div class="col-lg-4 col-4 p-0">
-        &nbsp;&nbsp;&nbsp;<a href="{{asset('index.php/Combustible/create')}}" class="btn btn-success"> <b>Nuevo Motor</b> </a>
+        &nbsp;&nbsp;&nbsp;<a href="{{asset('index.php/Combustible/create')}}" class="btn btn-success"> <b>Nuevo Combustible</b> </a>
     </div>
     <div class="col-lg-4 col-4 p-0"></div>
 </div>

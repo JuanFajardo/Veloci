@@ -19,50 +19,39 @@
         <div class="form-group col-md-3 mb-3">
             <label> <b>Marca</b> <small><a href="{{asset('index.php/Marca')}}">Agregar Marca</a> </small> </label>
             <input type="text" class="form-control mt-1" name="marca" placeholder="Toyota" required  autocomplete="off" list="marca-list">
-            <datalist id="marca-list">             
-                <option value="Land Rover">Land Rover</option> 
-                <option value="Jaguar">Jaguar</option> 
-                <option value="Mercedes Benz">Mercedes Benz</option> 
-                <option value="Cadillac">Cadillac</option> 
-                <option value="Audi">Audi</option> 
-                <option value="Dodge">Dodge</option> 
-                <option value="RAM">RAM</option> 
-                <option value="Jeep">Jeep</option> 
-                <option value="Bronco">Bronco</option> 
-                <option value="Toyota">Toyota</option> 
-                <option value="Volkswagen">Volkswagen</option> 
-                <option value="Volvo">Volvo</option> 
-                <option value="Nissan">Nissan</option> 
-                <option value="Hyundai">Hyundai</option> 
-                <option value="Mitsubishi">Mitsubishi</option> 
+            <datalist id="marca-list"> 
+                @foreach($marcas as $marca)
+                    <option value="{{$marca->marca}}">{{$marca->marca}}</option> 
+                @endforeach
             </datalist>
-
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Motor</b> <small><a href="{{asset('index.php/Motor')}}">Agregar Motor</a> </small> </label>
-            <input type="text" name="motor" class="form-control mt-1" placeholder="--" required  autocomplete="off">
+            <input type="text" name="motor" class="form-control mt-1" placeholder="--" required list="motor-list" autocomplete="off">
+            <datalist id="motor-list"> 
+                @foreach($motors as $motor)
+                    <option value="{{$motor->motor}}">{{$motor->motor}}</option> 
+                @endforeach
+            </datalist>      
         </div>
         <div class="form-group col-md-3 mb-3">
             <label> <b>Tipo</b> <small><a href="{{asset('index.php/Tipo')}}">Agregar Tipo</a> </small> </label>
             <input type="text" class="form-control mt-1" name="tipo" placeholder="Camioneta" required  list="tipo-list" autocomplete="off" >
             <datalist id="tipo-list"> 
-                <option value="Camioneta">Caminioneta</option> 
-                <option value="Vagoneta">Vagoneta</option>
-                <option value="Semi-Nuevo">Semi-Nuevo</option>
-                
+                @foreach($tipos as $tipo)
+                    <option value="{{$tipo->tipo}}">{{$tipo->tipo}}</option> 
+                @endforeach
             </datalist>        
         </div>
     </div>
-        
     <div class="row">
         <div class="form-group col-md-3 mb-3">
             <label> <b>Combustible</b> <small><a href="{{asset('index.php/Combustible')}}">Agregar Combustible</a> </small> </label>
             <input type="text" class="form-control mt-1" name="combustible" placeholder="Gasolina" required  list="combustible-list" autocomplete="off">
-            <datalist id="combustible-list"> 
-                <option value="Gasolina">Gasolina</option> 
-                <option value="Diesel">Diesel</option> 
-                <option value="Hibrido">Hibrido</option> 
-                <option value="Electrico">Electrico</option> 
+            <datalist id="combustible-list">
+                @foreach($combustibles as $combustible)
+                    <option value="{{$combustible->combustible}}">{{$combustible->combustible}}</option> 
+                @endforeach
             </datalist>
         </div>
         <div class="form-group col-md-3 mb-3">

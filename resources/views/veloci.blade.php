@@ -125,7 +125,7 @@
                                 <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Camioneta')}}">Camionetas</a></li>
                                 <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Vagoneta')}}">Vagonetas</a></li>
                                 <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Electrica')}}">Electrica</a></li>
-                                <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Hibridos')}}">Híbridos</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Hibrido')}}">Híbridos</a></li>
                                 <li><a class="dropdown-item" href="{{asset('index.php/Inventario/Seminuevo')}}">Semi-Nuevos</a></li>
                             </ul>
                         </li>

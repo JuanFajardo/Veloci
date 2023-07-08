@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Models\Vehiculo;
 use \App\Mail\VelociMail;
+
+use \App\Models\Combustible;
+use \App\Models\Marca;
+use \App\Models\Motor;
+use \App\Models\Tipo;
+
 use Illuminate\Support\Facades\Mail;
 
 class VehiculoController extends Controller
@@ -16,7 +22,11 @@ class VehiculoController extends Controller
     }
 
     public function create(){
-        return view('vehiculo.create');
+        $combustibles = Combustible::all();
+        $marcas = Marca::all();
+        $motors = Motor::all();
+        $tipos =Tipo::all();
+        return view('vehiculo.create', compact('combustibles','marcas','motors','tipos'));
     }
 
     public function store(Request $request){
@@ -28,9 +38,7 @@ class VehiculoController extends Controller
         $foto5 = $request->file('foto5')->store('public/images');
         if( isset( $request->foto6 ) )
             $foto6 = $request->file('foto6')->store('public/images');
-
         $pdf = $request->file('ficha')->store('public/images');
-        
 
         $dato = new Vehiculo;
         $dato->id_usuario = \Auth::user()->id;
@@ -58,8 +66,6 @@ class VehiculoController extends Controller
         $dato->popular = False;
         $dato->save();
         
-        //Vehiculo::create( $request->all() );
-
         return redirect()->route('Vehiculo.index')
             ->with('success', 'Product created successfully');
     }
@@ -72,8 +78,11 @@ class VehiculoController extends Controller
 
     public function edit($id){
         $dato = Vehiculo::find($id);
-
-        return view('vehiculo.edit', compact('dato'));
+        $combustibles = Combustible::all();
+        $marcas = Marca::all();
+        $motors = Motor::all();
+        $tipos =Tipo::all();
+        return view('vehiculo.edit', compact('dato','combustibles','marcas','motors','tipos'));
     }
 
     public function update(Request $request, $id){
@@ -153,7 +162,11 @@ class VehiculoController extends Controller
     public function tienda(){
         $datos = Vehiculo::paginate(12);
         $sucess ="";
-        return view('vehiculo.tienda', compact('datos','sucess'));
+        $combustibles = Combustible::all();
+        $marcas = Marca::all();
+        $motors = Motor::all();
+        $tipos =Tipo::all();
+        return view('vehiculo.tienda', compact('datos','sucess','combustibles','marcas','motors','tipos'));
     }
 
 
@@ -180,9 +193,7 @@ class VehiculoController extends Controller
        $datos = Vehiculo::Where( 'anio', 'like', $anio)->where('marca', 'like', $marca)->where('tipo', 'like', $tipo)->where('combustible', 'like', $combustible)->get();
        $sucess = $msj;
        return $datos; 
-       //return view('vehiculo.tienda', compact('datos','sucess'));
     }
-
 
     public function inventarioTipo($tipo){
         $datos = $sucess = $combustible = $marca = "-";
@@ -202,8 +213,6 @@ class VehiculoController extends Controller
             $combustible = '%';
             $success = "Semi-Nuevo";
         }
-
-
         if ($tipo == "Electrica"){
             $combustible = "Electrico";
             $marca = "%";
@@ -216,7 +225,11 @@ class VehiculoController extends Controller
         }
         
         $datos = Vehiculo::Where('tipo', 'like', $marca)->where('combustible', 'like', $combustible)->paginate(12);
-        return view('vehiculo.tienda', compact('datos','sucess'));
+        $combustibles = Combustible::all();
+        $marcas = Marca::all();
+        $motors = Motor::all();
+        $tipos =Tipo::all();
+        return view('vehiculo.tienda', compact('datos','sucess','combustibles','marcas','motors','tipos'));
     }
 
     public function pagina( $pagina ){
@@ -238,8 +251,11 @@ class VehiculoController extends Controller
     public function buscar(Request $request){
         $datos = Vehiculo::Where('titulo', 'like', '%'.$request->busqueda.'%')->paginate(12);
         $sucess = "Busqueda de : ".$request->busqueda;
-        return view('vehiculo.tienda', compact('datos','sucess'));
-
+        $combustibles = Combustible::all();
+        $marcas = Marca::all();
+        $motors = Motor::all();
+        $tipos =Tipo::all();
+        return view('vehiculo.tienda', compact('datos','sucess','combustibles','marcas','motors','tipos'));
     }
 
 }
