@@ -264,7 +264,7 @@
                                     <div class="card" style="width: 16rem;">
                                         <div class="card-body aling-center">
                                         <img src=" {{asset('assets/images/moneysRecurso 7.png')}}" alt=""  width="40" height="40">
-                                        <h5 class="card-title">Proceso de compra sencilla</h5>
+                                        <h5 class="card-title mt-3">Proceso de compra </h5>
                                         <p >No necesitas grandes requisitos.</p>
                                           
                                         </div>
@@ -274,7 +274,7 @@
                                 <div class="col-lg-6 mt-5  ">
                                     <div class="card" style="width: 16rem;">
                                         <div class="card-body">
-                                        <img src=" {{asset('assets/images/auto.png')}}" alt=""  width="50" height="50">
+                                        <img src=" {{asset('assets/images/auto.png')}}" alt=""  width="50" height="50" >
                                         <h5 class="card-title">Paga y llévatelo</h5>
                                         <p >Paga el monto y llévate el auto hasta tu casa.</p>
                                           

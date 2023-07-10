@@ -2,16 +2,16 @@
 
 @section('producto')
 <main>
-    <section class="section-padding section-bg" id="section_2">
+    <section class="section-padding section-bg" >
         <div class="container">
             <div class="col-lg-12 col-12 text-left mb-4">
                 <h2>¿Quienes Somos?</h2>
                 <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
             </div>
-            <div class="row">
+            <div class="row mt-5">
 
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <img src="{{asset('assets/images/historiaveloci2.jpg')}}" class="custom-text-box-image img-fluid" alt="">
+                    <img src="{{asset('assets/images/cl 4.jpg')}}" class="custom-text-box-image img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-6 col-12 mb-lg-0">
@@ -27,12 +27,7 @@
                 </div>
 
             </div>
-        </div>
-    </section>
-    
-    <section class="section-padding section-bg" id="section_2">
-        <div class="container">
-            <div class="row">
+            <div class="row mt-5">
 
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                     <div class="custom-text-box texto-justificado">
@@ -42,18 +37,14 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <img src="{{asset('assets/images/nissan qashqai cliente satisfecho20220603.jpg')}}" class="custom-text-box-image img-fluid" alt="">
+                    <img src="{{asset('assets/images/cl 1.jpg')}}" class="custom-text-box-image img-fluid" alt="">
                 </div>
 
             </div>
-        </div>
-    </section>
-    <section class="section-padding section-bg" id="section_2">
-        <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <img src="{{asset('assets/images/toyota land cruiser 79 2022.jpg')}}" class="custom-text-box-image img-fluid" alt="">
+                    <img src="{{asset('assets/images/cl 2.jpg')}}" class="custom-text-box-image img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
@@ -113,6 +104,6 @@
     </section>
 
 </main>
-</section>
+
 
 @endsection
