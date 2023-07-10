@@ -3,8 +3,8 @@
 @section('producto')
 
 <section class="section-padding section-bg" id="section_3">
-    <div class="container">
-        <div class="col-lg-12 col-12 text-left mb-4">
+    <div class="container-xxl">
+        <div class="text-left mb-4">
             @if( isset($busqueda) )
               <h2>{{$busqueda}}</h2>
             @else
@@ -18,210 +18,98 @@
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
         <div class="row">
-            <div class="col-lg-3 col-12 mb-4">
-                <div class="container mt-3">
-                    <h5>Buscador</h5>
-                    <div id="accordion">
-
-                      
-                      <div class="card">
-                        <div class="card-header">
-                          
-                          <form action="{{route('vehiculo.buscar')}}" method="POST">
-                            @csrf
-                            <div class="input-group">                      
-                              <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Buscar" name="busqueda" id="example-search-input">
-                              <span class="input-group-append">
-                                <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
-                                  <i class="bis bi-search"></i>
-                                </button>
-                              </span>        
-                            </div>
-                      </form>
-              
-              <!--<div id="accordion" class=" accordion mt-3">
-                <div class="card">
-                  <div class="card-header"> 
-                      <form action="{{route('vehiculo.buscar')}}" method="POST" >
-                       @csrf
-                      <div class="input-group">                      
-                              <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Buscar" name="busqueda" id="example-search-input">
-                              <span class="input-group-append">
-                                <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
-                                  <i class="bis bi-search"></i>
-                                </button>
-                              </span>        
-                            </div>
-                      </form>
-                        </div>
-                    </div>
-                      
-                      <div class="accordion-item">
-                        <div class="accordion-item">
-                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseOne">Año
-                          </a>
-                        </div>
-                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-                        <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
-                          <div class="card-body">
-                            <ul class="list-group" >
-                                @for($i=date('Y'); $i>=2019; $i--)
-                                  <li class="list-group-item">
-                                    <input class="anio form-check-input me-1" type="radio" name="anio" value="{{$i}}" >{{$i}}
-                                  </li>
-                                @endfor
-                              </ul>
-                          </div>
-                        </div>
-                      </div>
-                      
-
-                      <div class="card">
-                        <div class="card-body">
-                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">Marca
-                        </a>
-                        </div>
-                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-                            <div class="card-body">
-                                <ul class="list-group">
-                                  @foreach($marcas as $marca)
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="radio" name="marca" value="{{$marca->marca}}">{{$marca->marca}}
-                                    </li>
-                                  @endforeach
-                                  </ul>
-                              </div>
-                        </div>
-                      </div>
-
-                      <div class="card">
-                        <div class="card-body">
-                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree"> Tipo de Vehículo</a>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-                        <div class="card-body">
-                            <div class="card-body">
-                                <ul class="list-group">
-                                    @foreach($tipos as $tipo)
-                                      <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" name="tipo" value="{{$tipo->tipo}}">{{$tipo->tipo}}
-                                      </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-
-                      <div class="card">
-                        <div class="card-body">
-                          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
-                            Combustible
-                          </a>
-                        </div>
-                        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
-                          <div class="card-body">
-                            <div class="card-body">
-                                <ul class="list-group">
-                                    @foreach($combustibles as $combustible)
-                                      <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" name="combustible" value="{{$combustible->combustible}}" >{{$combustible->combustible}}
-                                      </li>
-                                    @endforeach
-                                  </ul>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="mt-5">
-                          <center><a class="custom-btn-bo" href="#collapseFour" id="limpiar"> <i class="bi bi-filter"> </i> Limpiar Buscador </a></center>
-                      
-                      </div>
-  
-                    </div>-->
-                    <div class="accordion mt-3" id="accordionPanelsStayOpenExample">
-
-                      <div class="accordion-item">
-                        <h6 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                         Año:
-                        </button>
-                        </h6>
-                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
-                           <div class="accordion-body">
-                              <ul class="list-group" >
-                                @for($i=date('Y'); $i>=2019; $i--)
-                                  <li class="list-group-item">
-                                    <input class="anio form-check-input me-1" type="radio" name="anio" value="{{$i}}" >{{$i}}
-                                  </li>
-                                @endfor
-                              </ul>
-                            </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                       <h6 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" >
-                        Marca:
-                        </button>
-                        </h6>
-                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                            <div class="accordion-body">
-                            <ul class="list-group">
-                                  @foreach($marcas as $marca)
-                                    <li class="list-group-item">
-                                      <input class="form-check-input me-1" type="radio" name="marca" value="{{$marca->marca}}">{{$marca->marca}}
-                                    </li>
-                                  @endforeach
-                                  </ul>
-                            </div>
-                          </div>
-                      </div>
-  
-                      <div class="accordion-item">
-                         <h6 class="accordion-header" id="panelsStayOpen-headingThree">
-                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" >
-                            Tipo de Vehículo:
-                            </button>
-                          </h6>
-                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" >
-                            <div class="accordion-body">
-                            <ul class="list-group">
-                                    @foreach($tipos as $tipo)
-                                      <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" name="tipo" value="{{$tipo->tipo}}">{{$tipo->tipo}}
-                                      </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="accordion-item">
-                         <h6 class="accordion-header" id="panelsStayOpen-headingFour">
-                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" >
-                           Combustible:
-                            </button>
-                          </h6>
-                          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" >
-                            <div class="accordion-body">
-                            <ul class="list-group">
-                                    @foreach($combustibles as $combustible)
-                                      <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="radio" name="combustible" value="{{$combustible->combustible}}" >{{$combustible->combustible}}
-                                      </li>
-                                    @endforeach
-                                  </ul>
-                            </div>
-                          </div>
-                      </div>
+            <div class="col-lg-3 col-12 mb-4 ">
+              <div class="row">
+             
+              <form action="{{route('vehiculo.buscar')}}" method="POST" >
+                @csrf
+                <div class="input-group">                      
+                  <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Buscar" name="busqueda" id="example-search-input">
+                  <span class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
+                      <i class="bis bi-search"></i>
+                    </button>
+                  </span>        
                 </div>
-                <div class="mt-5">
-                          <center><a class="custom-btn-bo" href="#collapseFour" id="limpiar"> <i class="bi bi-filter"> </i> Limpiar Buscador </a></center>
-                        
-                      </div>
-                
+              </form>
+              <div class="accordion mt-3" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h6 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                      Año:
+                    </button>
+                  </h6>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                      <ul class="list-group" >
+                        @for($i=date('Y'); $i>=2019; $i--)
+                        <li class="list-group-item">
+                          <input class="anio form-check-input me-1" type="radio" name="anio" value="{{$i}}" >{{$i}}
+                        </li>
+                        @endfor
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" >
+                   Marca:
+                  </button>
+                </h6>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                  <div class="accordion-body">
+                    <ul class="list-group">
+                      @foreach($marcas as $marca)
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" name="marca" value="{{$marca->marca}}">{{$marca->marca}}
+                      </li>
+                      @endforeach
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" >
+                    Tipo de vehículo:
+                  </button>
+                </h6>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" >
+                  <div class="accordion-body">
+                    <ul class="list-group">
+                      @foreach($tipos as $tipo)
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="radio" name="tipo" value="{{$tipo->tipo}}">{{$tipo->tipo}}
+                        </li>
+                      @endforeach
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="panelsStayOpen-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" >
+                    Combustible:
+                  </button>
+                </h6>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" >
+                  <div class="accordion-body">
+                    <ul class="list-group">
+                      @foreach($combustibles as $combustible)
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" name="combustible" value="{{$combustible->combustible}}" >{{$combustible->combustible}}
+                      </li>
+                      @endforeach
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="mt-5">
+              <center><a class="custom-btn-bo" href="#collapseFour" id="limpiar"> <i class="bi bi-filter"> </i> Limpiar Buscador </a></center>
+            </div>
+            </div>
             </div>
             
             <div class="col-lg-9 col-12 mb-4" id="principal">
@@ -251,7 +139,7 @@
                     </div>
                 @endforeach
               </div>
-              <div class="mt-5">
+              <div class="mt-4">
                 {{ $datos->links() }}
               </div>
             </div>

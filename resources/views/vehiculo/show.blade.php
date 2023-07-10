@@ -10,12 +10,9 @@
                         <img class="card-img img-fluid" src="{{asset('/'. $dato->foto1)}}" alt="Card image cap" id="product-detail">
                     </div>
                     
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
                     
-                    <div class="row">
+                    
+                    <div class="row mt-5">
                         <div class="col-1 align-self-center">
                             <a href="#multi-item-example" role="button" data-bs-slide="prev">
                                 <i class="text-dark bi-chevron-left"></i>
@@ -88,8 +85,8 @@
                         <!--End Controls-->
                     </div>
                 </div>
-                <div class="col-lg-4 col-12 mx-auto mt-4 mt-lg-0">
-                    <h5 class="mt-5 mb-3">{{$dato->titulo}}</h5>
+                <div class="col-lg-4 col-12 mx-auto ">
+                    <h5 >{{$dato->titulo}}</h5>
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
@@ -119,7 +116,7 @@
                                     <tr>
                                         <th>Color interior:</th> <td>{{$dato->color_interior}}</td></tr>
                                     <tr>
-                                        <th>Wheels:</th> <td>{{$dato->wheels}}</td></tr>
+                                        <th>Neumáticos:</th> <td>{{$dato->wheels}}</td></tr>
                                     <tr>
                                         <th>Tracción:</th> <td>{{$dato->traccion}}</td></tr>
                                 </tbody>
@@ -128,16 +125,16 @@
                     <div class="tags-block mt-5">
                         
                         <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class=" tags-block-link " style="color: white;">
-                            <i class=" bi-download"></i>  <span>Ficha Tecnica</span> 
+                            <i class=" bi-download"></i>  <span>Ficha Técnica</span> 
                         </a>
                         <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20estoy%20estoy%20interesado%20en%20{{$dato->titulo}}" class="tags-block-linkw" style="color: white;">
                             <i class=" bi-whatsapp"></i>  <span>Whatsapp</span>
                         </a>
                     </div>
 
-                    <form class="custom-form contact-form mt-2"  role="form">
+                    <form class="custom-form contact-form mt-3"  role="form">
                         @csrf
-                        <p class="mb-1"> <strong>Envia un mensaje para mas informacion:</strong>
+                        <p class="mb-1"> <strong>Enviar mensaje para más información:</strong>
                         </p>
                         <input type="hidden" name="titulo" id="titulo"  value="{{asset('/index.php/Tienda/'.$dato->id)}}" required>
                         <input type="text" name="nombre" id="nombre"  class="form-control" placeholder="ejemplo:Luis" required style="background-color:rgb(197, 197, 197);">
@@ -151,7 +148,7 @@
                     </form>
                 </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-5">
             <div class="container">
                 <h2>Autos Relacionados</h2>
                 <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
@@ -170,8 +167,8 @@
                             <hr style="width: 230px;">
 
                             <table class="default" >
-                                <tr><td>Motor :  </td><th colspan="3"> {{$dato->motor}}</th></tr>
-                                <tr><td>Tracción : </td><th>{{$dato->traccion}}</th></tr>
+                                <tr><td>Motor:  </td><th colspan="3"> {{$dato->motor}}</th></tr>
+                                <tr><td>Tracción: </td><th>{{$dato->traccion}}</th></tr>
                                 <tr><td>Comustible:  </td><th>{{$dato->combustible}}</th></tr>
                             </table>
 

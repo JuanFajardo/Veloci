@@ -136,7 +136,7 @@
                                 <li><a class="dropdown-item" href="{{asset('index.php/Clasificados')}}">Clasificados</a></li>
                                 
                                 @if( auth()->check() )
-                                    <li><a class="dropdown-item" href="{{asset('index.php/Vehiculo')}}">Adm. Vehiculos</a></li>
+                                    <li><a class="dropdown-item" href="{{asset('index.php/Vehiculo')}}">Adm. Vehículos</a></li>
                                     <li><a class="dropdown-item" href="{{asset('index.php/Trabajo')}}">Adm. Clasificados</a></li>
                                 @endif
 

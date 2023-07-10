@@ -45,11 +45,10 @@
             </div>
             <div class="row">
                 <div class="col-md-5 mx-auto ">
-                    <div class="small fw-light animated animate__rotateOut ">Buscar por marca,tipo de auto, etc.</div>
                         <form action="{{route('vehiculo.buscar')}}" method="POST" class="mt-2">
                             <div class="input-group">
                                 @csrf
-                                <input class="form-control border-end-0 border rounded-pill me-1" type="search" placeholder="Aqui.." name="busqueda" id="example-search-input" >
+                                <input class="form-control border-end-0 border rounded-pill me-1" type="search" placeholder="Buscar por marca,tipo de auto, etc." name="busqueda" id="example-search-input" >
                                 <span class="input-group-append">
                                 <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
                                     <i class="bis bi-search"></i>
@@ -226,7 +225,7 @@
 <section class="section-padding ">
                 <div class="container">
                     <div class="col-lg-12 col-12 text-left mb-4">
-                        <h2 class="animated bounce">Te Ofrecemos </h2>
+                        <h2 class="animated bounce">Te ofrecemos </h2>
                         <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
                     </div>
                     <p>La mejor atención y la compra con solo algunos pasos.</p>
@@ -239,7 +238,7 @@
                                     <div class="card" style="width: 16rem;">
                                         <div class="card-body">
                                         <img src="{{asset('assets/images/auto2.png')}}" alt=""  width="40" height="40">
-                                        <h5 class="card-title ">Selcción el vehículo </h5>
+                                        <h5 class="card-title ">Selección el vehículo </h5>
                                             <p >Tenemos muchos modelos y marcas disponibles.</p>
                                           
                                         </div>
