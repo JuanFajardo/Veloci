@@ -10,7 +10,7 @@
 
         <div class="form-group col-md-4 mb-4">
             <label> <b>Combustible</b> </label>
-            <input type="text" class="form-control mt-1" name="combustible" placeholder="Diesel" required  autocomplete="off" value="{{$dato->Combustible}}">
+            <input type="text" class="form-control mt-1" name="combustible" placeholder="Diesel" required  autocomplete="off" value="{{$dato->combustible}}">
         </div>
 
         <div class="form-group col-md-4 mb-4"><br/>

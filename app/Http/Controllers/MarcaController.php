@@ -34,7 +34,7 @@ class MarcaController extends Controller
     }
 
     public function update(Request $request, $id){
-        $dato = Trabajo::find($id);
+        $dato = Marca::find($id);
         $dato->marca  = $request['marca'];
         $dato->save();
         return redirect('/Marca');

@@ -10,7 +10,7 @@
 
         <div class="form-group col-md-4 mb-4">
             <label> <b>Tipo</b> </label>
-            <input type="text" class="form-control mt-1" name="tipo" placeholder="Electrico " required  autocomplete="off" value="{{$dato->motor}}">
+            <input type="text" class="form-control mt-1" name="tipo" placeholder="Electrico " required  autocomplete="off" value="{{$dato->tipo}}">
         </div>
 
         <div class="form-group col-md-4 mb-4"><br/>

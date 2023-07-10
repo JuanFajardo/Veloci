@@ -36,9 +36,9 @@ class MotorController extends Controller
 
     public function update(Request $request, $id){
         $dato = Motor::find($id);
-        $dato->motor    = $request['Motor'];
+        $dato->motor    = $request['motor'];
         $dato->save();
-        return redirect('/Trabajo');
+        return redirect('/Motor');
     }    
 }
 

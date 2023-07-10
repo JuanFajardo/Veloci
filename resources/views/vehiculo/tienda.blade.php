@@ -26,7 +26,7 @@
                       
                       <div class="card">
                         <div class="card-header">
-                          <a class="collapsed btn" data-bs-toggle="collapse" href="#">Busqueda</a>      
+                          
                           <form action="{{route('vehiculo.buscar')}}" method="POST">
                             @csrf
                             <div class="input-group">                      
