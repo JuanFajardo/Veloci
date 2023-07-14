@@ -3,7 +3,7 @@
 @section('producto')
 
 <section class="section-padding section-bg" id="section_3">
-    <div class="container-xxl">
+    <div class="container-fluid">
         <div class="text-left mb-4">
             @if( isset($busqueda) )
               <h2>{{$busqueda}}</h2>
@@ -198,7 +198,7 @@ function cargarInformacion(){
       principal = principal + "<p class=\"mb-0\"> Combustible: <strong>"+response[i].combustible+"</strong></p>";
       principal = principal + "<hr style=\"width: 230px;\">";
       principal = principal + "<div class=\"d-flex align-items-center mb-0 \">";
-      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"custom-btn-bo btn me-2\"><i class=\"bi-plus-lg\"></i></a>";
+      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"custom-btn-bo btn me-2\"><font size=2> Ver</font></a>";
       principal = principal + "<a href=\"https://wa.me/591"+response[i].comunicate+"?text=Hola%20vi%20este%20vehiculo%20"+response[i].titulo+"\" class=\"custom-btn-w btn  me-2\"><i class=\"bi-whatsapp\" style=\"color: rgb(51, 189, 69);\"></i></a>";
       principal = principal + "<a href=\"{{asset('/')}}/"+response[i].ficha+"\" class=\"custom-btn-d btn me-2\"><i class=\"bi-download\" style=\"color: rgb(75, 92, 170);\"></i></a>";
       principal = principal + '</div></div></div></a></div></div>';

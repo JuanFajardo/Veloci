@@ -1,79 +1,73 @@
 @extends('veloci')
 
 @section('producto')
-<section class="hero-section hero-section-full-height">
-    
-    <div class="container-fluid">
-        
-        <div class="row ">
-
-            <div class="col-lg-12 col-12 p-0">
-                <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{asset('assets/images/portadas medida fb.jpg')}}" class="carousel-image img-fluid" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('assets/images/pt 1 4xe.jpg')}}" class="carousel-image img-fluid" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('assets/images/pt2.jpg')}}" class="carousel-image img-fluid" alt="...">
-                        </div>
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+<section >
+     <div class="row ">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{asset('assets/images/pt 1 4xe.jpg')}}" class="d-block w-100" alt="...">
                 </div>
+                <div class="carousel-item">
+                        <img src="{{asset('assets/images/portadas medida fb.jpg')}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{asset('assets/images/pt2.jpg')}}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
         </div>
-    </div>
+    
 </section>
-<section class="section-padding section-bg" id="section_3">
+<section class="section-padding section-bg" >
     <div class="container">
-        <div class=" row  ">
+       <div class="row">
             <div class="col-lg-12 col-12 text-center mb-4">
-                            
                 <h2>Encentra tu Vehículo </h2>
             </div>
-            <div class="row">
-                <div class="col-md-5 mx-auto ">
-                        <form action="{{route('vehiculo.buscar')}}" method="POST" class="mt-2">
-                            <div class="input-group">
-                                @csrf
-                                <input class="form-control border-end-0 border rounded-pill me-1" type="search" placeholder="Buscar por marca,tipo de auto, etc." name="busqueda" id="example-search-input" >
-                                <span class="input-group-append">
-                                <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
-                                    <i class="bis bi-search"></i>
-                                </button>
-                                </span>
-                            </div>
-                        </form>
+            <div class="col-md-5 mx-auto ">
+                <form action="{{route('vehiculo.buscar')}}" method="POST" class="mt-2">
+                     <div class="input-group">
+                         @csrf
+                        <input class="form-control border-end-0 border rounded-pill me-1" type="search" placeholder="Buscar por marca,tipo de auto, etc." name="busqueda" id="example-search-input" >
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit">
+                                <i class="bis bi-search"></i>
+                            </button>
+                        </span>
                     </div>
-                </div>
+                </form>
             </div>
-
-        <div class="col-lg-12 col-12 text-left mb-4 mt-5">
-            <h2 >Los Destacados</h2>
-            <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
-        </div>
+       </div>
+        <div class="row">
+            <div class="col-lg-12 col-12 text-left mb-4 mt-5">
+                <h2 >Los Destacados</h2>
+                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
+            </div>
         
 
-        <div class="row">
-        @foreach ($datos as $dato)
+            <div class="row">
+            @foreach ($datos as $dato)
             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-4">
                 <div class="custom-block-wrap">
                     <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
-                    <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
+                        <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
 
-                    <div class="custom-block">
+                        <div class="custom-block">
                         <div class="custom-block-body">
                             <h5 class="mb-3">{{$dato->titulo}}</h5>
                             <hr style="width: 230px;">
@@ -88,18 +82,20 @@
                             </div>
                         </div>
                         
-                    </div>
+                        </div>
                     </a>
                 </div>
             </div>
-        @endforeach
-        </div><br/>
+             @endforeach
+            <div class="col text-end mt-5">
+                <p class="text-center"><a class="custom-btn btn " href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Catálogo</span></a></p>
+            </div>
+            </div>
+        </div>
+        
+    
     </div>
-    <div class="row">
-        <div class="col text-end mt-5">
-            <p class="text-center"><a class="custom-btn btn " href="{{asset('index.php/Tienda')}}"><i class="bi-chevron-right "> </i><span class="btn-text"> Catálogo</span></a></p>
-    </div>
-    </div>
+
     
 </section>
 <section class="about-section section-padding">
@@ -222,84 +218,59 @@
         </div>
     </div>
 </section>
-<section class="section-padding ">
-                <div class="container">
-                    <div class="col-lg-12 col-12 text-left mb-4">
-                        <h2 class="animated bounce">Te ofrecemos </h2>
-                        <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
-                    </div>
-                    <p>La mejor atención y la compra con solo algunos pasos.</p>
-                    <div class="row">
-                        <div class=" col-lg-6">
-                            <div class="row">
-
-                                <div class="col-lg-6 ">
-                                    
-                                    <div class="card" style="width: 16rem;">
-                                        <div class="card-body">
-                                        <img src="{{asset('assets/images/auto2.png')}}" alt=""  width="40" height="40">
-                                        <h5 class="card-title ">Selección el vehículo </h5>
-                                            <p >Tenemos muchos modelos y marcas disponibles.</p>
-                                          
-                                        </div>
-                                     </div>
-                                </div>
-                                <div class="col-lg-6 mt-5 ">
-                                    
-                                    <div class="card" style="width: 16rem;">
-                                        <div class="card-body">
-                                        <img src="{{asset('assets/images/auto3.png ')}}" alt=""  width="40" height="40">
-                                        <h5 class="card-title">Solicita una cotización </h5>
-                                        <p >Te ofrecemos diferentes tipos de precios.</p>
-                                          
-                                        </div>
-                                     </div>
-                                </div>
-                                
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 ">
-                                    
-                                    <div class="card" style="width: 16rem;">
-                                        <div class="card-body aling-center">
-                                        <img src=" {{asset('assets/images/moneysRecurso 7.png')}}" alt=""  width="40" height="40">
-                                        <h5 class="card-title mt-3">Proceso de compra </h5>
-                                        <p >No necesitas grandes requisitos.</p>
-                                          
-                                        </div>
-                                     </div>
-
-                                </div>
-                                <div class="col-lg-6 mt-5  ">
-                                    <div class="card" style="width: 16rem;">
-                                        <div class="card-body">
-                                        <img src=" {{asset('assets/images/auto.png')}}" alt=""  width="50" height="50" >
-                                        <h5 class="card-title">Paga y llévatelo</h5>
-                                        <p >Paga el monto y llévate el auto hasta tu casa.</p>
-                                          
-                                        </div>
-                                      </div>
-                                </div>
-                                
-                            </div>
-                            
-                            
+<section class="section-padding section-bg ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 text-left mb-4">
+                <h2 class="animated bounce">Te ofrecemos </h2>
+                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
+            </div>
+            
+            <div class="col-lg-6 col-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box  justify-content-center align-items-center ">
+                            <img src="{{asset('assets/images/auto2.png')}}" alt=""  width="40" height="40">
+                            <h5 class="mb-3">Selección el vehículo</h5>
+                            <p>Tenemos muchos modelos y marcas disponibles.</p>
                         </div>
-                        <div class="col-lg-6 ">
-                            <div class="news-block">
-                                <div class="news-block">
-                                    <img src="{{asset('assets/images/llave.png')}}" class="news-image img-fluid" alt="" >
-    
-                                   
-                                </div>
-                                
-    
-                            </div>
-                        </div>
-                        
                     </div>
-                   
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box  justify-content-center align-items-center">
+                            <img src="{{asset('assets/images/auto3.png ')}}" alt=""  width="40" height="40">
+                            <h5 class="mb-3">Solicita una cotización</h5>
+                            <p>Te ofrecemos diferentes tipos de precios.</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
+                            
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="custom-text-box  justify-content-center align-items-center">
+                        <img src=" {{asset('assets/images/moneysRecurso 7.png')}}"  alt=""  width="40" height="40">
+                            <h5 class="mb-3 mt-3">Proceso de compra</h5>
+                            <p>No necesitas grandes requisitos.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                         <div class="custom-text-box  justify-content-center">
+                         <img src=" {{asset('assets/images/auto.png')}}" alt=""  width="50" height="50" >
+                            <h5 class="mb-3">Paga y llévatelo</h5>
+                            <p>Paga el monto y llévate el auto hasta tu casa.</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-lg-6 col-12 ">
+                <div class="row">
+                    <img src="{{asset('assets/images/llave.png')}}" class="custom-text-box-image img-fluid" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
 
 @endsection
