@@ -2,17 +2,20 @@
 
 @section('producto')
 <section class="section-padding ">
-    <div class="container">
+    <div class="col-lg-12 col-12 text-center ">
+         <h3>Administrar Vehículos </h3>
+    </div>
+    <div class="container mt-3">
         <div class="row">
 
             <div class="col-lg-4 col-4 p-0">
-                 <a href="{{asset('index.php/Vehiculo/create')}}" class="btn btn-success"> <i class="bi-plus-lg"></i> <span>Nuevo Vehículo</span> </a>
+                 <a href="{{asset('index.php/Vehiculo/create')}}" class="btn btn-success"> <i class="bi bi-plus-circle"></i> <span>Nuevo </span> </a>
             </div>
             <div class="col-lg-4 col-4 p-0">
                 <h4><p class="badge badge-info">  Cantidad de autos: <b>{{count($datos)}}</b></p> </h4>
             </div>
             <div class="col-lg-4 col-4 p-0">
-                <h4><p class="badge badge-info">  Cantidad de Populares: <b>{{$populares}}</b> </p> </h4>
+                <h4><p class="badge badge-info">  Cantidad de populares: <b>{{$populares}}</b> </p> </h4>
             </div>
         </div>
 

@@ -95,7 +95,7 @@
                 </div>
 
 
-                <button class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998;" type="submit">Acceder</button>
+                <button class="btn btn-primary  btn-block" style="background-color: #3b5998;" type="submit">Acceder</button>
             </form>
             
 
