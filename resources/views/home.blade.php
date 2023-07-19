@@ -111,71 +111,29 @@
                 <div class="carousel slide carousel-multi-item pt-2 pt-md-0">
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Land Rover/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/landrover web.png')}}" alt="Land Rover"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Jaguar/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/jaguarweb.png')}}" alt="Jaguar"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Mercedes Benz/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/mercedes benz web.png')}}" alt="Mercedes Benz"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Cadillac/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/cadillac web.png')}}" alt="Cadillac"></a>
-                                </div>
 
+                            <?php $contador = 0; $msj=" active"; ?>
+                            @foreach($marcas as $marca)
+                            @if( $contador == 0 )
+                            <div class="carousel-item{{$msj}}">
+                                <div class="row">
+                            @endif
+                                    <div class="col-3 p-md-5">
+                                        <a href="{{asset('index.php/Tienda/'.$marca->marca.'/Marca')}}"><img class="img-fluid brand-img" src="{{asset($marca->imagen)}}" alt="{{$marca->marca}}"></a>
+                                    </div>
+                            <?php $contador ++ ; ?>  
+                            @if( $contador == 4 )
+                                </div>
                             </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Audi/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/audi web.png')}}" alt="Audi"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Dodge/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/dodgeweb (1).png')}}" alt="Dodge"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/RAM/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/ramweb.png')}}" alt="RAM"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Jeep/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/jeep web.png')}}" alt="Jeep"></a>
+                            <?php $contador=0; $msj=""; ?>
+                            @endif
+                            @endforeach
 
+                            @if( $contador < 4 )
                                 </div>
                             </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Bronco/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/broncoweb.png')}}" alt="Bronco"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Toyota/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/volkswagenweb.png')}}" alt="Toyota"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Volkswagen/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/toyota web.png')}}" alt="Volkswagen"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Volvo/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/volvoweb.png')}}" alt="Volvo"></a>
-                                </div>
-                            </div>
-                          </div>
-                          <option value="Nissan"></option> 
-                          <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Nissan/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/nissanweb.png')}}" alt="Nissan"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Hyundai/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/hyundaiweb.png')}}" alt="Hyundai"></a>
-                                </div>
-                                <div class="col-3 p-md-5">
-                                    <a href="{{asset('index.php/Tienda/Mitsubishi/Marca')}}"><img class="img-fluid brand-img" src="{{asset('assets/images/icons/mitsubichi web.png')}}" alt="Mitsubishi"></a>
-                                </div>
-                                
-                            </div>
-                          </div>
+                            @endif
+                           
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

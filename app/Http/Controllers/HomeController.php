@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vehiculo;
+use App\Models\Marca;
 
 class HomeController extends Controller
 {
@@ -20,7 +21,8 @@ class HomeController extends Controller
     public function index()
     {
         $datos = Vehiculo::where('popular', '1')->get();
-        return view('home', compact('datos'));
+        $marcas = Marca::all();
+        return view('home', compact('datos', 'marcas'));
     }
 
     public function show($busqueda){

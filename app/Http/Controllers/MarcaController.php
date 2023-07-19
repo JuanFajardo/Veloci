@@ -17,8 +17,11 @@ class MarcaController extends Controller
     }
 
     public function store(Request $request){
+        
+        $imagen = $request->file('imagen')->store('public/marcas');
         $dato = new Marca;
         $dato->marca  = $request['marca'];
+        $dato->imagen  = $imagen;
         $dato->save();
         return redirect('/Marca');
     }
@@ -36,6 +39,10 @@ class MarcaController extends Controller
     public function update(Request $request, $id){
         $dato = Marca::find($id);
         $dato->marca  = $request['marca'];
+        if ($request->hasFile('imagen')){
+            $imagen = $request->file('imagen')->store('public/images');
+            $dato->imagen = $imagen;  
+        }
         $dato->save();
         return redirect('/Marca');
     }

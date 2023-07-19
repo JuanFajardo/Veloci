@@ -14,7 +14,7 @@
        
         <table id="tablaAgenda" class="table table-striped table-bordered " >
             <thead>
-                <tr>
+                <tr> 
                     <th> Id </th>
                     <th> Marca </th>
                     <th> Accion </th>
@@ -24,7 +24,7 @@
             @foreach($datos as $dato)
                 <tr>
                     <td>{{$dato->id}}</td>
-                    <td>{{$dato->marca}}</td>
+                    <td>{{$dato->marca}} </td>
                     <td>
                         <a href="{{asset('index.php/Marca/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
                     </td>
