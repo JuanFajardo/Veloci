@@ -77,7 +77,7 @@ to{
   --h5-font-size:                 18px;
   --h6-font-size:                 20px;
   --p-font-size:                  13px;
-  --btn-font-size:                18px;
+  --btn-font-size:                12px;
   --copyright-font-size:          14px;
 
   --border-radius-large:          100px;
@@ -344,7 +344,7 @@ strong {
 .custom-btn-bo {
   background:  #44525d;
   border: 2px solid transparent;
-  border-radius: var(--border-radius-small);
+  border-radius: 10px;
   color: var(--white-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-normal);

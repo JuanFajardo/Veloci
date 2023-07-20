@@ -85,7 +85,7 @@
                 </div>
 
                  <div class="form-outline mb-4">
-                <label for="password" class="typeEmailX-2">Contaseña</label>
+                <label for="password" class="typeEmailX-2">Contraseña</label>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" />
                 @error('password')
                     <span class="invalid-feedback" role="alert">
