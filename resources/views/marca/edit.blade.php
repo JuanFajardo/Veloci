@@ -14,8 +14,13 @@
                 @csrf
                 @method('PUT')
                 <div class="row">
-                    <div class="form-group col-md-2 mb-2">  
+                    
+                    <div class="form-group col-md-3 mb-3">
+                        <label> <b>Logo de Marca</b> </label>
+                        <input type="file" name="imagen" autocomplete="off"  >
+                        <img src="{{asset($dato->imagen)}}" alt="">   
                     </div>
+
 
                     <div class="form-group col-md-4 mb-4">
                         <label> <b>Marca:</b> </label>

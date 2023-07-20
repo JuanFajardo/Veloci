@@ -10,6 +10,6 @@ class Marca extends Model
     use HasFactory;
 
     protected $table = 'marcas';
-    protected $fillable = [ 'id', 'marca' ];
+    protected $fillable = [ 'id', 'marca', 'imagen'];
 
 }

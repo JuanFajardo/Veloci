@@ -117,7 +117,7 @@
                 @foreach ($datos as $dato)
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block">
+                            <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block" target="_blank">
                             <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
                             <div class="custom-block">
                                 <div class="custom-block-body">
@@ -128,7 +128,7 @@
                                     <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
                                     <hr style="width: 230px;">
                                     <div class="d-flex align-items-center mb-0 ">
-                                      <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><font size=2> Ver</font></a>
+                                      <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2" target="_blank"><font size="2" > Ver</font></a>
                                       <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20vi%20este%20vehiculo%20{{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
                                       <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(75, 92, 170);"></i></a>
                                     </div>
@@ -188,7 +188,7 @@ function cargarInformacion(){
     for(var i=0; i<response.length; i++){
       principal = principal + '<div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">';
       principal = principal + '<div class="custom-block-wrap">';
-      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"d-block\">";
+      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"d-block\" target=\"_blank\">";
       principal = principal + "<img src=\"{{asset('/')}}/"+response[i].foto1+"\" class=\"custom-block-image img-fluid\" >";
       principal = principal + "<div class=\"custom-block\"><div class=\"custom-block-body\">";
       principal = principal + "<h5 class=\"mb-3\">"+response[i].titulo+"</h5>";
@@ -198,7 +198,7 @@ function cargarInformacion(){
       principal = principal + "<p class=\"mb-0\"> Combustible: <strong>"+response[i].combustible+"</strong></p>";
       principal = principal + "<hr style=\"width: 230px;\">";
       principal = principal + "<div class=\"d-flex align-items-center mb-0 \">";
-      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"custom-btn-bo btn me-2\"><font size=2> Ver</font></a>";
+      principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"custom-btn-bo btn me-2\"  target=\"_blank\"><font size=2> Ver</font></a>";
       principal = principal + "<a href=\"https://wa.me/591"+response[i].comunicate+"?text=Hola%20vi%20este%20vehiculo%20"+response[i].titulo+"\" class=\"custom-btn-w btn  me-2\"><i class=\"bi-whatsapp\" style=\"color: rgb(51, 189, 69);\"></i></a>";
       principal = principal + "<a href=\"{{asset('/')}}/"+response[i].ficha+"\" class=\"custom-btn-d btn me-2\"><i class=\"bi-download\" style=\"color: rgb(75, 92, 170);\"></i></a>";
       principal = principal + '</div></div></div></a></div></div>';
