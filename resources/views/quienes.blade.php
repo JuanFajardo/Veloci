@@ -18,11 +18,10 @@
                     <div class="custom-text-box texto-justificado">
                         <h2 class="mb-2">Historia</h2>
                         <hr style="width: 230px;">
-                        <font  size=3>El sueño de tener una auto venta se hizo realidad, la pasión por el mundo de los vehículos y ofrecer a nuestros clientes una experiencia diferente, basada en la confianza, la calidad y el servicio. Sabemos que el mercado de los autos es competitivo y que teníamos que diferenciarnos de la competencia. Por eso, creamos una marca nueva, que refleja nuestra visión y valores. Así nació Veloci Auto venta, una empresa que se especializa en la venta de autos nuevos y seminuevos, con garantía y asesoramiento personalizado.
-
-                            Renovamos un espacio para la comodidad de nuestros clientes, para ofrecer una variedad de modelos y marcas de autos, adaptados a las necesidades y preferencias de cada comprador estamos asociados con proveedores internacionales.
-                            
-                            En poco tiempo, Veloci Auto Venta se ha convertido en un referente en el sector de la venta de autos de Bolivia. Logrando fidelizar a cliente con un trato cercano y honesto, comprometidos con la calidad y la satisfacción. Nos sentimos orgullosos de haber cumplido un sueño de emprendimiento y de haber contribuido al desarrollo económico y social de nuestro país.</font>
+                        <font  size=3>La idea de un nuevo emprendimiento, más específicamente de un Auto venta surge a la raíz de experiencias que nos demostraban que en Bolivia no había un lugar que concentre varias marcas de movilidades, estas experiencias nos hicieron madurar la idea de crear a <strong>VELOCI</strong> quien sería un referente de concentración en un solo lugar de variedad de marcas, modelos y colores de automóviles de alta gama, de igual manera le ofrecemos la opción de elegir entre autos con combustible convencional, hibrido o eléctrico, facilitando de esta manera a nuestros clientes el afán de cruzar las ciudades en busca de autos soñados.
+                            <br><br><strong>VELOCI</strong> en sus instalaciones posee esta característica que nos distingue de las demás, contando con un variado stock de unidades motorizadas, misma que cuentan con la respectiva garantía, calidad y asesoramiento personalizado, para que nuestros clientes sientan la seguridad y seriedad de su inversión.<br><br>
+                            El auto soñado, el compañero de aventura, la unidad que transporta a la familia, el amigo de todos de los días búsquelo en <strong>AUTOVENTA VELOCI</strong> .
+                        </font>
                     </div>
                 </div>
 
@@ -33,7 +32,7 @@
                     <div class="custom-text-box texto-justificado">
                         <h2 class="mb-2">Misión</h2>
                         <hr style="width: 230px;">
-                        <font  size=3>En Veloci Autoventa buscamos  satisfacer las necesidades de nuestros  clientes, ofreciéndoles una amplia gama de vehículos revisados y garantizados, así como un asesoramiento personalizado de calidad con rapidez y confianza.</font>
+                        <font  size=3>Poner a disposición de nuestros clientes una amplia gama de movilidades según sus gustos, criterios y/o necesidades además de ofrecer garantías y asesoramiento personalizado en la adquisición de su compañero de aventura.</font>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
@@ -43,16 +42,17 @@
             </div>
             <div class="row mt-5">
                 
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <img src="{{asset('assets/images/cl 2.jpg')}}" class="custom-text-box-image img-fluid" alt="">
-                </div>
+                
 
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                     <div class="custom-text-box texto-justificado">
                         <h2 class="mb-2">Visión</h2>
                         <hr style="width: 230px;">
-                        <font size=3>Ser líder del mercado nacional de las autoventas de lujo y ser  sello de garantía, calidad y genérese confianza en sus potenciales consumidores como clientes habituales.</font>
+                        <font size=3>Queremos ser referente a nivel nacional de ofrecer a nuestra población variedad de un solo lugar, en donde el cliente podrá tener de elegir el que más le guste (marca, modelo color y/o combustible a usar) si la limitación que se tropieza en otros lugares, con entrega en cualquier punto del país, pero sobre todo con garantía y seriedad que protege su inversión.</font>
                     </div>
+                </div>
+                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                    <img src="{{asset('assets/images/cl 2.jpg')}}" class="custom-text-box-image img-fluid" alt="">
                 </div>
 
             </div>

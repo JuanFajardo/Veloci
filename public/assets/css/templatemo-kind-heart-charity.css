@@ -77,7 +77,7 @@ to{
   --h5-font-size:                 18px;
   --h6-font-size:                 20px;
   --p-font-size:                  13px;
-  --btn-font-size:                18px;
+  --btn-font-size:                12px;
   --copyright-font-size:          14px;
 
   --border-radius-large:          100px;
@@ -344,7 +344,7 @@ strong {
 .custom-btn-bo {
   background:  #44525d;
   border: 2px solid transparent;
-  border-radius: var(--border-radius-small);
+  border-radius: 10px;
   color: var(--white-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-normal);
@@ -677,10 +677,10 @@ strong {
 .carousel-control-next-icon, 
 .carousel-control-prev-icon {
   background-color: var(--secondary-color);
-  border-radius: var(--border-radius-large);
-  background-size: 60% 60%;
-  width: 80px;
-  height: 80px;
+  border-radius: var(--border-radius-small);
+  background-size: 30% 30%;
+  width: 30px;
+  height: 30px;
   opacity: 0;
   transition: all 0.5s;
 }
@@ -1602,8 +1602,8 @@ blockquote::before {
   .carousel-control-next-icon, 
   .carousel-control-prev-icon {
     opacity: 1;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
   }
 
   .news-detail-header-section {
@@ -1741,8 +1741,8 @@ blockquote::before {
 
   .carousel-control-next-icon, 
   .carousel-control-prev-icon {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
   }
 
   .volunteer-image {

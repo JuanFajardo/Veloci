@@ -32,7 +32,7 @@
 
                 </div>
 
-                <div class="row">
+                <!--<div class="row">
                   <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
                       <div class="contact-info-wrap">
                           <h2 class="mb-3">Informaciones</h2>
@@ -63,9 +63,9 @@
                           <button type="submit" class="form-control">Enviar</button>
                       </form>
                   </div>
-              </div>
+              </div>-->
 
             </div>
-        </section>
+    </section>
 </main>
 @endsection

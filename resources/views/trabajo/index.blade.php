@@ -1,43 +1,44 @@
 @extends('veloci')
 
 @section('producto')
-<br>
-<div class="row">
+<Section class="section-padding ">
+    <div class="col-lg-12 col-12 text-center ">
+         <h3>Administrar Clasificados </h3>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-lg-4 col-4 p-0">
+                <a href="{{asset('index.php/Trabajo/create')}}" class="btn btn-success"> <i class="bi bi-plus-circle"></i> <span>Nuevo </span> </a>
+            </div>
+        </div>
+        <div class="row mt-3">    
+            <table id="tablaAgenda" class="table table-striped table-bordered " >
+                <thead>
+                    <tr>
+                        <th> Título </th>
+                        <th> Tipo </th>
+                        <th> Contenido </th>
+                        <th> Accion </th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach($datos as $dato)
+                    <tr>
+                        <td>{{$dato->titulo}}</td>
+                        <td>{{$dato->tipo}}</td>
+                        <td>{{$dato->contenido}}</td>
+                        <td>
+                            <a href="{{asset('index.php/Trabajo/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+</Section>
 
-    <div class="col-lg-4 col-4 p-0">
-        
-    </div>
-    <div class="col-lg-4 col-4 p-0">
-        &nbsp;&nbsp;&nbsp;<a href="{{asset('index.php/Trabajo/create')}}" class="btn btn-success"> <b>Nuevo Trabajo</b> </a>
-    </div>
-    <div class="col-lg-4 col-4 p-0">
-        
-    </div>
-</div>
-<br/>
 
-<table id="tablaAgenda" class="table table-striped table-bordered" >
-    <thead>
-        <tr>
-            <th> Titulo </th>
-            <th> Tipo </th>
-            <th> Contenido </th>
-            <th> Accion </th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach($datos as $dato)
-        <tr>
-            <td>{{$dato->titulo}}</td>
-            <td>{{$dato->tipo}}</td>
-            <td>{{$dato->contenido}}</td>
-            <td>
-                <a href="{{asset('index.php/Trabajo/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
-            </td>
-        </tr>
-    @endforeach
-    </tbody>
-</table>
 @stop
 
 @section('js')

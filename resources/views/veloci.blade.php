@@ -212,15 +212,34 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-
-                       <h6 class="mb-3">Acerca de</h6>
+                        <h6 class=" mb-3" >Contactos</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
-                        <p  class="text-white  texto-justificado mt-3" >
-                            El sitio donde podrá encontrar 
-                            <br>los mejore catálogo de coches.
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-whatsapp me-2" ></i>
+                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
+                                +591 - 69612086 
+                            </a>
+                        <a class="me-5"></a>  
+                           <i class="bi-whatsapp me-2" ></i>
+                            <a href="https://wa.me/59177047837?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
+                                +591 - 77047837
+                            </a>
                         </p>
-                        
-                        <img  src="{{asset('assets/images/logveloci blanco.png')}}" class="logo img-fluid" alt="">
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:ventas@veloci.com.bo" class="site-footer-link">
+                                <font size=2> ventas@veloci.com.bo</font> 
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex mt-3 texto-justificado ">
+                            <i class="bi-geo-alt me-2" ></i>
+                            <font size=2>Santa Cruz Avenida Cristo Redentor entre sexto<br> y septimo anillo (a lado de Supermercado Hipermaxi)</font>
+                        </p>
+                       
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mx-auto">
                         <h6 class=" mb-3">Horarios de  Atención</h6>
@@ -264,33 +283,14 @@
                     
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
                         
-                        <h6 class=" mb-3" >Contactos</h6>
+                        <h6 class="mb-3">Acerca de</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
-
-                        <p class="text-white d-flex mb-2">
-                            <i class="bi-whatsapp me-2" ></i>
-                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
-                                +591 - 69612086 
-                            </a>
-                        <a class="me-5"></a>  
-                           <i class="bi-whatsapp me-2" ></i>
-                            <a href="https://wa.me/59177047837?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20" class="site-footer-link">
-                                +591 - 77047837
-                            </a>
+                        <p  class="text-white  texto-justificado mt-3" >
+                            El sitio donde podrá encontrar 
+                            <br>los mejore catálogo de coches.
                         </p>
-
-                        <p class="text-white d-flex">
-                            <i class="bi-envelope me-2"></i>
-
-                            <a href="mailto:ventas@veloci.com.bo" class="site-footer-link">
-                                <font size=2> ventas@veloci.com.bo</font> 
-                            </a>
-                        </p>
-
-                        <p class="text-white d-flex mt-3 texto-justificado ">
-                            <i class="bi-geo-alt me-2" ></i>
-                            <font size=2>Santa Cruz Avenida Cristo Redentor entre sexto y septimo anillo (a lado de Supermercado Hipermaxi)</font>
-                        </p>
+                        
+                        <img  src="{{asset('assets/images/logveloci blanco.png')}}" class="logo img-fluid" alt="">
                     </div>
                     
                 </div>
