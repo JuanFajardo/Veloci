@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/Vehiculo/{id}/popular' , 'App\Http\Controllers\VehiculoController@popular');
 
     Route::resource('/Trabajo' , 'App\Http\Controllers\TrabajoController');
+    Route::get('/Trabajo/{id}/Activar' , 'App\Http\Controllers\TrabajoController@activar');
     Route::resource('/Tipo' , 'App\Http\Controllers\TipoController');
     Route::resource('/Motor' , 'App\Http\Controllers\MotorController');
     Route::resource('/Marca' , 'App\Http\Controllers\MarcaController');

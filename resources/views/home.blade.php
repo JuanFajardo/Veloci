@@ -77,8 +77,8 @@
                             <hr style="width: 230px;">
                             <div class="d-flex align-items-center mb-0 ">
                             <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2"><font size=2> Ver</font></a>
-                            <a href="https://wa.me/59178718632&text=Hola me comunico por el auto {{$dato->titulo}}" class="custom-btn-w btn  me-2"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
-                            <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn me-2"><i class="bi-download" style="color: rgb(53, 62, 102);"></i></a>
+                            <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20estoy%20interesado%20en%20{{$dato->titulo}}" class="custom-btn-w btn  me-2" target="_blank"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
+                            <a href="{{asset('public/images/'.explode('/', $dato->ficha)[2] )}}" class="custom-btn-d btn me-2" target="_blank"><i class="bi-download" style="color: rgb(53, 62, 102);"></i></a>
                             </div>
                         </div>
                         
@@ -189,7 +189,7 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="custom-text-box  justify-content-center align-items-center ">
                             <img src="{{asset('assets/images/auto2.png')}}" alt=""  width="40" height="40">
-                            <h5 class="mb-3">Selección el vehículo</h5>
+                            <h5 class="mb-3">Selecciona el vehículo</h5>
                             <p>Tenemos muchos modelos y marcas disponibles.</p>
                         </div>
                     </div>

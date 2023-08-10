@@ -23,12 +23,18 @@
                 </thead>
                 <tbody>
                 @foreach($datos as $dato)
-                    <tr>
+                    <tr id="id{{$dato->id}}">
                         <td>{{$dato->titulo}}</td>
                         <td>{{$dato->tipo}}</td>
                         <td>{{$dato->contenido}}</td>
                         <td>
                             <a href="{{asset('index.php/Trabajo/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
+                            @if($dato->activo)
+                                <a href="{{asset('index.php/Trabajo/'.$dato->id.'/Activar')}}"  class="btn btn-primary"> <i class="bi bi-bell-fill"></i> </a> 
+                            @else
+                                <a href="{{asset('index.php/Trabajo/'.$dato->id.'/Activar')}}"  class="btn btn-danger"> <i class="bi bi-bell-slash-fill"></i> </a> 
+                            @endif
+                            <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger"> <i class="bi bi-trash"></i> </a> 
                         </td>
                     </tr>
                 @endforeach
@@ -66,5 +72,29 @@
             }
         });
     });
+
+    function eliminar(id){
+        var resultado = confirm("¿Estás seguro de eliminarlo?");
+        if (resultado) {
+            var fila='id'+id;
+            $("#"+fila).hide();
+
+            const csrfToken = $('meta[name="csrf-token"]').attr('content');
+            const datos = {
+                _token: csrfToken,
+                _method: "DELETE",
+            };    
+            
+            $.post('{{asset("index.php")}}/Trabajo/'+id, datos, function(response) {
+                alert('Dato Eliminado');
+            }, 'json').fail(function(xhr, status, error) {
+                // Manejar errores
+                console.error('Error:', error);
+            });
+
+        }
+
+        
+    }
 </script>
 @stop

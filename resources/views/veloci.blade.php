@@ -11,8 +11,8 @@
         <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/bootstrap-icons.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/templatemo-kind-heart-charity.css')}}" rel="stylesheet">
-        <link href="{{asset('assets/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
-        <link href="{{asset('assets/css/dataTables.animate.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/dataTables.bootstrap.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/jquery.dataTables.min.css')}}" rel="stylesheet">
         <style>
             .whatsapp-float {
             position: fixed;
@@ -103,7 +103,7 @@
 
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{asset('index.php')}}">
                     <img src="{{asset('assets/images/logveloci 1.png')}}" class="logo img-fluid" alt="Kind Heart Charity">
                 </a>
 

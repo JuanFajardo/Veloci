@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Vehiculo;
 use App\Models\Marca;
 
+use \App\Models\Combustible;
+
+use \App\Models\Motor;
+use \App\Models\Tipo;
+
+
 class HomeController extends Controller
 {
     /**
@@ -28,6 +34,12 @@ class HomeController extends Controller
     public function show($busqueda){
         $datos = Vehiculo::Where('marca', $busqueda)->paginate(12);
         $sucess ="";
-        return view('vehiculo.tienda', compact('datos','sucess', 'busqueda'));        
+        $combustibles = Combustible::all();
+        $marcas = Marca::all();
+        $motors = Motor::all();
+        $tipos =Tipo::all();
+        
+        return view('vehiculo.tienda', compact('datos','sucess', 'busqueda','combustibles','marcas','motors','tipos'));
+                                        
     }
 }

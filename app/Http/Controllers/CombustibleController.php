@@ -38,6 +38,13 @@ class CombustibleController extends Controller
         $dato->save();
         return redirect('/Combustible');
     }
+
+    public function destroy(Request $request, $id){
+        $dato = Combustible::find($id);
+        $dato->delete();
+        //$dato->save();
+        return redirect('/Combustible');
+    }
     
 }
 

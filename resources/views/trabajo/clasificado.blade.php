@@ -13,6 +13,7 @@
 
 
                     @foreach($datos as $dato)
+                    @if($dato->activo)
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
                             <div class="custom-block">
@@ -24,46 +25,15 @@
                                         {{$dato->tipo}}
                                     </li>
                                 </div>
-                                <a href="{{asset(''.$dato->pdf)}}" class="custom-btn btn" target="_blank"> <i class="bi-download me-2"></i>Convocatoria</a>
+                                
+                                    <a href="{{asset(''.$dato->pdf)}}" class="custom-btn btn" target="_blank"> <i class="bi-download me-2"></i>Convocatoria</a>
+                                
                             </div>
                         </div>
                     </div>
+                    @endif
                     @endforeach
-
                 </div>
-
-                <!--<div class="row">
-                  <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
-                      <div class="contact-info-wrap">
-                          <h2 class="mb-3">Informaciones</h2>
-                              <div class="contact-info">
-                              <p class="d-flex mb-2">
-                                  <i class="bi-whatsapp me-2"></i>
-                                  <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
-                                      +591 - 69612086 
-                                  </a>
-                              </p>
-                              <p class="d-flex">
-                                  <i class="bi-envelope me-2"></i>
-                                  <a href="mailto:gerencia@veloci.com.bo">
-                                      gerencia@veloci.com.bo
-                                  </a>
-                              </p>                               
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-lg-5 col-12 mx-auto">
-                      <form class="custom-form contact-form" action="#" method="post" role="form">
-                          <h2>Consultas</h2>
-                          <p class="mb-4">Para mas informacion envinos un mensaje:</p>
-                          <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Ejemplo:Luis" required>
-                          <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="luis@gmail.com" required>
-                          <textarea name="message" rows="5" class="form-control" id="message" placeholder="Mensaje"></textarea>
-                          <button type="submit" class="form-control">Enviar</button>
-                      </form>
-                  </div>
-              </div>-->
 
             </div>
     </section>
