@@ -46,6 +46,12 @@ class MarcaController extends Controller
         $dato->save();
         return redirect('/Marca');
     }
+
+    public function destroy(Request $request, $id){
+        $dato = Marca::find($id);
+        $dato->delete();
+        return redirect('/Marca');
+    }
     
 }
 

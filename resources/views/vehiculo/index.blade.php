@@ -32,7 +32,7 @@
             </thead>
             <tbody>
             @foreach($datos as $dato)
-                <tr>
+                <tr id="id{{$dato->id}}">
                     <td>{{$dato->titulo}}</td>
                     <td>{{$dato->tipo}}</td>
                     <td>{{$dato->combustible}}</td>
@@ -53,7 +53,7 @@
                         @else
                             <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/popular')}}" class="btn btn-danger">No Popular</a> 
                         @endif
-                        
+                        <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger"> <i class="bi bi-trash"></i> </a> 
                     </td>
                 </tr>
             @endforeach
@@ -90,5 +90,29 @@
             }
         });
     });
+
+    function eliminar(id){
+        var resultado = confirm("¿Estás seguro de eliminarlo?");
+        if (resultado) {
+            var fila='id'+id;
+            $("#"+fila).hide();
+
+            const csrfToken = $('meta[name="csrf-token"]').attr('content');
+            const datos = {
+                _token: csrfToken,
+                _method: "DELETE",
+            };    
+            
+            $.post('{{asset("index.php")}}/Vehiculo/'+id, datos, function(response) {
+                alert('Dato Eliminado');
+            }, 'json').fail(function(xhr, status, error) {
+                // Manejar errores
+                console.error('Error:', error);
+            });
+
+        }
+
+        
+    }
 </script>
 @stop

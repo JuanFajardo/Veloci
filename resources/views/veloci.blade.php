@@ -11,8 +11,8 @@
         <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/bootstrap-icons.css')}}" rel="stylesheet">
         <link href="{{asset('assets/css/templatemo-kind-heart-charity.css')}}" rel="stylesheet">
-        <link href="{{asset('assets/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
-        <link href="{{asset('assets/css/dataTables.animate.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/dataTables.bootstrap.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/css/jquery.dataTables.min.css')}}" rel="stylesheet">
         <style>
             .whatsapp-float {
             position: fixed;

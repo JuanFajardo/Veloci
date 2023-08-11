@@ -68,6 +68,19 @@ class TrabajoController extends Controller
         $datos = Trabajo::all();
         return view('trabajo.clasificado', compact('datos'));        
     }
+
+    public function destroy(Request $request, $id){
+        $dato = Trabajo::find($id);
+        $dato->delete();
+        return redirect('/Trabajo');
+    }
+
+    public function activar($id){
+        $dato = Trabajo::find($id);
+        $dato->activo= !($dato->activo);
+        $dato->save();
+        return redirect('/Trabajo');
+    }
     
 }
 

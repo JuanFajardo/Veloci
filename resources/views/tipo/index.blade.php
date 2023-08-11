@@ -23,11 +23,12 @@
                 </thead>
                 <tbody>
                 @foreach($datos as $dato)
-                    <tr>
+                    <tr id="id{{$dato->id}}">
                         <td>{{$dato->id}}</td>
                         <td>{{$dato->tipo}}</td>
                         <td>
                             <a href="{{asset('index.php/Tipo/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
+                            <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger"> <i class="bi bi-trash"></i> </a> 
                         </td>
                     </tr>
                 @endforeach
@@ -65,5 +66,29 @@
             }
         });
     });
+
+    function eliminar(id){
+        var resultado = confirm("¿Estás seguro de eliminarlo?");
+        if (resultado) {
+            var fila='id'+id;
+            $("#"+fila).hide();
+
+            const csrfToken = $('meta[name="csrf-token"]').attr('content');
+            const datos = {
+                _token: csrfToken,
+                _method: "DELETE",
+            };    
+            
+            $.post('{{asset("index.php")}}/Tipo/'+id, datos, function(response) {
+                alert('Dato Eliminado');
+            }, 'json').fail(function(xhr, status, error) {
+                // Manejar errores
+                console.error('Error:', error);
+            });
+
+        }
+
+        
+    }
 </script>
 @stop

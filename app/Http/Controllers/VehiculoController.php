@@ -72,8 +72,9 @@ class VehiculoController extends Controller
 
     public function show($id){
         $dato = Vehiculo::find($id);
+        $marcas = Marca::all();
         $datos = Vehiculo::Where( 'tipo', $dato->tipo )->paginate(3);
-        return view('vehiculo.show', compact('dato', 'datos'));
+        return view('vehiculo.show', compact('dato', 'datos','marcas'));
     }
 
     public function edit($id){
@@ -153,11 +154,6 @@ class VehiculoController extends Controller
             ->with('success', 'Popular');
     }
 
-    public function destroy(Product $product){
-        $product->delete();
-        return redirect()->route('products.index')
-            ->with('success', 'Product deleted successfully');
-    }
 
     public function tienda(){
         $datos = Vehiculo::paginate(12);
@@ -256,6 +252,12 @@ class VehiculoController extends Controller
         $motors = Motor::all();
         $tipos =Tipo::all();
         return view('vehiculo.tienda', compact('datos','sucess','combustibles','marcas','motors','tipos'));
+    }
+
+    public function destroy(Request $request, $id){
+        $dato = Vehiculo::find($id);
+        $dato->delete();
+        return redirect('/Vehiculo');
     }
 
 }

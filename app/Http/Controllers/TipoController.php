@@ -39,6 +39,12 @@ class TipoController extends Controller
         $dato->save();
         return redirect('/Tipo');
     }
+
+    public function destroy(Request $request, $id){
+        $dato = Tipo::find($id);
+        $dato->delete();
+        return redirect('/Tipo');
+    }
     
 }
 
