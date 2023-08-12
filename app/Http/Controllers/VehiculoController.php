@@ -10,18 +10,23 @@ use \App\Models\Combustible;
 use \App\Models\Marca;
 use \App\Models\Motor;
 use \App\Models\Tipo;
+use \App\Models\Visita;
 
 use Illuminate\Support\Facades\Mail;
 
 class VehiculoController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo', 'Vehiculo', $request->userAgent());
+        
         $datos = Vehiculo::all();
         $populares = Vehiculo::Where('popular', '1')->count();
         return view('vehiculo.index', compact('datos', 'populares'));
     }
 
-    public function create(){
+    public function create(Request $request){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/create', 'Vehiculo/Crear', $request->userAgent());
+        
         $combustibles = Combustible::all();
         $marcas = Marca::all();
         $motors = Motor::all();
@@ -30,6 +35,7 @@ class VehiculoController extends Controller
     }
 
     public function store(Request $request){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/create', 'Vehiculo/Guardar', $request->userAgent());
         
         $foto1 = $request->file('foto1')->store('public/images');
         $foto2 = $request->file('foto2')->store('public/images');
@@ -70,14 +76,19 @@ class VehiculoController extends Controller
             ->with('success', 'Product created successfully');
     }
 
-    public function show($id){
+    public function show(Request $request, $id){
+        
         $dato = Vehiculo::find($id);
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/'.$id, 'Vehiculo/Mostrar/'.$dato->titulo, $request->userAgent());
+        
         $marcas = Marca::all();
         $datos = Vehiculo::Where( 'tipo', $dato->tipo )->paginate(3);
         return view('vehiculo.show', compact('dato', 'datos','marcas'));
     }
 
-    public function edit($id){
+    public function edit(Request $request, $id){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/'.$id.'/edit', 'Vehiculo/Editar', $request->userAgent());
+        
         $dato = Vehiculo::find($id);
         $combustibles = Combustible::all();
         $marcas = Marca::all();
@@ -87,7 +98,7 @@ class VehiculoController extends Controller
     }
 
     public function update(Request $request, $id){
-        
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/'.$id.'/edit', 'Vehiculo/Actualizar', $request->userAgent());
         $dato = Vehiculo::find($id);
         $dato->id_usuario = \Auth::user()->id;
         $dato->titulo= $request['titulo'];
@@ -138,7 +149,9 @@ class VehiculoController extends Controller
             ->with('success', 'Product updated successfully');
     }
     
-    public function activo($id){
+    public function activo(Request $request, $id){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/'.$id.'/activo', 'Vehiculo/Activo', $request->userAgent());
+        
         $dato = Vehiculo::find($id);
         $dato->activo= !($dato->activo);
         $dato->save();
@@ -146,7 +159,9 @@ class VehiculoController extends Controller
             ->with('success', 'Activo');
     }
 
-    public function popular($id){
+    public function popular(Request $request, $id){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/'.$id.'/Popular', 'Vehiculo/Popular', $request->userAgent());
+        
         $dato = Vehiculo::find($id);
         $dato->popular= !($dato->popular);
         $dato->save();
@@ -155,7 +170,9 @@ class VehiculoController extends Controller
     }
 
 
-    public function tienda(){
+    public function tienda(Request $request){
+        Visita::insertarVisita($request->ip(), 'index.php/Tienda', 'Vehiculo/Tienda', $request->userAgent());
+        
         $datos = Vehiculo::paginate(12);
         $sucess ="";
         $combustibles = Combustible::all();
@@ -167,6 +184,8 @@ class VehiculoController extends Controller
 
 
     public function filtro(Request $request){
+        Visita::insertarVisita($request->ip(), 'index.php/Tienda'.$request->al(), 'Vehiculo/Filtro', $request->userAgent());
+        
         $anio  = $marca = $tipo = $combustible = "%";
         $msj = ''; 
        // {"_token":"NXT6iqAflE2t9qvK6QqmCoiC0gDPtC0uIKmFHvm0","anio":"2023","marca":"--","tiptipoo":"Camioneta","combustible":"--","boton":"Filtrar"}
@@ -191,7 +210,9 @@ class VehiculoController extends Controller
        return $datos; 
     }
 
-    public function inventarioTipo($tipo){
+    public function inventarioTipo(Request $request, $tipo){
+        Visita::insertarVisita($request->ip(), 'index.php/Tienda', 'Vehiculo/Tienda/'.$tipo, $request->userAgent());
+        
         $datos = $sucess = $combustible = $marca = "-";
 
         if ($tipo == "Camioneta"){
@@ -228,11 +249,14 @@ class VehiculoController extends Controller
         return view('vehiculo.tienda', compact('datos','sucess','combustibles','marcas','motors','tipos'));
     }
 
-    public function pagina( $pagina ){
+    public function pagina(Request $request, $pagina ){
+        Visita::insertarVisita($request->ip(), 'index.php/Pagina', 'Pagina/'.$pagina, $request->userAgent());
         return view($pagina);
     }
 
     public function correo(Request $request){
+        Visita::insertarVisita($request->ip(), 'index.php/Correo/'.$request->all(), 'Correo/', $request->userAgent());
+        
         $nombre     = $request->nombre."|".$request->email."|".$request->message."|".$request->titulo;
         foreach(['ventas@veloci.com.bo'] as $correo ){
             try {
@@ -245,6 +269,8 @@ class VehiculoController extends Controller
     }
 
     public function buscar(Request $request){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/Buscar/', 'Vehiculo/Buscar/'.$request->busqueda, $request->userAgent());
+        
         $datos = Vehiculo::Where('titulo', 'like', '%'.$request->busqueda.'%')->paginate(12);
         $sucess = "Busqueda de : ".$request->busqueda;
         $combustibles = Combustible::all();
@@ -255,6 +281,8 @@ class VehiculoController extends Controller
     }
 
     public function destroy(Request $request, $id){
+        Visita::insertarVisita($request->ip(), 'index.php/Vehiculo/'.$id.'/edit', 'Vehiculo/Eliminar', $request->userAgent());
+        
         $dato = Vehiculo::find($id);
         $dato->delete();
         return redirect('/Vehiculo');

@@ -28,6 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('/Motor' , 'App\Http\Controllers\MotorController');
     Route::resource('/Marca' , 'App\Http\Controllers\MarcaController');
     Route::resource('/Combustible' , 'App\Http\Controllers\CombustibleController');
+
+    Route::get('/Visita' , 'App\Http\Controllers\VisitaController@index');
+    Route::get('/Visita/{id}' , 'App\Http\Controllers\VisitaController@detalle');
 });
 
 Auth::routes();
