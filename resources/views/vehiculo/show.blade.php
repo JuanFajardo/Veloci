@@ -85,9 +85,9 @@
                         <!--End Controls-->
                     </div>
                 </div>
-                <div class="col-lg-4 col-12 mx-auto ">
+                <div class="col-lg-4 col-12 mx-auto mt-4 ">
                     <h5 >{{$dato->titulo}}</h5>
-                    <div class="news-block news-block-two-col d-flex mt-4">
+                    <div class="news-block news-block-two-col d-flex mt-3">
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
                                 <p class="mb-0">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
 
-                    <div class="news-block news-block-two-col d-flex mt-4">
+                    <div class="news-block news-block-two-col d-flex mt-3">
                             <table class="table" >
                                 <tbody>
                                     <tr>
@@ -122,7 +122,7 @@
                                 </tbody>
                             </table>
                     </div>
-                    <div class="tags-block mt-5">
+                    <div class="tags-block mt-3">
                         
                         <a href="{{asset('public/images/'.explode("/", $dato->ficha)[2] )}}" class=" tags-block-link " style="color: white;" target="_blank">
                             <i class=" bi-download"></i>  <span>Ficha Técnica</span> 
@@ -134,7 +134,7 @@
 
                     <form class="custom-form contact-form mt-3"  role="form">
                         @csrf
-                        <p class="mb-1"> <strong>Enviar mensaje para más información:</strong>
+                        <p class="mb-1"> <strong>Enviar un mensaje para más información:</strong>
                         </p>
                         <input type="hidden" name="titulo" id="titulo"  value="{{asset('/index.php/Tienda/'.$dato->id)}}" required>
                         <input type="text" name="nombre" id="nombre"  class="form-control" placeholder="ejemplo:Luis" required style="background-color:rgb(197, 197, 197);">

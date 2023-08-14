@@ -23,9 +23,15 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         Visita::insertarVisita($request->ip(), '/index.php/home', 'home', $request->userAgent());
+        
         $datos = Vehiculo::where('popular', '1')->get();
-        $marcas = Marca::all();        
-        return view('home', compact('datos', 'marcas'));
+        $marcas = Marca::all();
+        
+        $visitasN = Visita::count();
+        $vehiculosN = Vehiculo::count();
+        $marcasN = Marca::count();
+        
+        return view('home', compact('datos', 'marcas', 'visitasN', 'vehiculosN', 'marcasN'));
     }
 
     public function show($busqueda){

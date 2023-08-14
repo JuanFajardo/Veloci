@@ -39,21 +39,21 @@
                     <td>{{$dato->anio}}</td>
                     <td>{{$dato->color}}</td>
                     <td>
-                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" target="_blank"  class="btn btn-success">Ver</a> 
+                        <a href="{{asset('index.php/Tienda/'.$dato->id)}}" target="_blank"  class="btn btn-success" title="Ver Vehículo"><i class="bi bi-eye"></i></a> 
 
-                        <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
+                        <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/edit')}}"  class="btn btn-warning" style="color: white;" title="Modificar Vehículo"><i class="bi bi-pencil-square"></i></a> 
                         @if($dato->activo)
-                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/activo')}}" class="btn btn-primary">Desactivar</a> 
+                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/activo')}}" class="btn btn-primary" title="Desactivar"><i class="bi bi-bell-fill"></i> </a> 
                         @else
-                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/activo')}}" class="btn btn-danger">Activar</a> 
+                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/activo')}}" class="btn btn-danger" title="Activar"><i class="bi bi-bell-slash-fill"></i> </a> 
                         @endif
 
                         @if($dato->popular)
-                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/popular')}}" class="btn btn-primary">Popular</a> 
+                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/popular')}}" class="btn btn-primary" title="No Popular"><i class="bi bi-camera-video"></i></a> 
                         @else
-                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/popular')}}" class="btn btn-danger">No Popular</a> 
+                            <a href="{{asset('index.php/Vehiculo/'.$dato->id.'/popular')}}" class="btn btn-danger" title="Popular"><i class="bi bi-camera-video-off"></i></a> 
                         @endif
-                        <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger"> <i class="bi bi-trash"></i> </a> 
+                        <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger" title="Eliminar Vehículo"> <i class="bi bi-trash"></i> </a> 
                     </td>
                 </tr>
             @endforeach

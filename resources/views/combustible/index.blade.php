@@ -26,8 +26,8 @@
                         <td>{{$dato->id}}</td>
                         <td>{{$dato->combustible}}</td>
                         <td>
-                            <a href="{{asset('index.php/Combustible/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
-                            <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger"> <i class="bi bi-trash"></i> </a> 
+                            <a href="{{asset('index.php/Combustible/'.$dato->id.'/edit')}}"  class="btn btn-warning"style="color: white;" title="Modificar Combustible"><i class="bi bi-pencil-square"></i></a> 
+                            <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger" title="Eliminar Combustible"> <i class="bi bi-trash"></i> </a> 
                         </td>
                     </tr>
                 @endforeach

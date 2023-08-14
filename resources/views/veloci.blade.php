@@ -16,7 +16,7 @@
         <style>
             .whatsapp-float {
             position: fixed;
-            bottom: 20px;
+            bottom: 80px;
             right: 20px;
             width: 60px;
             height: 60px;
@@ -32,6 +32,115 @@
                 width: 80px;
                 height: 80px;
             }
+            .facebook-float {
+            position: fixed;
+            bottom: 150px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 40px;
+            border-radius: 70%;
+            text-align: center;
+            line-height: 60px;
+            z-index: 999;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            }
+            .facebook-float:hover {
+                width: 80px;
+                height: 80px;
+            }
+            .twitter-float {
+            position: fixed;
+            bottom: 190px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 40px;
+            border-radius: 70%;
+            text-align: center;
+            line-height: 60px;
+            z-index: 999;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            }
+            .twitter-float:hover {
+                width: 80px;
+                height: 80px;
+            }
+            .instagram-float {
+            position: fixed;
+            bottom: 230px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 40px;
+            border-radius: 70%;
+            text-align: center;
+            line-height: 60px;
+            z-index: 999;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            }
+            .instagram-float:hover {
+                width: 80px;
+                height: 80px;
+            }
+            .youtube-float {
+            position: fixed;
+            bottom: 270px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 40px;
+            border-radius: 70%;
+            text-align: center;
+            line-height: 60px;
+            z-index: 999;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            }
+            .youtube-float:hover {
+                width: 80px;
+                height: 80px;
+            }
+            .tiktok-float {
+            position: fixed;
+            bottom: 310px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 40px;
+            border-radius: 70%;
+            text-align: center;
+            line-height: 60px;
+            z-index: 999;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            }
+            .tiktok-float:hover {
+                width: 80px;
+                height: 80px;
+            }
+            .linkedin-float {
+            position: fixed;
+            bottom: 350px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 40px;
+            border-radius: 70%;
+            text-align: center;
+            line-height: 60px;
+            z-index: 999;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            }
+            .linkedin-float:hover {
+                width: 80px;
+                height: 80px;
+            }
+            
         </style>
     </head>
     <body id="section_1">
@@ -99,6 +208,7 @@
                     </div>
                 </div>
             </div>
+            
         </header>
 
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
@@ -133,12 +243,11 @@
                             <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre Nosotros</a>
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{asset('index.php/Pagina/quienes')}}">¿Quienes Somo?</a></li>
-                                <li><a class="dropdown-item" href="{{asset('index.php/Clasificados')}}">Clasificados</a></li>
+                                <li><a class="dropdown-item" href="{{asset('index.php/Clasificados')}}">Trabaja con Nosotros</a></li>
                                 
                                 @if( auth()->check() )
                                     <li><a class="dropdown-item" href="{{asset('index.php/Vehiculo')}}">Adm. Vehículos</a></li>
-                                    <li><a class="dropdown-item" href="{{asset('index.php/Trabajo')}}">Adm. Clasificados</a></li>
-                                    <li><a class="dropdown-item" href="{{asset('index.php/Visita')}}">Ver Visitas</a></li>
+                                    <li><a class="dropdown-item" href="{{asset('index.php/Trabajo')}}">Adm. Trabaja con Nosotros</a></li>
                                 @endif
 
                             </ul>
@@ -153,25 +262,35 @@
                             
                             <li class="social-icon-item me-2">
                                 <a href="https://www.facebook.com/VelociAutoventa/" >
-                                    <i class=" bi-facebook" style="color: blue;"></i>
+                                    <img  src="{{asset('assets/images/logo-face.png')}}" alt="" width="20" height="20" title="Facebook">
                                 </a>
                             </li>
                             <li class="social-icon-item me-2">
-                                <a href="https://twitter.com/AutoventaVeloci/" class=" bi-twitter" style="color: rgb(54, 168, 234);"></a>
+                                <a href="https://twitter.com/AutoventaVeloci/" >
+                                    <img  src="{{asset('assets/images/logo-t.png')}}" alt="" width="20" height="20" title="Twitter">
+                                </a>
                             </li>
     
                             <li class="social-icon-item me-2">
-                                <a href="https://www.instagram.com/veloci.autoventas/" class="bi-instagram" style="color: rgb(233, 38, 171);"></a>
+                                <a href="https://www.instagram.com/veloci.autoventas/"  >
+                                    <img src="{{asset('assets/images/logo.ins.png')}}" alt="" width="20" height="20" title="Instagram">
+                                </a>
                             </li>
     
                             <li class="social-icon-item me-2">
-                                <a href="https://youtube.com/@velociautoventabo/" class=" bi-youtube" style="color: red;"></a>
+                                <a href="https://youtube.com/@velociautoventabo/" >
+                                    <img  src="{{asset('assets/images/logo-y.png')}}" alt="" width="20" height="20" title="Youtube">
+                                </a>
      
                             <li class="social-icon-item me-2">
-                                <a href="https://www.tiktok.com/@veloci.autoventas/" class=" bi-tiktok" style="color: black;"></a>
+                                <a href="https://www.tiktok.com/@veloci.autoventas/" >
+                                    <img  src="{{asset('assets/images/logo.tik.png')}}" alt="" width="20" height="20" title="Tiktok">
+                                </a>
                             </li>
                             <li class="social-icon-item me-2">
-                                <a href="https://www.linkedin.com/company/velociautoventa/" class=" bi-linkedin" style="color: blue;"></a>
+                                <a href="https://www.linkedin.com/company/velociautoventa/" >
+                                    <img  src="{{asset('assets/images/logo-i.png')}}" alt="" width="20" height="20" title="Linkedin">
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -186,6 +305,44 @@
                     <img class="whatsapp-float" src="{{asset('assets/images/logo.png')}}" alt="">
                 </a>
             </p>
+            <div class="d-none d-sm-none d-md-block">
+                <p class="social-icon-item ">
+                <a href="https://www.linkedin.com/company/velociautoventa/"  target="_blank">
+                    <img class="facebook-float" src="{{asset('assets/images/logo-i.png')}}" alt="">
+                </a>
+            </p>
+            <p class="social-icon-item">
+                <a href="https://www.tiktok.com/@veloci.autoventas/"  target="_blank">
+                    <img class="twitter-float" src="{{asset('assets/images/logo.tik.png')}}" alt="">
+                </a>
+            </p>
+            <p class="social-icon-item">
+                <a href="https://youtube.com/@velociautoventabo/"  target="_blank">
+                    <img class="instagram-float" src="{{asset('assets/images/logo-y.png')}}" alt="">
+                </a>
+            </p>
+            <p class="social-icon-item">
+                <a href="https://www.instagram.com/veloci.autoventas/"  target="_blank">
+                    <img class="youtube-float" src="{{asset('assets/images/logo.ins.png')}}" alt="">
+                </a>
+            </p>
+            <p class="social-icon-item">
+                <a href="https://twitter.com/AutoventaVeloci/"  target="_blank">
+                    <img class="tiktok-float" src="{{asset('assets/images/logo-t.png')}}" alt="">
+                </a>
+            </p>
+            <p class="social-icon-item">
+                <a href="https://www.facebook.com/VelociAutoventa/"  target="_blank">
+                    <img class="linkedin-float" src="{{asset('assets/images/logo-face.png')}}" alt="">
+                </a>
+            </p>
+            </div>
+                 
+        
+            
+            
+
+
 
             <div class="modal fade" id="correoModal" tabindex="-1" aria-labelledby="correoModal" aria-hidden="true">
                 <div class="modal-dialog">
@@ -238,7 +395,7 @@
 
                         <p class="text-white d-flex mt-3 texto-justificado ">
                             <i class="bi-geo-alt me-2" ></i>
-                            <font size=2>Santa Cruz Avenida Cristo Redentor entre sexto<br> y septimo anillo (a lado de Supermercado Hipermaxi)</font>
+                            <font size=2>Santa Cruz Avenida Cristo Redentor entre sexto y septimo anillo (a lado de Supermercado Hipermaxi)</font>
                         </p>
                        
                     </div>

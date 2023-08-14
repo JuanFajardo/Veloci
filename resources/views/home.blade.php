@@ -11,7 +11,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('assets/images/pt 1 4xe.jpg')}}" class="d-block w-100" alt="...">
+                    <img src="{{asset('assets/images/ram2.jpg')}}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
                         <img src="{{asset('assets/images/portadas medida fb.jpg')}}" class="d-block w-100" alt="...">
@@ -227,6 +227,50 @@
                 
             </div>
         </div>
+    </div>
+</section>
+<section class="about-section section-padding">
+    <div class="container">
+        <div class="row  ">
+            <div class="col-lg-12 col-12 text-left mb-4">
+                <h2 class="animated bounce">Estadistica </h2>
+                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 text-center">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-body text-secondary">
+                        <div class="counter-thumb text-center"> 
+                            <span class="counter-number" data-from="1" data-to="{{$visitasN}}" data-speed="1000"></span>
+                            <span class="text-gray counter-text">Visítas</span>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 text-center">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-body text-secondary">
+                        <div class="counter-thumb text-center"> 
+                            <span class="counter-number" data-from="1" data-to="{{$vehiculosN}}" data-speed="1000"></span>
+                            <span class="text-gray counter-text">Vehiculos</span>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 text-center">
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-body text-secondary">
+                        <div class="counter-thumb text-center"> 
+                            <span class="counter-number" data-from="1" data-to="{{$marcasN}}" data-speed="1000"></span>
+                            <span class="text-gray counter-text">Marcas</span>
+                        </div>
+                    </div>
+                
+                </div>
+            
+            </div>
+        
     </div>
 </section>
 

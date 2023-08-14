@@ -7,7 +7,7 @@
                 <div class="row">
 
                     <div class="col-lg-12 col-12 text-left mb-4">
-                        <h2>Clasificados</h2>
+                        <h2>Trabaja con Nosotros</h2>
                         <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
                     </div>
 

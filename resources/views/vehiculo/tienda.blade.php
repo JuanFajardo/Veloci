@@ -3,7 +3,7 @@
 @section('producto')
 
 <section class="section-padding section-bg" id="section_3">
-    <div class="container-fluid">
+    <div class="container">
         <div class="text-left mb-4">
             @if( isset($busqueda) )
               <h2>{{$busqueda}}</h2>
@@ -36,7 +36,7 @@
                 <div class="accordion-item">
                   <h6 class="accordion-header" id="panelsStayOpen-headingOne">
                     <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                      Año:
+                      A帽o:
                     </button>
                   </h6>
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
@@ -72,7 +72,7 @@
               <div class="accordion-item">
                 <h6 class="accordion-header" id="panelsStayOpen-headingThree">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" >
-                    Tipo de vehículo:
+                    Tipo de veh铆culo:
                   </button>
                 </h6>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" >
@@ -115,18 +115,18 @@
             <div class="col-lg-9 col-12 mb-4" id="principal">
               <div class="row">
                 @foreach ($datos as $dato)
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-4">
                         <div class="custom-block-wrap">
                             <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="d-block" target="_blank">
                             <img src="{{asset('public/images/'.explode("/", $dato->foto1)[2] )}}" class="custom-block-image img-fluid" alt="">
                             <div class="custom-block">
                                 <div class="custom-block-body">
                                     <h5 class="mb-3">{{$dato->titulo}}</h5>
-                                    <hr style="width: 230px;">
+                                    <hr style="width: 200px;">
                                     <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
-                                    <p class="mb-0"> Tracción: <strong>{{$dato->traccion}}</strong></p>
+                                    <p class="mb-0"> Tracci贸n: <strong>{{$dato->traccion}}</strong></p>
                                     <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
-                                    <hr style="width: 230px;">
+                                    <hr style="width: 200px;">
                                     <div class="d-flex align-items-center mb-0 ">
                                       <a href="{{asset('index.php/Tienda/'.$dato->id)}}" class="custom-btn-bo btn me-2" target="_blank"><font size="2" > Ver</font></a>
                                       <a href="https://wa.me/591{{$dato->comunicate}}?text=Hola%20vi%20este%20vehiculo%20{{$dato->titulo}}" class="custom-btn-w btn  me-2" target="_blank"><i class="bi-whatsapp" style="color: rgb(51, 189, 69);"></i></a>
@@ -186,7 +186,7 @@ function cargarInformacion(){
   $.post('{{asset("index.php")}}/Tienda', datos, function(response) {
     var principal = '<div class="row">';
     for(var i=0; i<response.length; i++){
-      principal = principal + '<div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">';
+      principal = principal + '<div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mt-4">';
       principal = principal + '<div class="custom-block-wrap">';
       principal = principal + "<a href=\"{{asset('index.php/Tienda/')}}/"+response[i].id+"\" class=\"d-block\" target=\"_blank\">";
       principal = principal + "<img src=\"{{asset('/')}}/"+response[i].foto1+"\" class=\"custom-block-image img-fluid\" >";
@@ -194,7 +194,7 @@ function cargarInformacion(){
       principal = principal + "<h5 class=\"mb-3\">"+response[i].titulo+"</h5>";
       principal = principal + "<hr style=\"width: 230px;\">";
       principal = principal + "<p class=\"mb-0\"> Motor: <strong> "+response[i].motor+"</strong></p>";
-      principal = principal + "<p class=\"mb-0\"> Tracción: <strong>"+response[i].traccion+"</strong></p>";
+      principal = principal + "<p class=\"mb-0\"> Tracci贸n: <strong>"+response[i].traccion+"</strong></p>";
       principal = principal + "<p class=\"mb-0\"> Combustible: <strong>"+response[i].combustible+"</strong></p>";
       principal = principal + "<hr style=\"width: 230px;\">";
       principal = principal + "<div class=\"d-flex align-items-center mb-0 \">";

@@ -28,13 +28,13 @@
                         <td>{{$dato->tipo}}</td>
                         <td>{{$dato->contenido}}</td>
                         <td>
-                            <a href="{{asset('index.php/Trabajo/'.$dato->id.'/edit')}}"  class="btn btn-warning">Modificar</a> 
+                            <a href="{{asset('index.php/Trabajo/'.$dato->id.'/edit')}}"  class="btn btn-warning" style="color: white;"  title="Modificar Artículo"><i class="bi bi-pencil-square"></i></a> 
                             @if($dato->activo)
-                                <a href="{{asset('index.php/Trabajo/'.$dato->id.'/Activar')}}"  class="btn btn-primary"> <i class="bi bi-bell-fill"></i> </a> 
+                                <a href="{{asset('index.php/Trabajo/'.$dato->id.'/Activar')}}"  class="btn btn-primary" title="Deshabilitar"> <i class="bi bi-bell-fill"></i> </a> 
                             @else
-                                <a href="{{asset('index.php/Trabajo/'.$dato->id.'/Activar')}}"  class="btn btn-danger"> <i class="bi bi-bell-slash-fill"></i> </a> 
+                                <a href="{{asset('index.php/Trabajo/'.$dato->id.'/Activar')}}"  class="btn btn-danger" title="Habilitar"> <i class="bi bi-bell-slash-fill"></i> </a> 
                             @endif
-                            <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger"> <i class="bi bi-trash"></i> </a> 
+                            <a href="#" onclick="eliminar('{{$dato->id}}')"  class="btn btn-danger" title="Eliminar Artículo"> <i class="bi bi-trash"></i> </a> 
                         </td>
                     </tr>
                 @endforeach
