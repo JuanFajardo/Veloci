@@ -36,7 +36,7 @@
                 <div class="accordion-item">
                   <h6 class="accordion-header" id="panelsStayOpen-headingOne">
                     <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                      A帽o:
+                      Año:
                     </button>
                   </h6>
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
@@ -72,7 +72,7 @@
               <div class="accordion-item">
                 <h6 class="accordion-header" id="panelsStayOpen-headingThree">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" >
-                    Tipo de veh铆culo:
+                    Tipo de vehículo:
                   </button>
                 </h6>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" >
@@ -124,7 +124,7 @@
                                     <h5 class="mb-3">{{$dato->titulo}}</h5>
                                     <hr style="width: 200px;">
                                     <p class="mb-0"> Motor: <strong> {{$dato->motor}}</strong></p>
-                                    <p class="mb-0"> Tracci贸n: <strong>{{$dato->traccion}}</strong></p>
+                                    <p class="mb-0"> Tracción: <strong>{{$dato->traccion}}</strong></p>
                                     <p class="mb-0"> Combustible: <strong>{{$dato->combustible}}</strong></p>
                                     <hr style="width: 200px;">
                                     <div class="d-flex align-items-center mb-0 ">
