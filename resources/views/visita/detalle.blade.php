@@ -3,7 +3,7 @@
 @section('producto')
 <section class="section-padding ">
     <div class="col-lg-12 col-12 text-center ">
-        <h3>Agregar Nueva Marca </h3>
+        <h3>Reportes Detalle </h3>
     </div>
     <div class="container mt-5">
         <div class="col-lg-12 col-12 p-0">

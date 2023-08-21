@@ -23,7 +23,16 @@ class VisitaController extends Controller
         return view('visita.detalle', compact('datos', 'id'));
         return $datos; 
     }
+    public function graf(){
+        $gf = Visita::select('updated_at', Visita::raw('count(updated_at) as cantidad'))
+               ->groupBy('updated_at')
+               ->orderBy('cantidad', 'desc')
+               ->get();
+               return $gf;
 
+        return view('visita.index', compact('gf'));
+        //return $gf;
+    }
     
     // Route::get('/Visita' , 'App\Http\Controllers\VisitaController@index');
     // Route::get('/Visita/{id}' , 'App\Http\Controllers\VisitaController@detalle');

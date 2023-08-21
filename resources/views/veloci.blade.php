@@ -247,12 +247,14 @@
                                 
                                 @if( auth()->check() )
                                     <li><a class="dropdown-item" href="{{asset('index.php/Vehiculo')}}">Adm. Vehículos</a></li>
-                                    <li><a class="dropdown-item" href="{{asset('index.php/Trabajo')}}">Adm. Trabaja con Nosotros</a></li>
+                                    <li><a class="dropdown-item" href="{{asset('index.php/Trabajo')}}">Adm. Trabajos</a></li>
+                                    <li><a class="dropdown-item" href="{{asset('index.php/Visita')}}">Reportes</a></li>
                                 @endif
 
                             </ul>
                         </li>
                         <li class="nav-item ms-3">
+                            
                         </li>
                     </ul>
                 </div>
@@ -463,6 +465,7 @@
         <script src="{{asset('assets/js/counter.js')}}"></script>
         <script src="{{asset('assets/js/custom.js')}}"></script>
         <script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         @yield('js')
     </body>
 </html>

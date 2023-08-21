@@ -14,7 +14,7 @@
             
     <div class="container">
         <div class="col-lg-12 col-12 p-0 mt-5">
-                 <a href="{{asset('index.php/Vehiculo')}}" class="btn btn-warning"> <i class="bi bi-arrow-left-circle"></i> <span>Volver</span> </a>
+                 <a href="{{asset('index.php/Vehiculo')}}"  class="btn btn-secondary" > <i class="bi bi-arrow-left-circle"></i> <span>Volver</span> </a>
                  <a href="{{asset('index.php/Marca')}}" class="btn btn-success"> <i class="bi bi-plus-circle"></i> <span>Agregar Marca</span> </a>
                  <!--<a href="{{asset('index.php/Motor')}}" class="btn btn-success"> <i class="bi bi-plus-circle"></i> <span>Agregar Motor</span> </a>-->
                  <a href="{{asset('index.php/Tipo')}}" class="btn btn-success"> <i class="bi bi-plus-circle"></i> <span>Agregar Tipo</span> </a>

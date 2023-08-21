@@ -21,7 +21,11 @@ class VehiculoController extends Controller
         
         $datos = Vehiculo::all();
         $populares = Vehiculo::Where('popular', '1')->count();
-        return view('vehiculo.index', compact('datos', 'populares'));
+        $visitasA = Visita::count();
+        $vehiculosA = Vehiculo::count();
+        $marcasA = Marca::count();
+        $tiposA = Tipo::count();
+        return view('vehiculo.index', compact('datos', 'populares', 'visitasA', 'vehiculosA', 'marcasA','tiposA'));
     }
 
     public function create(Request $request){
@@ -287,6 +291,7 @@ class VehiculoController extends Controller
         $dato->delete();
         return redirect('/Vehiculo');
     }
+    
 
 }
 

@@ -7,7 +7,7 @@
     </div>
     <div class="container">
         <div class="col-lg-4 col-4 p-0">
-            <a href="{{asset('index.php/Marca')}}" class="btn btn-warning"> <i class="bi bi-arrow-left-circle"></i> <span>Volver</span> </a>
+            <a href="{{asset('index.php/Marca')}}" class="btn btn-secondary"> <i class="bi bi-arrow-left-circle"></i> <span>Volver</span> </a>
         </div>
         <div class="row mt-3">
             <form action="{{ route('Marca.update', $dato->id) }}" method="POST" enctype="multipart/form-data" class="col-md-12 m-auto card-body" >

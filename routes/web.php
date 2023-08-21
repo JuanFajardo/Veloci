@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/Visita' , 'App\Http\Controllers\VisitaController@index');
     Route::get('/Visita/{id}' , 'App\Http\Controllers\VisitaController@detalle');
+    Route::get('/Grafica' , 'App\Http\Controllers\VisitaController@graf');
 });
 
 Auth::routes();
