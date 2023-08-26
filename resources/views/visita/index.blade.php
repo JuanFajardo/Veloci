@@ -41,6 +41,7 @@
                     <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
                         <canvas id="myChart" width="250" height="100"></canvas>
                     </div>   
+                    
                 </div>
             </div>
                 
@@ -162,10 +163,10 @@
         var data = {
             labels: meses,//['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
             datasets: [{
-            label: 'Ventas',
+            label: 'Visitas',
             data: datos, //[[ 19, 3, 5, 2]],
-            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo
-            borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
+            backgroundColor: 'rgba(3, 3, 129, 1.0)', // Color de fondo
+            borderColor: 'rgba(3, 3, 129, 1.0)', // Color del borde
             borderWidth: 1 // Ancho del borde
             }]
         };
@@ -236,6 +237,12 @@
         }   
     }
     
+    </script>
+    <script>
+       const printCharts =() =>{
+
+       }
+       printChart()
     </script>
     
 @stop
