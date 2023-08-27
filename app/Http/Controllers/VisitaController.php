@@ -30,8 +30,5 @@ class VisitaController extends Controller
                ->orderBy('mes', 'asc')
                ->get();
         return $gf;
-
-        //return view('visita.index', compact('gf'));
-        
     }    
 }

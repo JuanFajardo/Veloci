@@ -34,7 +34,7 @@ class HomeController extends Controller
         return view('home', compact('datos', 'marcas', 'visitasN', 'vehiculosN', 'marcasN'));
     }
 
-    public function show($busqueda){
+    public function show(Request $request,  $busqueda){
         Visita::insertarVisita($request->ip(), '/index.php/Tienda/Buscar', 'Busqueda : '.$busqueda, $request->userAgent());
         $datos = Vehiculo::Where('marca', $busqueda)->paginate(12);
         $sucess ="";
@@ -42,7 +42,7 @@ class HomeController extends Controller
         $marcas = Marca::all();
         $motors = Motor::all();
         $tipos =Tipo::all();
-        return "bett0";
+        //return "bett0";
         return view('vehiculo.tienda', compact('datos','sucess', 'busqueda','combustibles','marcas','motors','tipos'));                                        
     }
 }

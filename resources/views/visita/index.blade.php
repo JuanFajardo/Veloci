@@ -140,10 +140,14 @@
         }
         return msj;
     }
+
     function cargarGrafica(){
         
         var inicio = $('#inicio').val();
         var fin = $('#fin').val();
+        console.log(inicio);
+        console.log(fin);
+
         meses = [];
         datos = [];
 
@@ -151,8 +155,6 @@
             for (var i = 0; i < data.length; i++) {
                 var dato = data[i];
                 datos.push( dato.total ) ;
-                console.log(dato.mes);
-                console.log(mes(dato.mes));
                 meses.push( mes(dato.mes) ) ;
             }
         });
@@ -184,7 +186,6 @@
             data: data, // Datos del gráfico
             options: options // Opciones del gráfico
         });
-
     
     }
 
