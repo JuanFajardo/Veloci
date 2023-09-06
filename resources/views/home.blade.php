@@ -153,12 +153,13 @@
     </div>
 </section>
 
-<section class="section-padding section-bg">
+<section class="section-padding">
     <div class="container">
         <div class="col-lg-12 col-12 text-left mb-4">
             <h2 >Visita Nuestro Showroom</h2>
             <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
         </div>
+        
         <div class="row "><!--------------------------------------------------------------------------------ACTUALIZACION DE UBICACION--------------------------------------------------------------------------------------------------->
                 <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
                     <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
@@ -172,11 +173,86 @@
                     };
                     var to = d.getElementsByTagName('script')[0];
                     to.parentNode.insertBefore(s, to);
-                  })();</script><a href="https://1map.com/es/map-embed">1 Map</a></div>            
+                  })();</script><a href="https://1map.com/es/map-embed">1 Map</a>
+                  </div>            
         </div>
     </div>
 </section>
-<section class="section-padding section-bg ">
+<section class="news-section section-padding ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 mb-4">
+                <h2>Clientes Satisfechos</h2>
+                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                   <div class="row mt-5">
+                        <div class="col-1 align-self-center">
+                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
+                                <i class="text-dark bi-chevron-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                        </div>
+                        
+                        <br/>
+                        <br/>
+
+                        <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
+                            <div class="carousel-inner product-links-wap" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="#">
+                                                <img src="{{asset('assets/images/llave.png')}}" class="custom-text-box-image img-fluid" alt="" width="100" height="40">
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#">
+                                                <img src="{{asset('assets/images/llave.png')}}" class="custom-text-box-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <!--/.First slide-->
+
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="#">
+                                                <img src="{{asset('assets/images/llave.png')}}" class="custom-text-box-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#">
+                                                <img src="{{asset('assets/images/llave.png')}}" class="custom-text-box-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--End Slides-->
+                        </div>
+                        <!--End Carousel Wrapper-->
+                        <!--Start Controls-->
+                        <div class="col-1 align-self-center">
+                            <a href="#multi-item-example" role="button" data-bs-slide="next" >
+                                <i class="text-dark bi-chevron-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+                        <!--End Controls-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-padding  ">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-12 text-left mb-4">
@@ -222,20 +298,16 @@
             </div>
             <div class="col-lg-6 col-12 ">
                 <div class="row">
-                    <img src="{{asset('assets/images/llave.png')}}" class="custom-text-box-image img-fluid" alt="">
+                    <img src="{{asset('assets/images/llave.png')}}" class="custom-text-box-image img-fluid " alt="">
                 </div>
                 
             </div>
         </div>
     </div>
 </section>
-<section class="about-section section-padding">
+<section class="section-padding">
     <div class="container">
         <div class="row  ">
-            <div class="col-lg-12 col-12 text-left mb-4">
-                <h2 class="animated bounce">Estadistica </h2>
-                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
-            </div>
             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 text-center">
                 <div class="card border-secondary mb-3" style="max-width: 18rem;">
                     <div class="card-body text-secondary">
@@ -270,7 +342,7 @@
                 </div>
             
             </div>
-        
+        </div>
     </div>
 </section>
 

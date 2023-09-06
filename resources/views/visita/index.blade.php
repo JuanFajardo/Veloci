@@ -8,11 +8,42 @@
     </div>
     <div class="container">
         <div class="row">
+            
+            <div class="card">
+                <div class="card-header">
+                  General
+                </div>
+                <div class="card-body">
+                     <div class="col-auto">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Diaria </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Semanal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">60 Días</label>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
+                        <canvas id="myChart2" width="250" height="100"></canvas>
+                    </div>   
+                </div>
+            </div>
+                
+            
+        </div>
+        <div class="row mt-4">
             <div class="card">
                     <div class="card-header">
-                        Reporte Mensual 
+                        Por Rango 
                     </div>
                 <div class="card-body">
+
                     <form class="row g-3">
                         <div class="col-auto">
                             <div class="row g-3 align-items-center">
@@ -32,10 +63,11 @@
                                 <div class="col-auto">
                                     <input type="date" class="form-control" id="fin" value="{{date('Y')}}-12-31" /> 
                                 </div>
+                               
                             </div>
                         </div>
                         <div class="col-auto">
-                            <button type="button" class="btn btn-primary mb-3" onclick="cargarGrafica()">Buscar</button>
+                            <button type="button" class="btn btn-secondary mb-3" onclick="cargarGrafica()">Buscar</button>
                         </div>
                     </form>
                     <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
@@ -44,51 +76,12 @@
                     
                 </div>
             </div>
-                
             
-        </div>
-        <div class="row mt-4">
-            
-            <div class="card">
-                <div class="card-header">
-                    Reporte Diaria 
-                </div>
-                <div class="card-body">
-                    <!--<form class="row g-3">
-                        <div class="col-auto">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Fecha Inicio:</label>
-                                </div>
-                                <div class="col-auto">
-                                <input type="date" class="form-control" id="creationDateFromCampaign" value="{{date('Y')}}-01-01" /></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Fecha Final:</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="date" class="form-control" id="creationDateFromCampaign" value="{{date('Y')}}-01-01" /></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary mb-3">Buscar</button>
-                        </div>
-                    </form>-->
-                    <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
-                        <canvas id="myChart2" width="250" height="100"></canvas>
-                    </div>   
-                </div>
-            </div>
         </div>
         <div class="row mt-4">
             <div class="card">
                 <div class="card-header">
-                    Lista de Segimiento por
+                    Lista de Entradas
                 </div>
                 <div class="card-body">
                     <table id="tablaAgenda" class="table table-striped table-bordered " >
@@ -105,7 +98,7 @@
                                 <td>{{$dato->titulo}}</td>
                                 <td>{{$dato->cantidad}} </td>
                                 <td>
-                                    <a href="{{asset('index.php/Visita/'.base64_encode($dato->titulo))}}"  class="btn btn-info" title="Ver Detalle" style="color: white;"> <i class="bi bi-card-list"></i> </a> 
+                                    <a href="{{asset('index.php/Visita/'.base64_encode($dato->titulo))}}"  class="btn btn-secondary" title="Ver Detalle" style="color: white;"> <i class="bi bi-card-list"></i> </a> 
                                 </td>
                             </tr>
                         @endforeach
