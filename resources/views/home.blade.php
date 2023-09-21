@@ -37,7 +37,7 @@
     <div class="container">
        <div class="row">
             <div class="col-lg-12 col-12 text-center mb-4">
-                <h2>Encentra tu Vehículo </h2>
+                <h2>Encuentra tu Vehículo </h2>
             </div>
             <div class="col-md-5 mx-auto ">
                 <form action="{{route('vehiculo.buscar')}}" method="POST" class="mt-2">
