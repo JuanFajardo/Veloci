@@ -74,21 +74,6 @@
         <hr style="width:1100px; height:2px; background:rgb(15, 38, 114)">
         <div class="row">
             <div class="col-lg-12 col-12  mb-4 text-center">
-                <h2 class="animated bounce">Reporte</h2>
-            </div>
-            <div class="col-lg-12 col-12 mt-4">
-                 <a href="{{asset('index.php/Visita')}}" class="btn btn-success"> <i class="bi bi-bar-chart"></i> <span>Completa</span> </a>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
-                <canvas id="myChart" width="250" height="100"></canvas>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
-                <canvas id="myChart2" width="250" height="100"></canvas>
-            </div>
-        </div>
-        <hr style="width:1100px; height:2px; background:rgb(15, 38, 114)">
-        <div class="row">
-            <div class="col-lg-12 col-12  mb-4 text-center">
                 <h2 class="animated bounce">Vehículos</h2>
             </div>
 

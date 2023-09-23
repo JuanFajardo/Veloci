@@ -265,15 +265,16 @@
                             <li class="social-icon-item me-2">
                                 <a href="https://www.facebook.com/VelociAutoventa/" >
                                     <img  src="{{asset('assets/images/logo-face.png')}}" alt="" width="20" height="20" title="Facebook">
+                                    
                                 </a>
                             </li>
-                            <li class="social-icon-item me-2">
+                           <li class="social-icon-item me-2">
                                 <a href="https://twitter.com/AutoventaVeloci/" >
-                                    <img  src="{{asset('assets/images/logo-t.png')}}" alt="" width="20" height="20" title="Twitter">
+                                    <img  src="{{asset('assets/images/x.tik.png')}}" alt="" width="20" height="20" title="X">
                                 </a>
                             </li>
     
-                            <li class="social-icon-item me-2">
+                           <li class="social-icon-item me-2">
                                 <a href="https://www.instagram.com/veloci.autoventas/"  >
                                     <img src="{{asset('assets/images/logo.ins.png')}}" alt="" width="20" height="20" title="Instagram">
                                 </a>
@@ -330,7 +331,7 @@
             </p>
             <p class="social-icon-item">
                 <a href="https://twitter.com/AutoventaVeloci/"  target="_blank">
-                    <img class="tiktok-float" src="{{asset('assets/images/logo-t.png')}}" alt="">
+                    <img class="tiktok-float" src="{{asset('assets/images/x.tik.png')}}" alt="">
                 </a>
             </p>
             <p class="social-icon-item">
@@ -339,13 +340,6 @@
                 </a>
             </p>
             </div>
-                 
-        
-            
-            
-
-
-
             <div class="modal fade" id="correoModal" tabindex="-1" aria-labelledby="correoModal" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -371,6 +365,56 @@
         <footer class="site-footer"> 
             <div class="container">
                 <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        
+                        <h6 class="mb-3">Acerca de</h6>
+                        <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
+                        <p  class="text-white  texto-justificado mt-3" >
+                            El sitio donde podrá encontrar 
+                            <br>los mejore catálogo de coches.
+                        </p>
+                        
+                        <img  src="{{asset('assets/images/logveloci blanco.png')}}" class="logo img-fluid" alt="">
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h6 class=" mb-3">Horarios de  Atención</h6>
+                        <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
+                        <p class="text-white d-flex mt-3">
+                            <i class="bi-clock-fill me-2" ></i>
+                                Lunes - Sábado
+                        </p>
+                        <p class="text-white d-flex mt-3">
+                            <i class="bi-minus me-2" ></i>
+                                Mañanas: 8:00 - 12:00<br>
+                                Tardes: 14:00 - 18:00
+                        </p>
+                        <ul class="social-icon">
+                             
+
+                            <li class="social-icon-item">
+                                <a href="https://www.facebook.com/VelociAutoventa/" class="social-icon-link bi-facebook"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://twitter.com/AutoventaVeloci/" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://www.instagram.com/veloci.autoventas/" class="social-icon-link bi-instagram"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/@velociautoventabo/" class="social-icon-link bi-youtube"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://www.tiktok.com/@veloci.autoventas/" class="social-icon-link bi-tiktok"></a>
+                            </li>
+                                
+                            <li class="social-icon-item">
+                                <a href="https://www.linkedin.com/company/velociautoventa/" class="social-icon-link bi-linkedin"></a>
+                            </li>
+                        </ul>
+
+                    </div>
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
                         <h6 class=" mb-3" >Contactos</h6>
                         <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
@@ -397,61 +441,11 @@
 
                         <p class="text-white d-flex mt-3 texto-justificado ">
                             <i class="bi-geo-alt me-2" ></i>
-                            <font size=2>Santa Cruz Avenida Cristo Redentor entre sexto y septimo anillo (a lado de Supermercado Hipermaxi)</font>
+                            <font size=2>Santa Cruz Avenida Cristo Redentor entre sexto y <br>septimo anillo (alado de Supermercado Hipermaxi)</font>
                         </p>
                        
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                        <h6 class=" mb-3">Horarios de  Atención</h6>
-                        <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
-                        <p class="text-white d-flex mt-3">
-                            <i class="bi-clock-fill me-2" ></i>
-                                Lunes - Sábado
-                        </p>
-                        <p class="text-white d-flex mt-3">
-                            <i class="bi-minus me-2" ></i>
-                                Mañanas: 8:00 - 12:00<br>
-                                Tardes: 14:00 - 18:00
-                        </p>
-                        <ul class="social-icon">
-                             <li class="social-icon-item">
-                                <a href="https://twitter.com/AutoventaVeloci/" class="social-icon-link bi-twitter"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="https://www.facebook.com/VelociAutoventa/" class="social-icon-link bi-facebook"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="https://www.instagram.com/veloci.autoventas/" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="https://www.linkedin.com/company/velociautoventa/" class="social-icon-link bi-linkedin"></a>
-                            </li>
-
-                                <li class="social-icon-item">
-                                    <a href="https://youtube.com/@velociautoventabo/" class="social-icon-link bi-youtube"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="https://www.tiktok.com/@veloci.autoventas/" class="social-icon-link bi-tiktok"></a>
-                                </li>
-                        </ul>
-
-                    </div>
                     
-                    
-                    <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        
-                        <h6 class="mb-3">Acerca de</h6>
-                        <hr style="width:230px; height:2px; background:rgb(172, 172, 172)">
-                        <p  class="text-white  texto-justificado mt-3" >
-                            El sitio donde podrá encontrar 
-                            <br>los mejore catálogo de coches.
-                        </p>
-                        
-                        <img  src="{{asset('assets/images/logveloci blanco.png')}}" class="logo img-fluid" alt="">
-                    </div>
                     
                 </div>
                 
