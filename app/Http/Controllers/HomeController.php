@@ -27,7 +27,7 @@ class HomeController extends Controller
         $datos = Vehiculo::where('popular', '1')->get();
         $marcas = Marca::all();
         
-        $visitasN = Visita::count();
+        $visitasN = Visita::Where('titulo', 'home')->count();
         $vehiculosN = Vehiculo::count();
         $marcasN = Marca::count();
         

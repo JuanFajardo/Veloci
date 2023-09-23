@@ -14,6 +14,7 @@
                     </div>
                 <div class="card-body">
                     <form class="row g-3">
+                        
                         <div class="col-auto">
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
@@ -24,6 +25,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-auto">
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
@@ -34,9 +36,23 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-auto">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <select name="tipo" id="tipo" class="form-control">
+                                        <option value="mes">Mes</option>
+                                        <option value="dia">D&iacute;a</option>
+                                        <option value="semana">Semana</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-auto">
                             <button type="button" class="btn btn-primary mb-3" onclick="cargarGrafica()">Buscar</button>
                         </div>
+
                     </form>
                     <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
                         <canvas id="myChart" width="250" height="100"></canvas>
@@ -141,57 +157,67 @@
         return msj;
     }
 
+    function dia(mes){
+        var msj="";
+        msj = "Dia "+mes;
+        return msj;
+    }
+
+    function semana(mes){
+        var msj="";
+        msj = "Semana "+mes;
+        return msj;
+    }
+
+    var options = { scales: { y: { beginAtZero: true }}};
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, { type: 'line', data: null, options: options});
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    var myChart2 = new Chart(ctx2, {type: 'bar', data: null, options: options });
+    
     function cargarGrafica(){
-        
+
         var inicio = $('#inicio').val();
         var fin = $('#fin').val();
-        console.log(inicio);
-        console.log(fin);
-
+        var tipo = $('#tipo').val();
         meses = [];
         datos = [];
-
-        $.getJSON( '{{asset("index.php")}}/Grafica/'+inicio+'/'+fin, function( data ) {
+        
+        $.getJSON( '{{asset("index.php")}}/Grafica/'+inicio+'/'+fin+'/'+tipo, function( data ) {
             for (var i = 0; i < data.length; i++) {
                 var dato = data[i];
                 datos.push( dato.total ) ;
-                meses.push( mes(dato.mes) ) ;
+                if (tipo == "mes"){
+                    meses.push( mes(dato.mes) ) ;
+                }else if(tipo == "dia"){
+                    meses.push( dia(dato.mes) ) ;
+                }else if(tipo == "semana"){
+                    meses.push( semana(dato.mes) ) ;
+                }
+                
             }
         });
-
-        var ctx = document.getElementById('myChart').getContext('2d');
-        // Datos del gráfico
-        var data = {
+        
+        var informacion = {
             labels: meses,//['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
             datasets: [{
             label: 'Ventas',
             data: datos, //[[ 19, 3, 5, 2]],
-            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo
-            borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
-            borderWidth: 1 // Ancho del borde
+            backgroundColor: 'rgba(255, 0, 0, 0.2)', // Color de fondo
+            borderColor: 'rgba(255, 0, 0, 1)', // Color del borde
+            borderWidth: 3 // Ancho del borde
             }]
         };
-        // Opciones del gráfico
-        var options = { scales: { y: { beginAtZero: true }}};
-
-        var myChart = new Chart(ctx, {
-            type: 'line', // Tipo de gráfico
-            data: data, // Datos del gráfico
-            options: options // Opciones del gráfico
-        });
         
-        var ctx2 = document.getElementById('myChart2').getContext('2d');
-        var myChart2 = new Chart(ctx2, {
-            type: 'bar', // Tipo de gráfico
-            data: data, // Datos del gráfico
-            options: options // Opciones del gráfico
-        });
-    
+        myChart.data = informacion;
+        myChart.update();
+        myChart2.data = informacion;
+        myChart2.update();
+        
     }
 
     $(document).ready(function(){
         cargarGrafica();
-
         $('#tablaAgenda').DataTable({
             "order": [[ 1, 'desc']],
             "language": {
