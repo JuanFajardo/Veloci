@@ -188,11 +188,10 @@ class VehiculoController extends Controller
 
 
     public function filtro(Request $request){
-        Visita::insertarVisita($request->ip(), 'index.php/Tienda'.$request->al(), 'Vehiculo/Filtro', $request->userAgent());
-        
+
         $anio  = $marca = $tipo = $combustible = "%";
         $msj = ''; 
-       // {"_token":"NXT6iqAflE2t9qvK6QqmCoiC0gDPtC0uIKmFHvm0","anio":"2023","marca":"--","tiptipoo":"Camioneta","combustible":"--","boton":"Filtrar"}
+       
        if($request->anio != '--'){
             $anio = $request->anio;
             $msj = $msj.' <b>Año:</b> '.$anio;
@@ -211,6 +210,8 @@ class VehiculoController extends Controller
         }
        $datos = Vehiculo::Where( 'anio', 'like', $anio)->where('marca', 'like', $marca)->where('tipo', 'like', $tipo)->where('combustible', 'like', $combustible)->get();
        $sucess = $msj;
+
+       Visita::insertarVisita($request->ip(), $msj, 'Vehiculo/Filtro', $request->userAgent() );
        return $datos; 
     }
 
@@ -259,7 +260,7 @@ class VehiculoController extends Controller
     }
 
     public function correo(Request $request){
-        Visita::insertarVisita($request->ip(), 'index.php/Correo/'.$request->all(), 'Correo/', $request->userAgent());
+        
         
         $nombre     = $request->nombre."|".$request->email."|".$request->message."|".$request->titulo;
         foreach(['ventas@veloci.com.bo'] as $correo ){
@@ -269,6 +270,8 @@ class VehiculoController extends Controller
                 printf( "".$th);
             }   
         }
+        
+        Visita::insertarVisita($request->ip(), 'index.php/Correo/', $nombre, $request->userAgent());
         return ["mensaje"=>"enviado"];
     }
 

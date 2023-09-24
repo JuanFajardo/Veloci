@@ -14,6 +14,36 @@
                   General
                 </div>
                 <div class="card-body">
+                     <div class="col-auto">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Diaria </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Semanal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">60 Días</label>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
+                        <canvas id="myChart2" width="250" height="100"></canvas>
+                    </div>   
+                </div>
+            </div>
+                
+            
+        </div>
+        <div class="row mt-4">
+            <div class="card">
+                    <div class="card-header">
+                        Por Rango 
+                    </div>
+                <div class="card-body">
+
                     <form class="row g-3">
                         
                         <div class="col-auto">
@@ -35,6 +65,7 @@
                                 <div class="col-auto">
                                     <input type="date" class="form-control" id="fin" value="{{date('Y')}}-12-31" /> 
                                 </div>
+                               
                             </div>
                         </div>
 
@@ -51,54 +82,17 @@
                         </div>
 
                         <div class="col-auto">
-                            <button type="button" class="btn btn-primary mb-3" onclick="cargarGrafica()">Buscar</button>
+                            <button type="button" class="btn btn-secondary mb-3" onclick="cargarGrafica()">Buscar</button>
                         </div>
 
                     </form>
                     <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
                         <canvas id="myChart" width="250" height="100"></canvas>
                     </div>   
+                    
                 </div>
             </div>
-                
             
-        </div>
-        <div class="row mt-4">
-            <div class="card">
-                    <div class="card-header">
-                        Por Rango 
-                    </div>
-                <div class="card-body">
-                    <!--<form class="row g-3">
-                        <div class="col-auto">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Fecha Inicio:</label>
-                                </div>
-                                <div class="col-auto">
-                                <input type="date" class="form-control" id="creationDateFromCampaign" value="{{date('Y')}}-01-01" /></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Fecha Final:</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="date" class="form-control" id="creationDateFromCampaign" value="{{date('Y')}}-01-01" /></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary mb-3">Buscar</button>
-                        </div>
-                    </form>-->
-                    <div class="col-lg-12 col-md-12 col-12 mb-4 mb-lg-0 mt-4">
-                        <canvas id="myChart2" width="250" height="100"></canvas>
-                    </div>   
-                </div>
-            </div>
         </div>
         <div class="row mt-4">
             <div class="card">
@@ -120,7 +114,7 @@
                                 <td>{{$dato->titulo}}</td>
                                 <td>{{$dato->cantidad}} </td>
                                 <td>
-                                    <a href="{{asset('index.php/Visita/'.base64_encode($dato->titulo))}}"  class="btn btn-info" title="Ver Detalle" style="color: white;"> <i class="bi bi-card-list"></i> </a> 
+                                    <a href="{{asset('index.php/Visita/'.base64_encode($dato->titulo))}}"  class="btn btn-secondary" title="Ver Detalle" style="color: white;"> <i class="bi bi-card-list"></i> </a> 
                                 </td>
                             </tr>
                         @endforeach
@@ -201,11 +195,17 @@
         var informacion = {
             labels: meses,//['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
             datasets: [{
-            label: 'Ventas',
+            label: 'Visitas',
             data: datos, //[[ 19, 3, 5, 2]],
+<<<<<<< HEAD
             backgroundColor: 'rgba(255, 0, 0, 0.2)', // Color de fondo
             borderColor: 'rgba(255, 0, 0, 1)', // Color del borde
             borderWidth: 3 // Ancho del borde
+=======
+            backgroundColor: 'rgba(3, 3, 129, 1.0)', // Color de fondo
+            borderColor: 'rgba(3, 3, 129, 1.0)', // Color del borde
+            borderWidth: 1 // Ancho del borde
+>>>>>>> 2648c9f099716c83e80df9fa9c28b25b27365e38
             }]
         };
         
@@ -218,7 +218,6 @@
 
     $(document).ready(function(){
         cargarGrafica();
-
         $('#tablaAgenda').DataTable({
             "order": [[ 1, 'desc']],
             "language": {
@@ -264,6 +263,12 @@
         }   
     }
     
+    </script>
+    <script>
+       const printCharts =() =>{
+
+       }
+       printChart()
     </script>
     
 @stop

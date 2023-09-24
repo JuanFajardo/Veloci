@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\Visita;
+use Illuminate\Support\Facades\DB;
+
 
 class VisitaController extends Controller
 {
@@ -23,15 +25,30 @@ class VisitaController extends Controller
         return view('visita.detalle', compact('datos', 'id'));
         return $datos; 
     }
-    public function graf($inicio, $fin){
-        $gf = Visita::select(Visita::raw('COUNT(*) as total'), Visita::raw('MONTH(updated_at) as mes'))
+    public function graf($inicio, $fin, $tipo){
+        $gf = null;
+
+        if($tipo == "mes"){
+            $gf = Visita::select(Visita::raw('COUNT(*) as total'), Visita::raw('MONTH(updated_at) as mes'))
                ->groupBy(Visita::raw('MONTH(updated_at)'))
                ->whereBetween('updated_at', [$inicio, $fin])
                ->orderBy('mes', 'asc')
                ->get();
+        }elseif($tipo == "dia"){
+            $gf = Visita::select(Visita::raw('COUNT(*) as total'), Visita::raw('DAY(updated_at) as mes'))
+               ->groupBy(Visita::raw('DAY(updated_at)'))
+               ->whereBetween('updated_at', [$inicio, $fin])
+               ->orderBy('mes', 'asc')
+               ->get();
+        }elseif($tipo == "semana"){
+            $gf = \DB::table('visitas')
+               ->select(DB::raw('YEAR(updated_at) as anio, WEEK(updated_at) as mes, COUNT(*) as total'))
+               ->whereBetween('updated_at', [$inicio, $fin])
+               ->groupBy(DB::raw('YEAR(updated_at), WEEK(updated_at)'))
+               ->orderBy('anio')
+               ->orderBy('mes')
+               ->get();
+        }
         return $gf;
-
-        //return view('visita.index', compact('gf'));
-        
     }    
 }
