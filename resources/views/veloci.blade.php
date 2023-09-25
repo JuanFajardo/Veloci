@@ -258,7 +258,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row ">
+                <!--<div class="row ">
                     <div class="me-4  ms-auto d-flex ">
                         <ul class="social-icon ">
                             
@@ -297,7 +297,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>--->
             </div>
         </nav>
 
