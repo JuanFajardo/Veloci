@@ -300,7 +300,6 @@
                 </div>--->
             </div>
         </nav>
-
         <main>
             @yield('producto')
             <p class="social-icon-item">
@@ -357,11 +356,6 @@
             </div>
 
         </main>
-
-
-        
-        
-
         <footer class="site-footer"> 
             <div class="container">
                 <div class="row">
