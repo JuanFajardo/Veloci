@@ -22,6 +22,12 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
+        try {
+            Visita::insertarVisita($request->ip(), '/index.php/home', 'home', $request->userAgent());
+        } catch (\Exception $e) {
+            Visita::insertarVisita($e, '/index.php/home', 'home', $e);
+        }
+
         Visita::insertarVisita($request->ip(), '/index.php/home', 'home', $request->userAgent());
         
         $datos = Vehiculo::where('popular', '1')->get();
@@ -35,7 +41,14 @@ class HomeController extends Controller
     }
 
     public function show(Request $request,  $busqueda){
-        Visita::insertarVisita($request->ip(), '/index.php/Tienda/Buscar', 'Busqueda : '.$busqueda, $request->userAgent());
+
+        try {
+            Visita::insertarVisita($request->ip(), '/index.php/Tienda/Buscar', 'Busqueda : '.$busqueda, $request->userAgent());
+        } catch (\Exception $e) {
+            Visita::insertarVisita($e, '/index.php/Tienda/Buscar', 'Busqueda : '.$busqueda, $e);
+        }
+        
+
         $datos = Vehiculo::Where('marca', $busqueda)->paginate(12);
         $sucess ="";
         $combustibles = Combustible::all();
