@@ -16,10 +16,6 @@ use \App\Models\Visita;
 class HomeController extends Controller
 {
     
-    public function __construct()
-    {
-    }
-
     public function index(Request $request)
     {
         try {
@@ -28,7 +24,7 @@ class HomeController extends Controller
             Visita::insertarVisita($e, '/index.php/home', 'home', $e);
         }
 
-        Visita::insertarVisita($request->ip(), '/index.php/home', 'home', $request->userAgent());
+        #Visita::insertarVisita($request->ip(), '/index.php/home', 'home', $request->userAgent());
         
         $datos = Vehiculo::where('popular', '1')->get();
         $marcas = Marca::all();
