@@ -1,38 +1,33 @@
 @extends('veloci')
 
 @section('producto')
-<section >
-     <div class="row ">
+
+<section>
+    <div class="row">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('assets/images/ram2.jpg')}}" class="d-block w-100" alt="...">
+                    <img src="{{asset('assets/images/GAZOO.jpg')}}" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                        <img src="{{asset('assets/images/portadas medida fb.jpg')}}" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{asset('assets/images/pt2.jpg')}}" class="d-block w-100" alt="...">
-                    </div>
+                    <img src="{{asset('assets/images/OCT001.jpg')}}" class="d-block w-100" alt="">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/images/TACOMA23TRD.jpg')}}" class="d-block w-100" alt="">
+                </div>
             </div>
-
+            
         </div>
-    
+    </div>    
 </section>
+
 <section class="section-padding section-bg" >
     <div class="container">
        <div class="row">
@@ -95,63 +90,68 @@
         
     
     </div>
-
-    
 </section>
-<section class="about-section section-padding">
-    <div class="container">
-        <div class="col-lg-12 col-12 text-left mb-4">
-            
-            <h2 >Las Mejores Marcas</h2>
-            <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
-        </div>
-        <div class="row">
-            
-            <div class="col">
-                <div class="carousel slide carousel-multi-item pt-2 pt-md-0">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
 
+<section class="news-section section-padding ">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12 col-12 mb-4">
+                <h2> Las Mejores Marcas </h2>
+                <hr style="width:100px; height:2px; background:rgb(15, 38, 114)">
+            </div>
+        </div>    
+        
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="row mt-5">
+
+                    <div class="col-1 align-self-center" >
+                        <a href="#multiMarcas" role="button" data-bs-slide="prev">
+                            <i class="text-dark bi-chevron-left"></i>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                    </div>
+                        
+                    <div id="multiMarcas" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel"  >
+                        <div class="carousel-inner product-links-wap" role="listbox"  >
                             <?php $contador = 0; $msj=" active"; ?>
                             @foreach($marcas as $marca)
-                            @if( $contador == 0 )
-                            <div class="carousel-item{{$msj}}">
-                                <div class="row">
-                            @endif
+                                @if( $contador == 0 )
+                                    <div class="carousel-item{{$msj}}">
+                                        <div class="row">
+                                @endif
                                     <div class="col-3 p-md-5">
                                         <a href="{{asset('index.php/Tienda/'.$marca->marca.'/Marca')}}"><img class="img-fluid brand-img" src="{{asset($marca->imagen)}}" alt="{{$marca->marca}}"></a>
                                     </div>
-                            <?php $contador ++ ; ?>  
-                            @if( $contador == 4 )
-                                </div>
-                            </div>
-                            <?php $contador=0; $msj=""; ?>
-                            @endif
+                                <?php $contador ++ ; ?>  
+                                @if( $contador == 4 )
+                                        </div>
+                                    </div>
+                                    <?php $contador=0; $msj=""; ?>
+                                @endif
                             @endforeach
 
-                            @if( $contador < 4 )
-                                </div>
-                            </div>
-                            @endif
-                           
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Siguiente</span>
-                        </button>
-                      </div>
+                    </div>
+                        
+                    <div class="col-1 align-self-center" >
+                        <a href="#multiMarcas" role="button" data-bs-slide="next" >
+                            <i class="text-dark bi-chevron-right"></i>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                    
                 </div>
-                
             </div>
-            
-            
         </div>
+
     </div>
 </section>
+
+
+
+
 
 <section class="section-padding">
     <div class="container">
@@ -178,6 +178,7 @@
         </div>
     </div>
 </section>
+
 <section class="news-section section-padding ">
     <div class="container">
         <div class="row">
@@ -252,6 +253,7 @@
         </div>
     </div>
 </section>
+
 <section class="section-padding  ">
     <div class="container">
         <div class="row">

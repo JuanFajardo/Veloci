@@ -144,27 +144,10 @@
         </style>
     </head>
     <body id="section_1">
+
         <header class="site-header d-lg-block d-none">
             <div class="container">
                 <div class="row">
-                    
-                    <div class="col-lg-6 d-flex">
-                        <p class="d-flex me-4 mb-0">
-                            <!--<i class="bi-whatsapp me-2"></i>
-                            <a href="https://wa.me/59169612086?text=Hola%20quiero%20saber%20mas%20de%20Veloci%20">
-                                +591 - 69612086 
-                            </a>-->
-                        </p>
-
-                        <!--<p class="d-flex mb-0">
-                            <i class="bi-envelope me-2"></i>
-
-                            <a href="mailto: ventas@veloci.com.bo">
-                                ventas@veloci.com.bo
-                            </a>
-                        </p>-->
-                    </div>
-
                     <div class="col-lg-6 col-12 ms-auto d-flex">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-whatsapp me-2" style="color: rgb(34, 215, 58);"></i>
@@ -178,37 +161,9 @@
                                 +591 - 77047837
                             </a>
                         </p>
-                       
-                       
-
-                        <!--<ul class="social-icon">
-                            
-                            <li class="social-icon-item">
-                                <a href="https://www.facebook.com/VelociAutoventa/" class="social-icon-link bi-facebook"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://twitter.com/AutoventaVeloci/" class="social-icon-link bi-twitter"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="https://www.instagram.com/veloci.autoventas/" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="https://youtube.com/@velociautoventabo/" class="social-icon-link bi-youtube"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="https://www.tiktok.com/@veloci.autoventas/" class="social-icon-link bi-tiktok"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://www.linkedin.com/company/velociautoventa/" class="social-icon-link bi-linkedin"></a>
-                            </li>
-                        </ul>-->
                     </div>
                 </div>
             </div>
-            
         </header>
 
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
@@ -253,55 +208,15 @@
 
                             </ul>
                         </li>
-                        <li class="nav-item ms-3">
-                            
-                        </li>
                     </ul>
-                </div>
-                <!--<div class="row ">
-                    <div class="me-4  ms-auto d-flex ">
-                        <ul class="social-icon ">
-                            
-                            <li class="social-icon-item me-2">
-                                <a href="https://www.facebook.com/VelociAutoventa/" >
-                                    <img  src="{{asset('assets/images/logo-face.png')}}" alt="" width="20" height="20" title="Facebook">
-                                    
-                                </a>
-                            </li>
-                           <li class="social-icon-item me-2">
-                                <a href="https://twitter.com/AutoventaVeloci/" >
-                                    <img  src="{{asset('assets/images/x.tik.png')}}" alt="" width="20" height="20" title="X">
-                                </a>
-                            </li>
-    
-                           <li class="social-icon-item me-2">
-                                <a href="https://www.instagram.com/veloci.autoventas/"  >
-                                    <img src="{{asset('assets/images/logo.ins.png')}}" alt="" width="20" height="20" title="Instagram">
-                                </a>
-                            </li>
-    
-                            <li class="social-icon-item me-2">
-                                <a href="https://youtube.com/@velociautoventabo/" >
-                                    <img  src="{{asset('assets/images/logo-y.png')}}" alt="" width="20" height="20" title="Youtube">
-                                </a>
-     
-                            <li class="social-icon-item me-2">
-                                <a href="https://www.tiktok.com/@veloci.autoventas/" >
-                                    <img  src="{{asset('assets/images/logo.tik.png')}}" alt="" width="20" height="20" title="Tiktok">
-                                </a>
-                            </li>
-                            <li class="social-icon-item me-2">
-                                <a href="https://www.linkedin.com/company/velociautoventa/" >
-                                    <img  src="{{asset('assets/images/logo-i.png')}}" alt="" width="20" height="20" title="Linkedin">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>--->
+                </div>        
             </div>
         </nav>
+
         <main>
+            
             @yield('producto')
+
             <p class="social-icon-item">
                 <a href="https://wa.me/59169612086"  target="_blank">
                     <img class="whatsapp-float" src="{{asset('assets/images/logo.png')}}" alt="">
@@ -354,8 +269,9 @@
                     </div>
                 </div>
             </div>
-
         </main>
+        
+
         <footer class="site-footer"> 
             <div class="container">
                 <div class="row">
@@ -448,6 +364,7 @@
         </footer>
         <script src="{{asset('assets/js/jquery.min.js')}}"></script>
         <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('assets/js/popper.min.js')}}"></script>
         <script src="{{asset('assets/js/jquery.sticky.js')}}"></script>
         <script src="{{asset('assets/js/click-scroll.js')}}"></script>
         <script src="{{asset('assets/js/counter.js')}}"></script>
